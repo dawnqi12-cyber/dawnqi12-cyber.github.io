@@ -34,7 +34,7 @@
   <!-- feed -->
   <!-- 页面元数据 -->
   <title>C++学习指南 - Dawnqi's Blog</title>
-  <meta name="keywords" content="null">
+  <meta name="keywords" content="c++学习,null">
   <meta desc name="description" content="Dawnqi's Blog - Dawnqi - Dawnqi's Blog">
   <meta property="og:type" content="article">
 <meta property="og:title" content="C++学习指南">
@@ -43,8 +43,9 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-04-15T21:34:57.000Z">
-<meta property="article:modified_time" content="2026-04-15T21:34:57.019Z">
+<meta property="article:modified_time" content="2026-06-19T20:47:22.205Z">
 <meta property="article:author" content="Dawnqi">
+<meta property="article:tag" content="c++学习">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1626,7 +1627,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1776290652377),
+    lastupdate: new Date(1782480717013),
     sidebar: {
       for_page: ["blogger","category","tagcloud","qrcode","webinfo","lastupdate","repos"],
       for_post: ["toc"],
@@ -2483,7 +2484,88 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <html><head></head><body></body></html>
+    <html><head></head><body><h3 id="C-基础篇"><a href="#C-基础篇" class="headerlink" title="C++基础篇"></a>C++基础篇</h3><h4 id="C-C-中的sizeof关键字"><a href="#C-C-中的sizeof关键字" class="headerlink" title="C/C++中的sizeof关键字"></a>C/C++中的sizeof关键字</h4><ul>
+<li><span style="color:green">指针的大小永远是固定的，取决于处理器位数，32位就是 4 字节，64位就是 8 字节</span></li>
+<li><span style="color:green">数组作为函数参数时会退化为指针，大小要按指针的计算</span>， 详细请看这篇文章数组退化为指针</li>
+<li><span style="color:green">struct 结构体要考虑字节对齐: </span>，字节对齐的具体规则请看这篇文章</li>
+<li><span style="color:green">字节对齐字符串数组要算上末尾的 ‘\0’</span></li>
+</ul>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 前提: 64 位电脑上</span></span><br><span class="line"><span class="type">char</span>&nbsp; str[] = <span class="string">"Hello World"</span> ;</span><br><span class="line"><span class="type">char</span>&nbsp;&nbsp; *p = str;</span><br><span class="line"><span class="type">double</span> *dp;</span><br><span class="line"><span class="type">int</span> n = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">sizeof</span>(str )＝___12_____  <span class="comment">// 11个字符 + 末尾'\0'，总结第四点</span></span><br><span class="line"><span class="built_in">sizeof</span> ( p ) =  ___8 ___  <span class="comment">// 64 位电脑，指针 8 个字节</span></span><br><span class="line"><span class="built_in">sizeof</span> ( n ) = ___4______  <span class="comment">// int 一般 4 个字节</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="built_in">Func</span> (<span class="type">char</span> str[<span class="number">10</span>])</span><br><span class="line">{</span><br><span class="line">&nbsp;  <span class="built_in">sizeof</span>( str ) = _8__  <span class="comment">// 数组做参数退化为 char类型指针，即 8 个字节，总结第2点</span></span><br><span class="line">}</span><br><span class="line"><span class="type">void</span> *vp = <span class="built_in">malloc</span>( <span class="number">100</span> );</span><br><span class="line"></span><br><span class="line"><span class="built_in">sizeof</span> ( vp )＝__8____  <span class="comment">// vp 是一个 void 类型指针，还是 8 个字节</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">AlignedStruct</span> {</span><br><span class="line">    <span class="type">char</span> a;   <span class="comment">// 本来1字节，padding 3 字节</span></span><br><span class="line">    <span class="type">int</span> b;    <span class="comment">//  4 字节</span></span><br><span class="line">    <span class="type">short</span> c;  <span class="comment">// 本来 short 2字节，但是整体需要按照 4 字节对齐(成员对齐边界最大的是int 4) ，</span></span><br><span class="line">    <span class="comment">//所以需要padding 2，总共: 4 + 4 + 4</span></span><br><span class="line">};</span><br></pre></td></tr></tbody></table></figure>
+<hr>
+<h4 id="C-C-sizeof-和-strlen-的区别"><a href="#C-C-sizeof-和-strlen-的区别" class="headerlink" title="C/C++ sizeof 和 strlen 的区别"></a>C/C++ sizeof 和 strlen 的区别</h4><p>strlen 是头文件 cstring 中的函数，而 sizeof 是 C++ 中的运算符。</p>
+<ul>
+<li>strlen: strlen 是一个 C 标准库中的函数，用于计算 C 风格字符串（以空字符 ‘\0’ 结尾的字符数组）的长度，即不包括结尾的空字符的字符个数。</li>
+</ul>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="type">char</span> str[] = <span class="string">"Hello, world!"</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Length of str: "</span> &lt;&lt; <span class="built_in">strlen</span>(str) &lt;&lt; std::endl; <span class="comment">// 输出字符串 str 的长度</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>sizeof: sizeof 是一个 C++ 编译期间计算的操作符，用于计算数据类型或对象所占用的字节数。</li>
+</ul>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="type">int</span> a = <span class="number">42</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Size of int: "</span> &lt;&lt; <span class="built_in">sizeof</span>(<span class="type">int</span>) &lt;&lt; std::endl;    <span class="comment">// 输出 int 类型的大小</span></span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Size of a: "</span> &lt;&lt; <span class="built_in">sizeof</span>(a) &lt;&lt; std::endl;        <span class="comment">// 输出变量 a 的大小</span></span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Size of double: "</span> &lt;&lt; <span class="built_in">sizeof</span>(<span class="type">double</span>) &lt;&lt; std::endl; <span class="comment">// 输出 double 类型的大小</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<hr>
+<h4 id="C-C-中数组做参数退化为指针"><a href="#C-C-中数组做参数退化为指针" class="headerlink" title="C/C++中数组做参数退化为指针"></a>C/C++中数组做参数退化为指针</h4><ul>
+<li>sizeof 数组参数<ul>
+<li>C++ 面试中还有一个比较常见的考题，就是会将一个数组做参数，然后在函数内部用 sizeof 去判断这个数组参数的大小，如下:</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">func</span><span class="params">(<span class="type">char</span> array[])</span> </span>{</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"sizeof=%d\n"</span>, <span class="built_in">sizeof</span>(array));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"strlen=%d\n"</span>, <span class="built_in">strlen</span>(array));</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="type">char</span> array[] = <span class="string">"Hello World"</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"sizeof=%d\n"</span>, <span class="built_in">sizeof</span>(array));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"strlen=%d\n"</span>, <span class="built_in">strlen</span>(array));</span><br><span class="line">    <span class="built_in">func</span>(array);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">比如上述的输出结果分别是多少，对于 <span class="number">64</span> 位机器来说，输出结果为：</span><br><span class="line"></span><br><span class="line"><span class="keyword">sizeof</span>=<span class="number">12</span></span><br><span class="line">strlen=<span class="number">11</span></span><br><span class="line"><span class="keyword">sizeof</span>=<span class="number">8</span></span><br><span class="line">strlen=<span class="number">11</span></span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><p>数组做参数退化为指针</p>
+<ul>
+<li>这里涉及到一个概念：数组退化为指针。</li>
+<li>数组退化：在 C++ 中，数组在作为函数参数时会退化为指向其首元素的指针。</li>
+<li>退化的原因是因为数组作为函数参数时，实际传递的是指向数组首元素的指针，不可能逐个拷贝整个数组然后在栈上传递，所以编译器只知道参数是一个指针，而不知道它的长度信息。</li>
+<li>但是，当数组直接作为 sizeof 的参数时，它不会退化，因为 sizeof 是编译器在编译期间计算的结果，这个时候编译器是有信息知道数组的大小。</li>
+<li>为了在函数中获取数组的长度，需要将数组的长度作为另一个参数传递给函数，或者使用模板实现。</li>
+</ul>
+</li>
+<li><p>数组的引用做参数 举例</p>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, std::<span class="type">size_t</span> N&gt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">printSizeAndLength</span><span class="params">(<span class="type">const</span> T (&amp;arr)[N])</span> </span>{</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Size of arr in function: "</span> &lt;&lt; <span class="built_in">sizeof</span>(arr) &lt;&lt; std::endl; <span class="comment">// 计算数组的大小</span></span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Length of arr: "</span> &lt;&lt; <span class="built_in">strlen</span>(arr) &lt;&lt; std::endl; <span class="comment">// 计算字符串的长度</span></span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="type">char</span> str[] = <span class="string">"Hello, world!"</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Size of str in main: "</span> &lt;&lt; <span class="built_in">sizeof</span>(str) &lt;&lt; std::endl; <span class="comment">// 计算整个字符数组的大小</span></span><br><span class="line">    <span class="built_in">printSizeAndLength</span>(str);</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">result：</span><br><span class="line">Size of str in main: <span class="number">14</span></span><br><span class="line">Size of arr in function: <span class="number">14</span></span><br><span class="line">Length of arr: <span class="number">13</span></span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>这段代码使用了模板函数 printSizeAndLength，它接受一个数组引用作为参数。</li>
+<li>在函数内部，使用 sizeof 计算数组的大小时，数组不会退化为指针。</li>
+<li>引用的作用就在于阻止拷贝的发生，通过传递引用，让形参得到和数组名同样的地址。</li>
+</ul>
+<hr>
+<h4 id="C-const-关键字详解：修饰变量、指针和函数"><a href="#C-const-关键字详解：修饰变量、指针和函数" class="headerlink" title="C++ const 关键字详解：修饰变量、指针和函数"></a>C++ const 关键字详解：修饰变量、指针和函数</h4><p>在 C/C++ 中，const 是一个关键字，用于表示常量。</p>
+<p>const 可以用于修饰变量、函数、指针等，主要作用有以下几种：</p>
+<ol>
+<li><p>const 修饰变量</p>
+<ul>
+<li><p>当 const 修饰变量时，该变量将被视为只读变量，即不能被修改。</p>
+</li>
+<li><p>对于确定不会被修改的变量，应该加上 const，这样可以保证变量的值不会被无意中修改，也可以使编译器在代码优化时更加智能。</p>
+</li>
+</ul>
+ <figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line">a = <span class="number">20</span>; <span class="comment">// 编译错误，a 是只读变量，不能被修改</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p> 但是！！！请注意！！！<br></p>
+<p> 这里的变量只读，其实只是编译器层面的保证，实际上可以通过指针在运行时去间接修改这个变量的值，当然这个方法比较trick。<br></p>
+<p> 对 const int 类型取指针，就是  const int* 类型的指针，将其强制转换为 int* 类型，就去掉了 const 限制，从而修改变量的值。<br></p>
+<p> 在 C++ 中，将 const 类型的指针强制转换为非 const 类型的指针被称为类型强制转换（Type Casting），这种行为称为 const_cast。<br></p>
+<p> 关于 const_cast 可以看下这篇文章: C++几种类型转换的区别<br></p>
+<p> 虽然可以这样操作，但这违反了 const 的语义，可能会导致程序崩溃或者产生未定义行为(undefined behavior)。<br></p>
+<p> 因为编译器可能会做一些优化！！也就是在你用到 const 变量的地方，编译器可能生成的代码直接就替换为常量的值，而不是访问一遍常量的指令。<br></p>
+<p> 所以极大可能你虽然修改了值，但是却不起作用！<br></p>
+<p> 下面👇这个例子，展示了使用 const_cast 修改 const 变量的值却不会起作用：<br> </p><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span>* p = &amp;a;</span><br><span class="line"><span class="type">int</span>* q = <span class="built_in">const_cast</span>&lt;<span class="type">int</span>*&gt;(p);</span><br><span class="line">*q = <span class="number">20</span>;  <span class="comment">// 通过指针间接修改 const 变量的值</span></span><br><span class="line">std::cout &lt;&lt; <span class="string">"a = "</span> &lt;&lt; a &lt;&lt; std::endl;  <span class="comment">// 输出 a 的值，结果为 10</span></span><br></pre></td></tr></tbody></table></figure><br> 在上面的例子中，将 p 声明为 const int* 类型，指向只读变量 a 的地址。<br><p></p>
+<p> 然后使用 const_cast 将 p 强制转换为  int* 类型的指针 q，从而去掉了 const 限制。<br></p>
+<p> 接下来，通过指针 q 间接修改了变量 a 的值。<br></p>
+<p> 但是请注意，即使 a 的值被修改了，但在程序中输出 a 的值仍然是 10，<br></p>
+<p> 正如前面所有，因为 a 是只读变量，所以编译器做了优化，早就把代码实际替换为了👇下面这样:<br></p>
+<p> <code>std::cout &lt;&lt; "a = " &lt;&lt; 10 &lt;&lt; std::endl;</code><br></p>
+<p> 总之，使用 const_cast 去掉 const 限制是不推荐的，这会破坏程序的正确性和稳定性。<br></p>
+<p> 我们应该遵循 C/C++ 语言中 const 的语义，尽量不修改只读变量的值。</p>
+</li>
+<li><p>const 修饰函数参数，表示函数不会修改参数<br><br>当 const 修饰函数参数时，表示函数内部不会修改该参数的值。这样做可以使代码更加安全，避免在函数内部无意中修改传入的参数值。</p>
+</li>
+</ol>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">const</span> <span class="type">int</span> a)</span> </span>{</span><br><span class="line">    <span class="comment">// 编译错误，不能修改 a 的值</span></span><br><span class="line">    a = <span class="number">10</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+</body></html>
   </div>
   
   
@@ -2507,10 +2589,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2026-04-16T05:34:57+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2026-06-20T04:47:22+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2026年4月16日</p>
+    <p>更新于：2026年6月20日</p>
   </a>
 </div>
 
@@ -2518,6 +2600,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/c-%E5%AD%A6%E4%B9%A0/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>c++学习</p></a></div>
+  <span hidden itemprop="keywords">c++学习</span>
+
 
         
       
@@ -2586,6 +2672,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='/2026/06/25/VS-Code%E4%B8%AD%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8Codex%E6%95%99%E7%A8%8B%E5%8F%8A%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>VS Code 中直接使用 Codex 教程及连接失败解决方案</p>
+          <p class='content'>
+本文原发布于 CSDN：https://blog.csdn.net/Xi1yang/article/details/162315971
+版权声明：本文为博主原创文章，遵循 CC 4.0 BY-...</p>
+        </a>
+      
       
         <a class='next' href='/2025/10/11/2025-10-10/'>
           <p class='title'>Fri Oct 10 2025 08:00:00 GMT+0800 (中国标准时间)<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
@@ -2638,9 +2731,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#C-%E5%9F%BA%E7%A1%80%E7%AF%87"><span class="toc-text">C++基础篇</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#C-C-%E4%B8%AD%E7%9A%84sizeof%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">C&#x2F;C++中的sizeof关键字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-C-sizeof-%E5%92%8C-strlen-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">C&#x2F;C++ sizeof 和 strlen 的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-C-%E4%B8%AD%E6%95%B0%E7%BB%84%E5%81%9A%E5%8F%82%E6%95%B0%E9%80%80%E5%8C%96%E4%B8%BA%E6%8C%87%E9%92%88"><span class="toc-text">C&#x2F;C++中数组做参数退化为指针</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#C-const-%E5%85%B3%E9%94%AE%E5%AD%97%E8%AF%A6%E8%A7%A3%EF%BC%9A%E4%BF%AE%E9%A5%B0%E5%8F%98%E9%87%8F%E3%80%81%E6%8C%87%E9%92%88%E5%92%8C%E5%87%BD%E6%95%B0"><span class="toc-text">C++ const 关键字详解：修饰变量、指针和函数</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
   
 
@@ -3587,7 +3690,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Dawnqi's Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2026/04/16/C-学习指南/","name":"C++学习指南"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Dawnqi's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"C++学习指南","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2026/04/16/C-%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/"},"author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2026/04/16/C-%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/","wordCount":0,"datePublished":"2026-04-15T21:34:57.000Z","dateModified":"2026-04-15T21:34:57.019Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Dawnqi's Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2026/04/16/C-学习指南/","name":"C++学习指南"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Dawnqi's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"C++学习指南","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2026/04/16/C-%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/"},"author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2026/04/16/C-%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/","wordCount":0,"datePublished":"2026-04-15T21:34:57.000Z","dateModified":"2026-06-19T20:47:22.205Z","keywords":"c++学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
