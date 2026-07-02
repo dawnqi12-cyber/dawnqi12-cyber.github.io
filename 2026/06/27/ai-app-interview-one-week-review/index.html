@@ -43,7 +43,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-06-27T02:00:00.000Z">
-<meta property="article:modified_time" content="2026-06-27T07:34:59.014Z">
+<meta property="article:modified_time" content="2026-07-02T15:19:41.385Z">
 <meta property="article:author" content="Dawnqi">
 <meta property="article:tag" content="AI应用开发">
 <meta property="article:tag" content="复习">
@@ -1629,7 +1629,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1782746321911),
+    lastupdate: new Date(1783005761824),
     sidebar: {
       for_page: ["blogger","category","tagcloud","qrcode","webinfo","lastupdate","repos"],
       for_post: ["toc"],
@@ -2543,7 +2543,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>这些项目目前更偏个人项目和工程化 Demo，但我不是只停留在 prompt 调用，而是重点补了状态管理、工具封装、数据库持久化、API 接口、测试和部署排障。我也清楚自己生产级经验还需要加强，所以准备面试时重点补了数据库、并发、缓存、消息队列和工程部署这些基础。</p>
 </blockquote>
 <hr>
-<h2 id="2-自我介绍模板"><a href="#2-自我介绍模板" class="headerlink" title="2. 自我介绍模板"></a>2. 自我介绍模板</h2><h3 id="2-1-2-分钟版本"><a href="#2-1-2-分钟版本" class="headerlink" title="2.1 2 分钟版本"></a>2.1 2 分钟版本</h3><p>面试官您好，我叫齐黎明，本科是网络工程，硕士是计算机技术。我的技术方向主要是 AI 应用开发，平时使用 Python、FastAPI、SQLAlchemy、LangGraph、LangChain、OpenAI API 等技术做 Agent 和 RAG 类应用。</p>
+<h2 id="2-自我介绍模板"><a href="#2-自我介绍模板" class="headerlink" title="2. 自我介绍模板"></a>2. 自我介绍模板</h2><h3 id="2-1-2-分钟版本"><a href="#2-1-2-分钟版本" class="headerlink" title="2.1 2 分钟版本"></a>2.1 2 分钟版本</h3><p>面试官您好，我叫亓黎明，本科是网络工程，硕士是计算机技术。我的技术方向主要是 AI 应用开发，平时使用 Python、FastAPI、SQLAlchemy、LangGraph、LangChain、OpenAI API 等技术做 Agent 和 RAG 类应用。</p>
 <p>我有两段比较相关的经历。第一段是在医疗科技公司做 Python 研发实习，参与过病理切片标注相关预研，用 OpenSlide 做大图读取和缩放浏览，也参与过医院 HIS 系统数据互通和数据可视化工作。第二段是在银行做金融业务运营，虽然岗位偏业务，但我接触了企业客户 API 对接、供应链金融产品逻辑，也用 SQL 做过交易数据清洗、对账和异常监控看板，把原来 2 小时的人工核销缩短到 20 分钟左右。</p>
 <p>最近我重点做了两个 AI 应用项目。一个是 RestaurantOps Agent，用 LangGraph 把餐饮运营里的需求解析、菜单规划、预算校验、库存校验、采购单生成、人工审批和报告导出串成一个多节点 Agent 工作流，并用 FastAPI、SQLAlchemy、SQLite、Streamlit 和 pytest 做了完整工程闭环。另一个是多模态 RAG 知识库问答系统，围绕 PDF、Markdown、图片等知识源，实践了文档解析、OCR/VLM、Embedding、Chroma、BM25、RAGAS 评估和离线部署排障。</p>
 <p>我目前希望找 AI 应用开发岗位，特别是 Agent、RAG、多模态知识库或者行业 AI 应用落地方向。我知道自己还属于初级阶段，但我学习速度比较快，也愿意在初创团队里承担从 Demo 到可用产品的工程实现工作。</p>
@@ -2737,11 +2737,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>System prompt 用来定义模型角色、行为边界、输出格式和禁止事项。它的优先级通常高于用户输入。</p>
 <p>高频考点：</p>
 <ul>
-<li>system prompt 和 user prompt 的区别是什么？</li>
-<li>如何让模型稳定输出 JSON？</li>
-<li>如何减少幻觉？</li>
+<li>system prompt 和 user prompt 的区别是什么？<blockquote>
+<p>System Prompt 负责“定规矩”（如“始终输出JSON”），User Prompt 负责“给素材”（如“处理这段文本”）。当两者冲突时，主流模型（如GPT-4、Claude）会优先遵循 System Prompt 的约束。</p>
+</blockquote>
+</li>
+<li>如何让模型稳定输出 JSON？<blockquote>
+<p>使用模型的 Structured Output（结构化输出） 或 JSON Mode,如果不支持原生模式，在 System Prompt 中写入铁律,在 User Prompt 末尾加上 “请直接返回：{”。模型看到左大括号后，续写的概率极高，能有效避免模型先输出“好的，这是您的JSON：”这类废话。</p>
+</blockquote>
+</li>
+<li>如何减少幻觉？<blockquote>
+<p>RAG（检索增强生成）优先;强制引用与不确定声明：在 System Prompt 中加入：“对于你无法确定的信息，必须直接回答‘根据现有资料无法确认’。如果引用了外部知识，请标注其来源位置。”思维链（CoT）与自我核查：要求模型 “先列出推理依据，再给出最终结论”。虽然这会增加Token消耗，但能迫使模型在逻辑上自洽。更进一步，可以要求模型在输出最终答案前，先在心里（或草稿中）自查一遍：“我生成的数字、人名、日期是否都在给定的上下文中出现过？”降低温度参数：将 Temperature 设置在 0.1~0.3 之间，Top-P 设为 0.9 左右。较高的温度（如0.8）会让模型“更有创意”，但也更容易编造细节。<br>参考回答：</p>
+</blockquote>
+</li>
 </ul>
-<p>参考回答：</p>
 <blockquote>
 <p>system prompt 更像系统规则，用来告诉模型角色、任务边界和输出要求；user prompt 是用户本轮具体问题。比如在我的菜单生成项目里，system prompt 会规定模型必须基于菜品库和库存数据生成菜单，不能编造不存在的菜品；user prompt 才是用户输入的预算、人数和偏好。</p>
 </blockquote>
@@ -2798,15 +2806,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="6-FastAPI-基础"><a href="#6-FastAPI-基础" class="headerlink" title="6. FastAPI 基础"></a>6. FastAPI 基础</h2><h3 id="6-1-FastAPI-是什么"><a href="#6-1-FastAPI-是什么" class="headerlink" title="6.1 FastAPI 是什么"></a>6.1 FastAPI 是什么</h3><p>FastAPI 是 Python Web 框架，适合构建 API 服务。它基于类型注解和 Pydantic 做参数校验，自动生成 OpenAPI 文档。</p>
 <p>高频考点：</p>
 <ul>
-<li>FastAPI 和 Flask 有什么区别？</li>
-<li>请求参数如何校验？</li>
-<li>如何处理异常？</li>
+<li>FastAPI 和 Flask 有什么区别？<blockquote>
+<p>Flask 像一个灵活的“瑞士军刀”，简单、自由，适合小型项目、原型开发或同步逻辑为主的场景; FastAPI 则像一把高性能的“现代激光剑”，为现代API而生，自带验证和文档，适合需要高并发、异步处理的大型项目或微服务。</p>
+</blockquote>
+</li>
+<li>请求参数如何校验？<blockquote>
+<p>FastAPI自动校验，声明式、自动化（强烈推荐）；Flask手动校验，Flask 本身不提供任何数据验证工具。你需要手动从 request 对象中获取数据，然后逐一检查。</p>
+</blockquote>
+</li>
+<li>如何处理异常？<blockquote>
+<p>在FastAPI中，异常就是响应，你通过 raise 一个异常来返回错误；而在Flask中，你更多是通过返回一个带有错误码的响应来告知客户端出错了。</p>
+</blockquote>
+</li>
 </ul>
 <p>参考回答：</p>
 <blockquote>
 <p>FastAPI 的优势是类型注解、Pydantic 校验、自动生成接口文档，并且支持异步。在我的 Agent 项目中，我用 FastAPI 封装菜单生成、方案查询、审批和菜品库查询接口，让前端 Streamlit 或其他客户端可以调用后端 Agent 服务。</p>
 </blockquote>
-<h3 id="6-2-REST-API-设计"><a href="#6-2-REST-API-设计" class="headerlink" title="6.2 REST API 设计"></a>6.2 REST API 设计</h3><p>你的项目可以这样设计接口：</p>
+<h3 id="6-2-REST-API-设计"><a href="#6-2-REST-API-设计" class="headerlink" title="6.2 REST API 设计"></a>6.2 REST API 设计</h3><blockquote>
+<p>REST API 是一种基于 HTTP 协议的应用程序编程接口，它遵循 REST（表述性状态转移） 架构风格。简单说，它就是一套互联网上机器之间通信的“通用语言”，让不同系统（如手机 App、网页、服务器）能通过互联网互相交换数据。</p>
+</blockquote>
+<p>你的项目可以这样设计接口：</p>
 <ul>
 <li>POST /menu-plans：创建菜单方案。</li>
 <li>GET /menu-plans/{id}：查询菜单方案。</li>
@@ -2826,14 +2846,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 <h3 id="6-3-同步和异步"><a href="#6-3-同步和异步" class="headerlink" title="6.3 同步和异步"></a>6.3 同步和异步</h3><p>基础原理：</p>
 <ul>
-<li>同步：请求处理过程中阻塞等待。</li>
-<li>异步：遇到 IO 操作时释放执行权，提高并发处理能力。</li>
-</ul>
-<p>高频考点：</p>
-<ul>
-<li>async/await 适合什么场景？</li>
-<li>CPU 密集型任务适合异步吗？</li>
-<li>大模型调用适合异步吗？</li>
+<li><p>同步：请求处理过程中阻塞等待。</p>
+</li>
+<li><p>异步：遇到 IO 操作时释放执行权，提高并发处理能力。</p>
+<blockquote>
+<p>同步：你发起一个任务，必须原地等待它完成，才能接着做下一件事。期间你被“卡住”了（阻塞）。异步：你发起一个任务，不用等它完成，立刻去干下一件事。等那个任务在后台做好了，再通过通知或回调来告诉你结果（非阻塞）。<br>高频考点：</p>
+</blockquote>
+</li>
+<li><p>async/await 适合什么场景？</p>
+</li>
+<li><p>CPU 密集型任务适合异步吗？</p>
+</li>
+<li><p>大模型调用适合异步吗？</p>
+</li>
 </ul>
 <p>参考回答：</p>
 <blockquote>
@@ -2843,9 +2868,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="7-Pydantic-基础"><a href="#7-Pydantic-基础" class="headerlink" title="7. Pydantic 基础"></a>7. Pydantic 基础</h2><h3 id="7-1-Pydantic-是什么"><a href="#7-1-Pydantic-是什么" class="headerlink" title="7.1 Pydantic 是什么"></a>7.1 Pydantic 是什么</h3><p>Pydantic 是 Python 数据校验库，可以用类型注解定义数据模型，对输入输出进行校验和转换。</p>
 <p>高频考点：</p>
 <ul>
-<li>Pydantic 在 FastAPI 中有什么作用？</li>
-<li>BaseModel 是什么？</li>
-<li>参数校验失败会怎样？</li>
+<li>Pydantic 在 FastAPI 中有什么作用？<blockquote>
+<p>1.运行时数据校验：Python的类型注解（Type Hints）在运行时会被忽略。Pydantic补上了这个缺口，它能根据你定义的模型，在程序运行时自动检查数据。如果传入的数据类型不对（比如把字符串”abc”传给一个期望是int的字段），Pydantic会立即报错，防止错误数据污染你的业务逻辑。2.自动数据转换与解析：Pydantic不仅能校验，还能聪明地转换数据。例如，你定义了字段类型为datetime，客户端传入”2024-01-15T09:00:00”这个字符串，Pydantic会自动将其解析成Python的datetime对象，让你直接使用。3.自动生成API文档：FastAPI会读取你定义的Pydantic模型，自动为你的API生成清晰、交互式的文档（Swagger UI）。</p>
+</blockquote>
+</li>
+<li>BaseModel 是什么？<blockquote>
+<p>BaseModel是Pydantic库中所有数据模型的父类。你可以通过继承它来定义自己的数据模型</p>
+</blockquote>
+</li>
+<li>参数校验失败会怎样？<blockquote>
+<p>当客户端发送的数据不符合模型定义时，FastAPI会自动处理并返回一个标准错误响应。</p>
+</blockquote>
+</li>
 </ul>
 <p>参考回答：</p>
 <blockquote>
@@ -2866,11 +2900,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="8-SQLAlchemy-与-ORM-基础"><a href="#8-SQLAlchemy-与-ORM-基础" class="headerlink" title="8. SQLAlchemy 与 ORM 基础"></a>8. SQLAlchemy 与 ORM 基础</h2><h3 id="8-1-ORM-是什么"><a href="#8-1-ORM-是什么" class="headerlink" title="8.1 ORM 是什么"></a>8.1 ORM 是什么</h3><p>ORM 是 Object-Relational Mapping，对象关系映射。它把数据库表映射成 Python 类，把记录映射成对象。</p>
 <p>高频考点：</p>
 <ul>
-<li>ORM 和手写 SQL 的区别？</li>
-<li>SQLAlchemy Session 是什么？</li>
-<li>ORM 会不会影响性能？</li>
+<li>ORM 和手写 SQL 的区别？<blockquote>
+<p>ORM操作 Python 对象（类实例）。开发效率极高，增删改查（CRUD）只需几行代码，自动处理防注入（SQL Injection）。但是灵活性受限</p>
+</blockquote>
+</li>
+<li>SQLAlchemy Session 是什么？<blockquote>
+<p>Session 是一个“购物车”或“工作区</p>
+</blockquote>
+</li>
+<li>ORM 会不会影响性能？<blockquote>
+<p>答案是：会，而且是把“双刃剑”——用错了慢十倍，用对了反而比手写更快。对象实例化开销和经典的 N+1 查询<br>参考回答：</p>
+</blockquote>
+</li>
 </ul>
-<p>参考回答：</p>
 <blockquote>
 <p>ORM 的好处是可以用对象方式操作数据库，开发效率高，也更容易维护表关系。缺点是复杂查询可能不如手写 SQL 直观，性能问题也更容易被隐藏。所以简单增删改查和表关系我会用 ORM，复杂统计和性能敏感查询可以写原生 SQL。</p>
 </blockquote>
@@ -2899,18 +2941,32 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>事务保证一组数据库操作要么全部成功，要么全部失败。</p>
 <p>ACID：</p>
 <ul>
-<li>Atomicity：原子性。</li>
-<li>Consistency：一致性。</li>
-<li>Isolation：隔离性。</li>
-<li>Durability：持久性。</li>
+<li>Atomicity：原子性。<blockquote>
+<p>事务是不可分割的最小工作单元。</p>
+</blockquote>
+</li>
+<li>Consistency：一致性。<blockquote>
+<p>事务结束后，数据库必须从一个正确的状态变到另一个正确的状态。</p>
+</blockquote>
+</li>
+<li>Isolation：隔离性。<blockquote>
+<p>多个事务并发执行时，彼此互不干扰。</p>
+</blockquote>
+</li>
+<li>Durability：持久性。<blockquote>
+<p>事务一旦提交，数据修改就是永久性的，即使系统宕机也不丢失。</p>
+</blockquote>
+</li>
 </ul>
 <p>高频考点：</p>
 <ul>
 <li>为什么审批采购单需要事务？</li>
 <li>并发更新库存有什么问题？</li>
-<li>脏读、不可重复读、幻读是什么？</li>
+<li>脏读、不可重复读、幻读是什么？<blockquote>
+<p>脏读:事务A读到了事务B尚未提交（随后可能回滚）的修改数据。<br>不可重复读:在同一个事务A内，两次读取同一条记录，因为事务B在此期间修改并提交了该记录，导致两次读到的值不一样。<br>幻读:在同一个事务A内，两次执行相同的查询条件（范围查询），因为事务B在此期间插入或删除了符合该条件的数据，导致两次返回的结果行数不一样。<br>参考回答：</p>
+</blockquote>
+</li>
 </ul>
-<p>参考回答：</p>
 <blockquote>
 <p>采购单审批和库存更新应该放在事务里。因为审批通过后可能要同时更新采购单状态、库存占用和日志记录，如果中间一步失败，就需要回滚，避免出现采购单已通过但库存没更新的情况。</p>
 </blockquote>
@@ -2918,9 +2974,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>索引是数据库为了加快查询建立的数据结构，常见是 B+ 树。</p>
 <p>高频考点：</p>
 <ul>
-<li>索引为什么能加快查询？</li>
-<li>什么字段适合建索引？</li>
-<li>索引有什么缺点？</li>
+<li>索引为什么能加快查询？<blockquote>
+<p>索引的本质是数据结构（MySQL InnoDB默认为 B+树），它把随机磁盘I/O变成了有序数据的快速路径查找。</p>
+</blockquote>
+</li>
+<li>什么字段适合建索引？<blockquote>
+<p>联合索引时，把区分度最高的字段放在最左边（遵循最左前缀原则），查询效率最高</p>
+</blockquote>
+</li>
+<li>索引有什么缺点？<blockquote>
+<p>物理空间占用：索引是独立于数据的物理文件。每多建一个索引，就多占用磁盘空间。如果一张表有5~6个联合索引，索引体积可能远超数据本身;写性能大幅下降：这是最致命的代价。;可能导致优化器误判</p>
+</blockquote>
+</li>
 </ul>
 <p>参考回答：</p>
 <blockquote>
@@ -3046,10 +3111,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="12-Docker-基础"><a href="#12-Docker-基础" class="headerlink" title="12. Docker 基础"></a>12. Docker 基础</h2><h3 id="12-1-Docker-是什么"><a href="#12-1-Docker-是什么" class="headerlink" title="12.1 Docker 是什么"></a>12.1 Docker 是什么</h3><p>Docker 是容器化技术，可以把应用、依赖、运行环境打包在一起，保证不同机器上运行环境一致。</p>
 <p>高频考点：</p>
 <ul>
-<li>Docker 和虚拟机区别？</li>
-<li>Dockerfile 是什么？</li>
+<li>Docker 和虚拟机区别？<blockquote>
+<p>最本质的区别在于“共享宿主内核” vs “独立内核”。这导致了它们在资源利用和启动速度上的天壤之别。虚拟机是“重装了一套系统”，而Docker是“给应用程序套了一个独立的运行环境（沙箱）”。</p>
+</blockquote>
+</li>
+<li>Dockerfile 是什么？<blockquote>
+<p>Dockerfile 是一个纯文本文件，里面包含了一系列指令和参数。Docker引擎会按顺序逐行执行这些指令，最终自动构建出一个Docker镜像。你可以把它想象成一道菜的烹饪步骤说明书，里面写明了“用谁做底料（基础镜像）”、“放什么料（复制代码）”、“开多大火（暴露端口）”、“出锅后做什么（启动命令）”。</p>
+</blockquote>
+</li>
 <li>镜像和容器区别？</li>
 </ul>
+<p>镜像（Image） = 类（Class）<br>它是一个只读的静态模板，包含了运行某个应用所需的全部代码、运行时、库、环境变量和配置文件。<br>它是不可变的。你只能通过 Dockerfile 重新构建生成新镜像，而不能直接“修改”一个已存在的镜像（除非通过 commit，但那是脏操作，不推荐）。<br>容器（Container） = 对象实例（Object Instance）<br>它是镜像运行起来后的动态实体。<br>当Docker引擎基于某个镜像执行 docker run 时，会在该镜像的最顶层添加一个可读写层（Writeable Layer），然后启动进程。这个带上了读写层的、正在运行的东西，就是容器。<br>容器是有生命周期的（运行、暂停、停止、删除）。容器停止或被删除后，这个可读写层（即容器内产生的新数据）会默认被销毁（除非你挂载了数据卷 Volume）。</p>
 <p>参考回答：</p>
 <blockquote>
 <p>镜像是静态模板，容器是镜像运行起来的实例。Docker 比虚拟机更轻量，因为它共享宿主机内核。对于 AI 应用项目，Docker 可以解决 Python 依赖、系统库、服务启动方式不一致的问题。</p>
@@ -3143,10 +3215,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>死锁是多个线程或进程互相等待对方释放资源，导致都无法继续执行。</p>
 <p>四个条件：</p>
 <ul>
-<li>互斥。</li>
-<li>占有且等待。</li>
-<li>不可抢占。</li>
-<li>循环等待。</li>
+<li><h2 id="互斥。-资源不能被共享，一个资源同时只能被一个占用者持有。"><a href="#互斥。-资源不能被共享，一个资源同时只能被一个占用者持有。" class="headerlink" title="互斥。  - 资源不能被共享，一个资源同时只能被一个占用者持有。"></a>互斥。<br>  - 资源不能被共享，一个资源同时只能被一个占用者持有。</h2></li>
+<li>请求保持。<ul>
+<li>占着已有的资源不放，同时去申请新的资源。</li>
+<li>一次性申请所有资源（如Java的synchronized锁住整个方法，或MySQL中提前SELECT … FOR UPDATE一次性锁定所有需要的行）。缺点是并发度会下降。</li>
+</ul>
+</li>
+<li>不剥夺。<ul>
+<li>已分配的资源在未使用完之前，不能被强行剥夺，只能由持有者主动释放。</li>
+<li>引入超时机制（Timeout）。如果申请资源超时（如MySQL innodb_lock_wait_timeout参数），就主动释放已持有的资源，回滚并重试。</li>
+</ul>
+</li>
+<li>循环等待。<ul>
+<li>多个进程/事务形成一个首尾相接的环形等待链。</li>
+<li>按固定顺序申请资源（这是最常用的代码规范）。例如，更新多行数据时，强制所有事务都按 主键ID升序 加锁。这样所有事务都是先锁ID小，再锁ID大，永远不会形成环。</li>
+</ul>
+</li>
 </ul>
 <p>参考回答：</p>
 <blockquote>
@@ -3166,11 +3250,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <h3 id="16-2-哈希表"><a href="#16-2-哈希表" class="headerlink" title="16.2 哈希表"></a>16.2 哈希表</h3><p>高频考点：</p>
 <ul>
-<li>哈希冲突是什么？</li>
-<li>如何解决哈希冲突？</li>
-<li>字典为什么查询快？</li>
+<li>哈希冲突是什么？<blockquote>
+<p>不同的输入键（Key）经过哈希函数（Hash Function）计算后，得到了相同的数组索引位置（桶/Bucket），这时就发生了哈希冲突。</p>
+</blockquote>
+</li>
+<li>如何解决哈希冲突？<blockquote>
+<p>链地址法（Chaining）,开放寻址法（Open Addressing）,再哈希法（Re-hashing）</p>
+</blockquote>
+</li>
+<li>字典为什么查询快？<blockquote>
+<p>字典查询快的核心在于“一次计算，直接寻址”，而不是“逐个比较”。<br>参考回答：</p>
+</blockquote>
+</li>
 </ul>
-<p>参考回答：</p>
 <blockquote>
 <p>哈希表通过哈希函数把 key 映射到数组下标，所以平均查询复杂度接近 O(1)。哈希冲突是不同 key 映射到同一位置，常见解决方式有链地址法和开放寻址法。</p>
 </blockquote>
@@ -3183,11 +3275,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h3 id="17-1-PyTorch-是什么"><a href="#17-1-PyTorch-是什么" class="headerlink" title="17.1 PyTorch 是什么"></a>17.1 PyTorch 是什么</h3><p>PyTorch 是深度学习框架，常用于模型训练、推理和实验。</p>
 <p>高频考点：</p>
 <ul>
-<li>Tensor 是什么？</li>
+<li>Tensor 是什么？<blockquote>
+<p>Tensor 是深度学习框架（PyTorch/TensorFlow）中的核心数据结构，本质上是一个多维数组，是神经网络中所有数据流动的载体。</p>
+</blockquote>
+</li>
 <li>训练和推理区别？</li>
-<li>loss、optimizer、backpropagation 是什么？</li>
+<li>loss、optimizer、backpropagation 是什么？<blockquote>
+<p>Loss（损失函数） = “偏离篮筐的距离”。衡量模型的预测值（y_pred）和真实值（y_true）之间的差距。常见的有分类用的 CrossEntropyLoss（交叉熵）和回归用的 MSELoss（均方误差）。Backpropagation（反向传播） = “分析是手肘歪了还是手腕抖了”。利用微积分中的链式法则（Chain Rule），从输出层的 Loss 开始，从后往前逐层计算每一个权重（Weight）对 Loss 的偏导数（Gradient/梯度）。核心数学意义：告诉优化器，“如果要减小误差，每个旋钮（权重）应该往哪个方向拧（正/负），拧多大力度（梯度值）。”Optimizer（优化器） = “调整投篮姿势的动作”。拿着反向传播算出来的梯度，去更新模型的权重参数。常见的 SGD（随机梯度下降）就是“梯度乘以学习率”直接减去；而 Adam 则是加了动量和自适应学习率，让更新更平滑<br>参考回答：</p>
+</blockquote>
+</li>
 </ul>
-<p>参考回答：</p>
 <blockquote>
 <p>Tensor 是多维数组，是深度学习中的基本数据结构。训练阶段会根据 loss 反向传播更新模型参数，推理阶段只使用训练好的模型做预测，不再更新参数。</p>
 </blockquote>
@@ -3606,10 +3703,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2026-06-27T15:34:59+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2026-07-02T23:19:41+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2026年6月27日</p>
+    <p>更新于：2026年7月2日</p>
   </a>
 </div>
 
@@ -3762,7 +3859,7 @@ AI...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">0. 使用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BD%A0%E7%9A%84%E9%9D%A2%E8%AF%95%E5%AE%9A%E4%BD%8D"><span class="toc-text">1. 你的面试定位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%8E%A8%E8%8D%90%E5%AE%9A%E4%BD%8D"><span class="toc-text">1.1 推荐定位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E9%9D%A2%E8%AF%95%E5%AE%98%E5%8F%AF%E8%83%BD%E5%AF%B9%E4%BD%A0%E7%9A%84%E5%88%A4%E6%96%AD"><span class="toc-text">1.2 面试官可能对你的判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E4%BD%A0%E7%9A%84%E5%9B%9E%E7%AD%94%E7%AD%96%E7%95%A5"><span class="toc-text">1.3 你的回答策略</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D%E6%A8%A1%E6%9D%BF"><span class="toc-text">2. 自我介绍模板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-%E5%88%86%E9%92%9F%E7%89%88%E6%9C%AC"><span class="toc-text">2.1 2 分钟版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-30-%E7%A7%92%E7%89%88%E6%9C%AC"><span class="toc-text">2.2 30 秒版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%AE%80%E5%8E%86%E9%A1%B9%E7%9B%AE%E4%B8%80%EF%BC%9ARestaurantOps-Agent"><span class="toc-text">3. 简历项目一：RestaurantOps Agent</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E9%A1%B9%E7%9B%AE%E4%B8%80%E5%8F%A5%E8%AF%9D"><span class="toc-text">3.1 项目一句话</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84"><span class="toc-text">3.2 项目架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-STAR-%E8%AE%B2%E8%BF%B0%E6%A8%A1%E6%9D%BF"><span class="toc-text">3.3 STAR 讲述模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%8A%80%E6%9C%AF%E6%B7%B1%E6%8C%96%E5%9B%9E%E7%AD%94%E6%A8%A1%E6%9D%BF"><span class="toc-text">3.4 技术深挖回答模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E9%AB%98%E9%A2%91%E9%97%AE%E9%A2%98"><span class="toc-text">3.5 高频问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Q1%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8-LangGraph%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF-LangChain-%E6%99%AE%E9%80%9A-Chain%EF%BC%9F"><span class="toc-text">Q1：为什么用 LangGraph，而不是 LangChain 普通 Chain？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q2%EF%BC%9A%E4%BD%A0%E7%9A%84-State-%E9%87%8C%E6%9C%89%E5%93%AA%E4%BA%9B%E5%AD%97%E6%AE%B5%EF%BC%9F"><span class="toc-text">Q2：你的 State 里有哪些字段？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q3%EF%BC%9Ahuman-in-the-loop-%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%EF%BC%9F"><span class="toc-text">Q3：human-in-the-loop 怎么实现？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q4%EF%BC%9APydantic-%E5%B7%A5%E5%85%B7%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="toc-text">Q4：Pydantic 工具有什么作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q5%EF%BC%9A%E5%A6%82%E6%9E%9C%E5%B7%A5%E5%85%B7%E8%B0%83%E7%94%A8%E5%A4%B1%E8%B4%A5%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-text">Q5：如果工具调用失败怎么办？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%AE%80%E5%8E%86%E9%A1%B9%E7%9B%AE%E4%BA%8C%EF%BC%9A%E5%A4%9A%E6%A8%A1%E6%80%81-RAG-%E7%9F%A5%E8%AF%86%E5%BA%93%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F"><span class="toc-text">4. 简历项目二：多模态 RAG 知识库问答系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E9%A1%B9%E7%9B%AE%E4%B8%80%E5%8F%A5%E8%AF%9D"><span class="toc-text">4.1 项目一句话</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-RAG-%E5%9F%BA%E7%A1%80%E6%B5%81%E7%A8%8B"><span class="toc-text">4.2 RAG 基础流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-STAR-%E8%AE%B2%E8%BF%B0%E6%A8%A1%E6%9D%BF"><span class="toc-text">4.3 STAR 讲述模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E9%AB%98%E9%A2%91%E9%97%AE%E9%A2%98"><span class="toc-text">4.4 高频问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Q1%EF%BC%9ARAG-%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%9F"><span class="toc-text">Q1：RAG 解决什么问题？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q2%EF%BC%9Achunk-size-%E6%80%8E%E4%B9%88%E9%80%89%EF%BC%9F"><span class="toc-text">Q2：chunk size 怎么选？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q3%EF%BC%9ABM25-%E5%92%8C%E5%90%91%E9%87%8F%E6%A3%80%E7%B4%A2%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">Q3：BM25 和向量检索有什么区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q4%EF%BC%9ARAGAS-%E8%AF%84%E4%BC%B0%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">Q4：RAGAS 评估什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q5%EF%BC%9A%E5%A4%9A%E6%A8%A1%E6%80%81-RAG-%E4%B8%AD%E5%9B%BE%E7%89%87%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%EF%BC%9F"><span class="toc-text">Q5：多模态 RAG 中图片怎么处理？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-OpenAI-API-%E4%B8%8E%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80"><span class="toc-text">5. OpenAI API 与大模型应用基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-System-Prompt"><span class="toc-text">5.1 System Prompt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-Few-shot"><span class="toc-text">5.2 Few-shot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA"><span class="toc-text">5.3 结构化输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-Function-Calling-Tool-Calling"><span class="toc-text">5.4 Function Calling &#x2F; Tool Calling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-%E6%88%90%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="toc-text">5.5 成本控制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-FastAPI-%E5%9F%BA%E7%A1%80"><span class="toc-text">6. FastAPI 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-FastAPI-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">6.1 FastAPI 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-REST-API-%E8%AE%BE%E8%AE%A1"><span class="toc-text">6.2 REST API 设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5"><span class="toc-text">6.3 同步和异步</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Pydantic-%E5%9F%BA%E7%A1%80"><span class="toc-text">7. Pydantic 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-Pydantic-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">7.1 Pydantic 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E5%9C%A8-Agent-%E5%B7%A5%E5%85%B7%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">7.2 在 Agent 工具中的作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-SQLAlchemy-%E4%B8%8E-ORM-%E5%9F%BA%E7%A1%80"><span class="toc-text">8. SQLAlchemy 与 ORM 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-ORM-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">8.1 ORM 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E4%BD%A0%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%A1%A8%E8%AE%BE%E8%AE%A1"><span class="toc-text">8.2 你的项目表设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E4%BA%8B%E5%8A%A1"><span class="toc-text">8.3 事务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E7%B4%A2%E5%BC%95"><span class="toc-text">8.4 索引</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-SQLite-MySQL-%E5%9F%BA%E7%A1%80"><span class="toc-text">9. SQLite &#x2F; MySQL 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-SQLite"><span class="toc-text">9.1 SQLite</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-MySQL"><span class="toc-text">9.2 MySQL</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-Redis-%E5%9F%BA%E7%A1%80"><span class="toc-text">10. Redis 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-1-Redis-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">10.1 Redis 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2-%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9-1%EF%BC%9A%E7%BC%93%E5%AD%98"><span class="toc-text">10.2 高频考点 1：缓存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-3-%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9-2%EF%BC%9A%E6%8C%81%E4%B9%85%E5%8C%96"><span class="toc-text">10.3 高频考点 2：持久化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-4-%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9-3%EF%BC%9A%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81%E5%93%A8%E5%85%B5%E3%80%81%E9%9B%86%E7%BE%A4"><span class="toc-text">10.4 高频考点 3：主从复制、哨兵、集群</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-5-Redis-%E9%9D%A2%E8%AF%95%E5%9B%9E%E7%AD%94%E8%BE%B9%E7%95%8C"><span class="toc-text">10.5 Redis 面试回答边界</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-Kafka-%E5%9F%BA%E7%A1%80"><span class="toc-text">11. Kafka 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-Kafka-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">11.1 Kafka 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9-1%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97"><span class="toc-text">11.2 高频考点 1：为什么用消息队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-3-%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9-2%EF%BC%9ATopic%E3%80%81Partition%E3%80%81Consumer-Group"><span class="toc-text">11.3 高频考点 2：Topic、Partition、Consumer Group</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-4-%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9-3%EF%BC%9A%E5%8F%AF%E9%9D%A0%E6%80%A7%E4%BF%9D%E9%9A%9C"><span class="toc-text">11.4 高频考点 3：可靠性保障</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-Kafka-%E9%9D%A2%E8%AF%95%E5%9B%9E%E7%AD%94%E8%BE%B9%E7%95%8C"><span class="toc-text">11.5 Kafka 面试回答边界</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-Docker-%E5%9F%BA%E7%A1%80"><span class="toc-text">12. Docker 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#12-1-Docker-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">12.1 Docker 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-2-%E5%9C%A8%E4%BD%A0%E7%9A%84%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">12.2 在你的项目中的作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-pytest-%E4%B8%8E%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80"><span class="toc-text">13. pytest 与测试基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#13-1-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E6%B5%8B%E8%AF%95"><span class="toc-text">13.1 为什么要写测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-2-%E4%BD%A0%E5%8F%AF%E4%BB%A5%E5%87%86%E5%A4%87%E7%9A%84%E6%B5%8B%E8%AF%95%E4%BE%8B%E5%AD%90"><span class="toc-text">13.2 你可以准备的测试例子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-HTTP-HTTPS-TCP-IP-%E5%9F%BA%E7%A1%80"><span class="toc-text">14. HTTP &#x2F; HTTPS &#x2F; TCP&#x2F;IP 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#14-1-HTTP-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">14.1 HTTP 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-2-%E5%B8%B8%E8%A7%81%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-text">14.2 常见状态码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-3-TCP-%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B"><span class="toc-text">14.3 TCP 三次握手</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80"><span class="toc-text">15. 操作系统基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#15-1-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B"><span class="toc-text">15.1 进程和线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-2-%E6%AD%BB%E9%94%81"><span class="toc-text">15.2 死锁</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80"><span class="toc-text">16. 数据结构与算法基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#16-1-%E5%B8%B8%E8%A7%81%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">16.1 常见数据结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-2-%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="toc-text">16.2 哈希表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-3-%E5%9B%BE%E5%92%8C-Agent-%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%9A%84%E5%85%B3%E8%81%94"><span class="toc-text">16.3 图和 Agent 工作流的关联</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-PyTorch-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80"><span class="toc-text">17. PyTorch &#x2F; 计算机视觉基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#17-1-PyTorch-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">17.1 PyTorch 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-2-YOLO"><span class="toc-text">17.2 YOLO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-3-U-Net"><span class="toc-text">17.3 U-Net</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-OpenSlide-%E5%8C%BB%E7%96%97%E5%AE%9E%E4%B9%A0%E5%9F%BA%E7%A1%80"><span class="toc-text">18. OpenSlide &#x2F; 医疗实习基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#18-1-OpenSlide-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">18.1 OpenSlide 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18-2-HIS-%E7%B3%BB%E7%BB%9F%E6%95%B0%E6%8D%AE%E4%BA%92%E9%80%9A"><span class="toc-text">18.2 HIS 系统数据互通</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-%E9%93%B6%E8%A1%8C%E4%B8%9A%E5%8A%A1%E7%BB%8F%E5%8E%86%E5%9B%9E%E7%AD%94"><span class="toc-text">19. 银行业务经历回答</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#19-1-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BB%8E%E9%93%B6%E8%A1%8C%E8%BD%AC-AI-%E5%BC%80%E5%8F%91%EF%BC%9F"><span class="toc-text">19.1 为什么从银行转 AI 开发？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19-2-SQL-%E7%9C%8B%E6%9D%BF%E6%80%8E%E4%B9%88%E5%81%9A%EF%BC%9F"><span class="toc-text">19.2 SQL 看板怎么做？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-%E9%A3%8E%E9%99%A9%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94%E5%BA%93"><span class="toc-text">20. 风险问题回答库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Q1%EF%BC%9A%E4%BD%A0%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%98%AF%E4%B8%8D%E6%98%AF%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%EF%BC%9F"><span class="toc-text">Q1：你的项目是不是学习项目？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q2%EF%BC%9A%E4%BD%A0%E5%86%99%E2%80%9C%E7%86%9F%E6%82%89-Redis-Kafka%E2%80%9D%EF%BC%8C%E4%BD%86%E9%A1%B9%E7%9B%AE%E6%B2%A1%E4%BD%93%E7%8E%B0%EF%BC%8C%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-text">Q2：你写“熟悉 Redis&#x2F;Kafka”，但项目没体现，怎么办？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q3%EF%BC%9A%E4%BD%A0%E6%9B%B4%E5%81%8F%E7%AE%97%E6%B3%95%E8%BF%98%E6%98%AF%E5%B7%A5%E7%A8%8B%EF%BC%9F"><span class="toc-text">Q3：你更偏算法还是工程？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q4%EF%BC%9A%E4%BD%A0%E5%9F%BA%E7%A1%80%E8%96%84%E5%BC%B1%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-text">Q4：你基础薄弱怎么办？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-%E9%AB%98%E9%A2%91%E5%9F%BA%E7%A1%80%E9%97%AE%E7%AD%94%E9%80%9F%E8%AE%B0"><span class="toc-text">21. 高频基础问答速记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#21-1-%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">21.1 数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-2-Redis"><span class="toc-text">21.2 Redis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-3-Kafka"><span class="toc-text">21.3 Kafka</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-4-HTTP"><span class="toc-text">21.4 HTTP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-5-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-text">21.5 操作系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-%E4%B8%80%E5%91%A8%E5%A4%8D%E4%B9%A0%E8%AE%A1%E5%88%92"><span class="toc-text">22. 一周复习计划</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Day-1%EF%BC%9A%E7%AE%80%E5%8E%86%E4%B8%BB%E7%BA%BF%E5%92%8C%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D"><span class="toc-text">Day 1：简历主线和自我介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Day-2%EF%BC%9ARestaurantOps-Agent"><span class="toc-text">Day 2：RestaurantOps Agent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Day-3%EF%BC%9AFastAPI-SQLAlchemy-%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">Day 3：FastAPI + SQLAlchemy + 数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Day-4%EF%BC%9A%E5%A4%9A%E6%A8%A1%E6%80%81-RAG"><span class="toc-text">Day 4：多模态 RAG</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Day-5%EF%BC%9AOpenAI-API-%E5%92%8C-Prompt-%E5%B7%A5%E7%A8%8B"><span class="toc-text">Day 5：OpenAI API 和 Prompt 工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Day-6%EF%BC%9ARedis-Kafka-%E7%BD%91%E7%BB%9C-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-text">Day 6：Redis &#x2F; Kafka &#x2F; 网络 &#x2F; 操作系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Day-7%EF%BC%9A%E5%85%A8%E7%9C%9F%E6%A8%A1%E6%8B%9F"><span class="toc-text">Day 7：全真模拟</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-%E5%85%A8%E7%9C%9F%E6%A8%A1%E6%8B%9F%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-text">23. 全真模拟面试题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%BB%84%EF%BC%9A%E7%AE%80%E5%8E%86%E5%92%8C%E5%8A%A8%E6%9C%BA"><span class="toc-text">第一组：简历和动机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%BB%84%EF%BC%9AAgent-%E9%A1%B9%E7%9B%AE"><span class="toc-text">第二组：Agent 项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%BB%84%EF%BC%9ARAG-%E9%A1%B9%E7%9B%AE"><span class="toc-text">第三组：RAG 项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%BB%84%EF%BC%9A%E5%90%8E%E7%AB%AF%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">第四组：后端和数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%BB%84%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6"><span class="toc-text">第五组：基础组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%BB%84%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80"><span class="toc-text">第六组：计算机基础</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-%E9%9D%A2%E8%AF%95%E8%A1%A8%E8%BE%BE%E5%8E%9F%E5%88%99"><span class="toc-text">24. 面试表达原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#24-1-%E4%B8%8D%E8%A6%81%E7%A1%AC%E8%A3%85%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C"><span class="toc-text">24.1 不要硬装生产经验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24-2-%E4%B8%8D%E8%A6%81%E5%8F%AA%E8%AF%B4%E5%90%8D%E8%AF%8D"><span class="toc-text">24.2 不要只说名词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24-3-%E6%AF%8F%E4%B8%AA%E6%8A%80%E6%9C%AF%E7%82%B9%E9%83%BD%E8%A6%81%E8%90%BD%E5%88%B0%E9%A1%B9%E7%9B%AE"><span class="toc-text">24.3 每个技术点都要落到项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24-4-%E5%9B%9E%E7%AD%94%E4%B8%8D%E4%BC%9A%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">24.4 回答不会的问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-%E6%9C%80%E5%90%8E%E5%86%B2%E5%88%BA%E8%83%8C%E8%AF%B5%E6%B8%85%E5%8D%95"><span class="toc-text">25. 最后冲刺背诵清单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-%E4%BD%A0%E7%9A%84%E6%A0%B8%E5%BF%83%E9%9D%A2%E8%AF%95%E7%AD%96%E7%95%A5"><span class="toc-text">26. 你的核心面试策略</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">0. 使用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BD%A0%E7%9A%84%E9%9D%A2%E8%AF%95%E5%AE%9A%E4%BD%8D"><span class="toc-text">1. 你的面试定位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%8E%A8%E8%8D%90%E5%AE%9A%E4%BD%8D"><span class="toc-text">1.1 推荐定位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E9%9D%A2%E8%AF%95%E5%AE%98%E5%8F%AF%E8%83%BD%E5%AF%B9%E4%BD%A0%E7%9A%84%E5%88%A4%E6%96%AD"><span class="toc-text">1.2 面试官可能对你的判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E4%BD%A0%E7%9A%84%E5%9B%9E%E7%AD%94%E7%AD%96%E7%95%A5"><span class="toc-text">1.3 你的回答策略</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D%E6%A8%A1%E6%9D%BF"><span class="toc-text">2. 自我介绍模板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-%E5%88%86%E9%92%9F%E7%89%88%E6%9C%AC"><span class="toc-text">2.1 2 分钟版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-30-%E7%A7%92%E7%89%88%E6%9C%AC"><span class="toc-text">2.2 30 秒版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%AE%80%E5%8E%86%E9%A1%B9%E7%9B%AE%E4%B8%80%EF%BC%9ARestaurantOps-Agent"><span class="toc-text">3. 简历项目一：RestaurantOps Agent</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E9%A1%B9%E7%9B%AE%E4%B8%80%E5%8F%A5%E8%AF%9D"><span class="toc-text">3.1 项目一句话</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84"><span class="toc-text">3.2 项目架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-STAR-%E8%AE%B2%E8%BF%B0%E6%A8%A1%E6%9D%BF"><span class="toc-text">3.3 STAR 讲述模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E6%8A%80%E6%9C%AF%E6%B7%B1%E6%8C%96%E5%9B%9E%E7%AD%94%E6%A8%A1%E6%9D%BF"><span class="toc-text">3.4 技术深挖回答模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E9%AB%98%E9%A2%91%E9%97%AE%E9%A2%98"><span class="toc-text">3.5 高频问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Q1%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8-LangGraph%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF-LangChain-%E6%99%AE%E9%80%9A-Chain%EF%BC%9F"><span class="toc-text">Q1：为什么用 LangGraph，而不是 LangChain 普通 Chain？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q2%EF%BC%9A%E4%BD%A0%E7%9A%84-State-%E9%87%8C%E6%9C%89%E5%93%AA%E4%BA%9B%E5%AD%97%E6%AE%B5%EF%BC%9F"><span class="toc-text">Q2：你的 State 里有哪些字段？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q3%EF%BC%9Ahuman-in-the-loop-%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%EF%BC%9F"><span class="toc-text">Q3：human-in-the-loop 怎么实现？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q4%EF%BC%9APydantic-%E5%B7%A5%E5%85%B7%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="toc-text">Q4：Pydantic 工具有什么作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q5%EF%BC%9A%E5%A6%82%E6%9E%9C%E5%B7%A5%E5%85%B7%E8%B0%83%E7%94%A8%E5%A4%B1%E8%B4%A5%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-text">Q5：如果工具调用失败怎么办？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%AE%80%E5%8E%86%E9%A1%B9%E7%9B%AE%E4%BA%8C%EF%BC%9A%E5%A4%9A%E6%A8%A1%E6%80%81-RAG-%E7%9F%A5%E8%AF%86%E5%BA%93%E9%97%AE%E7%AD%94%E7%B3%BB%E7%BB%9F"><span class="toc-text">4. 简历项目二：多模态 RAG 知识库问答系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E9%A1%B9%E7%9B%AE%E4%B8%80%E5%8F%A5%E8%AF%9D"><span class="toc-text">4.1 项目一句话</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-RAG-%E5%9F%BA%E7%A1%80%E6%B5%81%E7%A8%8B"><span class="toc-text">4.2 RAG 基础流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-STAR-%E8%AE%B2%E8%BF%B0%E6%A8%A1%E6%9D%BF"><span class="toc-text">4.3 STAR 讲述模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E9%AB%98%E9%A2%91%E9%97%AE%E9%A2%98"><span class="toc-text">4.4 高频问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Q1%EF%BC%9ARAG-%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%9F"><span class="toc-text">Q1：RAG 解决什么问题？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q2%EF%BC%9Achunk-size-%E6%80%8E%E4%B9%88%E9%80%89%EF%BC%9F"><span class="toc-text">Q2：chunk size 怎么选？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q3%EF%BC%9ABM25-%E5%92%8C%E5%90%91%E9%87%8F%E6%A3%80%E7%B4%A2%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">Q3：BM25 和向量检索有什么区别？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q4%EF%BC%9ARAGAS-%E8%AF%84%E4%BC%B0%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">Q4：RAGAS 评估什么？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Q5%EF%BC%9A%E5%A4%9A%E6%A8%A1%E6%80%81-RAG-%E4%B8%AD%E5%9B%BE%E7%89%87%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%EF%BC%9F"><span class="toc-text">Q5：多模态 RAG 中图片怎么处理？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-OpenAI-API-%E4%B8%8E%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80"><span class="toc-text">5. OpenAI API 与大模型应用基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-System-Prompt"><span class="toc-text">5.1 System Prompt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-Few-shot"><span class="toc-text">5.2 Few-shot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA"><span class="toc-text">5.3 结构化输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-Function-Calling-Tool-Calling"><span class="toc-text">5.4 Function Calling &#x2F; Tool Calling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-%E6%88%90%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="toc-text">5.5 成本控制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-FastAPI-%E5%9F%BA%E7%A1%80"><span class="toc-text">6. FastAPI 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-FastAPI-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">6.1 FastAPI 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-REST-API-%E8%AE%BE%E8%AE%A1"><span class="toc-text">6.2 REST API 设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5"><span class="toc-text">6.3 同步和异步</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Pydantic-%E5%9F%BA%E7%A1%80"><span class="toc-text">7. Pydantic 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-Pydantic-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">7.1 Pydantic 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E5%9C%A8-Agent-%E5%B7%A5%E5%85%B7%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">7.2 在 Agent 工具中的作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-SQLAlchemy-%E4%B8%8E-ORM-%E5%9F%BA%E7%A1%80"><span class="toc-text">8. SQLAlchemy 与 ORM 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-ORM-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">8.1 ORM 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E4%BD%A0%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%A1%A8%E8%AE%BE%E8%AE%A1"><span class="toc-text">8.2 你的项目表设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E4%BA%8B%E5%8A%A1"><span class="toc-text">8.3 事务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E7%B4%A2%E5%BC%95"><span class="toc-text">8.4 索引</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-SQLite-MySQL-%E5%9F%BA%E7%A1%80"><span class="toc-text">9. SQLite &#x2F; MySQL 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-SQLite"><span class="toc-text">9.1 SQLite</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-MySQL"><span class="toc-text">9.2 MySQL</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-Redis-%E5%9F%BA%E7%A1%80"><span class="toc-text">10. Redis 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-1-Redis-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">10.1 Redis 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2-%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9-1%EF%BC%9A%E7%BC%93%E5%AD%98"><span class="toc-text">10.2 高频考点 1：缓存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-3-%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9-2%EF%BC%9A%E6%8C%81%E4%B9%85%E5%8C%96"><span class="toc-text">10.3 高频考点 2：持久化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-4-%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9-3%EF%BC%9A%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E3%80%81%E5%93%A8%E5%85%B5%E3%80%81%E9%9B%86%E7%BE%A4"><span class="toc-text">10.4 高频考点 3：主从复制、哨兵、集群</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-5-Redis-%E9%9D%A2%E8%AF%95%E5%9B%9E%E7%AD%94%E8%BE%B9%E7%95%8C"><span class="toc-text">10.5 Redis 面试回答边界</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-Kafka-%E5%9F%BA%E7%A1%80"><span class="toc-text">11. Kafka 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-Kafka-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">11.1 Kafka 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9-1%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97"><span class="toc-text">11.2 高频考点 1：为什么用消息队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-3-%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9-2%EF%BC%9ATopic%E3%80%81Partition%E3%80%81Consumer-Group"><span class="toc-text">11.3 高频考点 2：Topic、Partition、Consumer Group</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-4-%E9%AB%98%E9%A2%91%E8%80%83%E7%82%B9-3%EF%BC%9A%E5%8F%AF%E9%9D%A0%E6%80%A7%E4%BF%9D%E9%9A%9C"><span class="toc-text">11.4 高频考点 3：可靠性保障</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-Kafka-%E9%9D%A2%E8%AF%95%E5%9B%9E%E7%AD%94%E8%BE%B9%E7%95%8C"><span class="toc-text">11.5 Kafka 面试回答边界</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-Docker-%E5%9F%BA%E7%A1%80"><span class="toc-text">12. Docker 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#12-1-Docker-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">12.1 Docker 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-2-%E5%9C%A8%E4%BD%A0%E7%9A%84%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">12.2 在你的项目中的作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-pytest-%E4%B8%8E%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80"><span class="toc-text">13. pytest 与测试基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#13-1-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%86%99%E6%B5%8B%E8%AF%95"><span class="toc-text">13.1 为什么要写测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-2-%E4%BD%A0%E5%8F%AF%E4%BB%A5%E5%87%86%E5%A4%87%E7%9A%84%E6%B5%8B%E8%AF%95%E4%BE%8B%E5%AD%90"><span class="toc-text">13.2 你可以准备的测试例子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-HTTP-HTTPS-TCP-IP-%E5%9F%BA%E7%A1%80"><span class="toc-text">14. HTTP &#x2F; HTTPS &#x2F; TCP&#x2F;IP 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#14-1-HTTP-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">14.1 HTTP 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-2-%E5%B8%B8%E8%A7%81%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-text">14.2 常见状态码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-3-TCP-%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B"><span class="toc-text">14.3 TCP 三次握手</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80"><span class="toc-text">15. 操作系统基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#15-1-%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B"><span class="toc-text">15.1 进程和线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-2-%E6%AD%BB%E9%94%81"><span class="toc-text">15.2 死锁</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%92%E6%96%A5%E3%80%82-%E8%B5%84%E6%BA%90%E4%B8%8D%E8%83%BD%E8%A2%AB%E5%85%B1%E4%BA%AB%EF%BC%8C%E4%B8%80%E4%B8%AA%E8%B5%84%E6%BA%90%E5%90%8C%E6%97%B6%E5%8F%AA%E8%83%BD%E8%A2%AB%E4%B8%80%E4%B8%AA%E5%8D%A0%E7%94%A8%E8%80%85%E6%8C%81%E6%9C%89%E3%80%82"><span class="toc-text">互斥。  - 资源不能被共享，一个资源同时只能被一个占用者持有。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80"><span class="toc-text">16. 数据结构与算法基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#16-1-%E5%B8%B8%E8%A7%81%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">16.1 常见数据结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-2-%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="toc-text">16.2 哈希表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-3-%E5%9B%BE%E5%92%8C-Agent-%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%9A%84%E5%85%B3%E8%81%94"><span class="toc-text">16.3 图和 Agent 工作流的关联</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-PyTorch-%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80"><span class="toc-text">17. PyTorch &#x2F; 计算机视觉基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#17-1-PyTorch-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">17.1 PyTorch 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-2-YOLO"><span class="toc-text">17.2 YOLO</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-3-U-Net"><span class="toc-text">17.3 U-Net</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-OpenSlide-%E5%8C%BB%E7%96%97%E5%AE%9E%E4%B9%A0%E5%9F%BA%E7%A1%80"><span class="toc-text">18. OpenSlide &#x2F; 医疗实习基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#18-1-OpenSlide-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">18.1 OpenSlide 是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18-2-HIS-%E7%B3%BB%E7%BB%9F%E6%95%B0%E6%8D%AE%E4%BA%92%E9%80%9A"><span class="toc-text">18.2 HIS 系统数据互通</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-%E9%93%B6%E8%A1%8C%E4%B8%9A%E5%8A%A1%E7%BB%8F%E5%8E%86%E5%9B%9E%E7%AD%94"><span class="toc-text">19. 银行业务经历回答</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#19-1-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BB%8E%E9%93%B6%E8%A1%8C%E8%BD%AC-AI-%E5%BC%80%E5%8F%91%EF%BC%9F"><span class="toc-text">19.1 为什么从银行转 AI 开发？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19-2-SQL-%E7%9C%8B%E6%9D%BF%E6%80%8E%E4%B9%88%E5%81%9A%EF%BC%9F"><span class="toc-text">19.2 SQL 看板怎么做？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-%E9%A3%8E%E9%99%A9%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94%E5%BA%93"><span class="toc-text">20. 风险问题回答库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Q1%EF%BC%9A%E4%BD%A0%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%98%AF%E4%B8%8D%E6%98%AF%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%EF%BC%9F"><span class="toc-text">Q1：你的项目是不是学习项目？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q2%EF%BC%9A%E4%BD%A0%E5%86%99%E2%80%9C%E7%86%9F%E6%82%89-Redis-Kafka%E2%80%9D%EF%BC%8C%E4%BD%86%E9%A1%B9%E7%9B%AE%E6%B2%A1%E4%BD%93%E7%8E%B0%EF%BC%8C%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-text">Q2：你写“熟悉 Redis&#x2F;Kafka”，但项目没体现，怎么办？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q3%EF%BC%9A%E4%BD%A0%E6%9B%B4%E5%81%8F%E7%AE%97%E6%B3%95%E8%BF%98%E6%98%AF%E5%B7%A5%E7%A8%8B%EF%BC%9F"><span class="toc-text">Q3：你更偏算法还是工程？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q4%EF%BC%9A%E4%BD%A0%E5%9F%BA%E7%A1%80%E8%96%84%E5%BC%B1%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-text">Q4：你基础薄弱怎么办？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-%E9%AB%98%E9%A2%91%E5%9F%BA%E7%A1%80%E9%97%AE%E7%AD%94%E9%80%9F%E8%AE%B0"><span class="toc-text">21. 高频基础问答速记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#21-1-%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">21.1 数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-2-Redis"><span class="toc-text">21.2 Redis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-3-Kafka"><span class="toc-text">21.3 Kafka</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-4-HTTP"><span class="toc-text">21.4 HTTP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-5-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-text">21.5 操作系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-%E4%B8%80%E5%91%A8%E5%A4%8D%E4%B9%A0%E8%AE%A1%E5%88%92"><span class="toc-text">22. 一周复习计划</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Day-1%EF%BC%9A%E7%AE%80%E5%8E%86%E4%B8%BB%E7%BA%BF%E5%92%8C%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D"><span class="toc-text">Day 1：简历主线和自我介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Day-2%EF%BC%9ARestaurantOps-Agent"><span class="toc-text">Day 2：RestaurantOps Agent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Day-3%EF%BC%9AFastAPI-SQLAlchemy-%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">Day 3：FastAPI + SQLAlchemy + 数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Day-4%EF%BC%9A%E5%A4%9A%E6%A8%A1%E6%80%81-RAG"><span class="toc-text">Day 4：多模态 RAG</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Day-5%EF%BC%9AOpenAI-API-%E5%92%8C-Prompt-%E5%B7%A5%E7%A8%8B"><span class="toc-text">Day 5：OpenAI API 和 Prompt 工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Day-6%EF%BC%9ARedis-Kafka-%E7%BD%91%E7%BB%9C-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-text">Day 6：Redis &#x2F; Kafka &#x2F; 网络 &#x2F; 操作系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Day-7%EF%BC%9A%E5%85%A8%E7%9C%9F%E6%A8%A1%E6%8B%9F"><span class="toc-text">Day 7：全真模拟</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-%E5%85%A8%E7%9C%9F%E6%A8%A1%E6%8B%9F%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-text">23. 全真模拟面试题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%BB%84%EF%BC%9A%E7%AE%80%E5%8E%86%E5%92%8C%E5%8A%A8%E6%9C%BA"><span class="toc-text">第一组：简历和动机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%BB%84%EF%BC%9AAgent-%E9%A1%B9%E7%9B%AE"><span class="toc-text">第二组：Agent 项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%BB%84%EF%BC%9ARAG-%E9%A1%B9%E7%9B%AE"><span class="toc-text">第三组：RAG 项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%BB%84%EF%BC%9A%E5%90%8E%E7%AB%AF%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">第四组：后端和数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%BB%84%EF%BC%9A%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6"><span class="toc-text">第五组：基础组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%BB%84%EF%BC%9A%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80"><span class="toc-text">第六组：计算机基础</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-%E9%9D%A2%E8%AF%95%E8%A1%A8%E8%BE%BE%E5%8E%9F%E5%88%99"><span class="toc-text">24. 面试表达原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#24-1-%E4%B8%8D%E8%A6%81%E7%A1%AC%E8%A3%85%E7%94%9F%E4%BA%A7%E7%BB%8F%E9%AA%8C"><span class="toc-text">24.1 不要硬装生产经验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24-2-%E4%B8%8D%E8%A6%81%E5%8F%AA%E8%AF%B4%E5%90%8D%E8%AF%8D"><span class="toc-text">24.2 不要只说名词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24-3-%E6%AF%8F%E4%B8%AA%E6%8A%80%E6%9C%AF%E7%82%B9%E9%83%BD%E8%A6%81%E8%90%BD%E5%88%B0%E9%A1%B9%E7%9B%AE"><span class="toc-text">24.3 每个技术点都要落到项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24-4-%E5%9B%9E%E7%AD%94%E4%B8%8D%E4%BC%9A%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">24.4 回答不会的问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-%E6%9C%80%E5%90%8E%E5%86%B2%E5%88%BA%E8%83%8C%E8%AF%B5%E6%B8%85%E5%8D%95"><span class="toc-text">25. 最后冲刺背诵清单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-%E4%BD%A0%E7%9A%84%E6%A0%B8%E5%BF%83%E9%9D%A2%E8%AF%95%E7%AD%96%E7%95%A5"><span class="toc-text">26. 你的核心面试策略</span></a></li></ol>
     </div>
   </section>
 
@@ -4711,7 +4808,7 @@ AI...</p>
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Dawnqi's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/技术学习/","name":"技术学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2026/06/27/ai-app-interview-one-week-review/","name":"AI 应用开发面试一周冲刺复习手册"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Dawnqi's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"AI 应用开发面试一周冲刺复习手册","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2026/06/27/ai-app-interview-one-week-review/"},"author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2026/06/27/ai-app-interview-one-week-review/","wordCount":0,"datePublished":"2026-06-27T02:00:00.000Z","dateModified":"2026-06-27T07:34:59.014Z","articleSection":"技术学习","keywords":"AI应用开发,面试,复习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Dawnqi's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/技术学习/","name":"技术学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2026/06/27/ai-app-interview-one-week-review/","name":"AI 应用开发面试一周冲刺复习手册"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Dawnqi's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"AI 应用开发面试一周冲刺复习手册","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2026/06/27/ai-app-interview-one-week-review/"},"author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2026/06/27/ai-app-interview-one-week-review/","wordCount":0,"datePublished":"2026-06-27T02:00:00.000Z","dateModified":"2026-07-02T15:19:41.385Z","articleSection":"技术学习","keywords":"AI应用开发,面试,复习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
