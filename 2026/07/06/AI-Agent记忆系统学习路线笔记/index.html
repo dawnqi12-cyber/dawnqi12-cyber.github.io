@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/archives/2025/"/>
+  
+  <link rel="canonical" href="http://example.com/2026/07/06/ai-agent记忆系统学习路线笔记/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,16 +33,23 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>归档：2025 - Dawnqi's Blog</title>
-  <meta name="keywords" content="null">
+  <title>AI Agent 记忆系统学习路线笔记：把短期记忆、长期记忆、RAG 与记忆演化机制串起来 - Dawnqi's Blog</title>
+  <meta name="keywords" content="AI应用开发,面试,RAG,Agent,记忆系统,null">
   <meta desc name="description" content="Dawnqi's Blog - Dawnqi - Dawnqi's Blog">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Dawnqi&#39;s Blog">
-<meta property="og:url" content="http://example.com/archives/2025/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="AI Agent 记忆系统学习路线笔记：把短期记忆、长期记忆、RAG 与记忆演化机制串起来">
+<meta property="og:url" content="http://example.com/2026/07/06/AI-Agent%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Dawnqi&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2026-07-06T15:10:00.000Z">
+<meta property="article:modified_time" content="2026-07-06T11:29:35.760Z">
 <meta property="article:author" content="Dawnqi">
+<meta property="article:tag" content="AI应用开发">
+<meta property="article:tag" content="Agent">
+<meta property="article:tag" content="RAG">
+<meta property="article:tag" content="记忆系统">
+<meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2054,7 +2061,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2343,7 +2350,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  search' style="display: ;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="images/bg.png"></div>
 
@@ -2412,32 +2419,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2025/10/11/2025-10-10/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2026/07/06/AI-Agent记忆系统学习路线笔记/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Dawnqi's Blog">
   </span>
@@ -2446,368 +2429,759 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2025/10/11/2025-10-10/"  itemprop="url">
-        Fri Oct 10 2025 08:00:00 GMT+0800 (中国标准时间)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <html><head></head><body></body></html>
+    
+      <h1 class="title" itemprop="name headline">
+        AI Agent 记忆系统学习路线笔记：把短期记忆、长期记忆、RAG 与记忆演化机制串起来
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">技术学习</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">技术学习</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-10-11T00:16:00+08:00">2025-10-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2026-07-06T23:10:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2026年7月6日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <html><head></head><body><blockquote>
+<p>参考原文：<a target="_blank" rel="noopener" href="https://javaguide.cn/ai/agent/agent-memory.html">AI Agent 记忆系统：短期记忆、长期记忆与记忆演化机制</a></p>
+<p>这篇文章不是原文摘抄，而是围绕原文最后的“如何把本文关于记忆的要点串起来”那一部分，重新整理出一条更适合学习、复习和工程理解的路线。重点不是堆概念，而是把概念之间的关系讲顺。</p>
+</blockquote>
+<h2 id="一、先抓一句总纲：Agent-记忆系统到底在解决什么"><a href="#一、先抓一句总纲：Agent-记忆系统到底在解决什么" class="headerlink" title="一、先抓一句总纲：Agent 记忆系统到底在解决什么"></a>一、先抓一句总纲：Agent 记忆系统到底在解决什么</h2><p>如果只记一句话，我会这样定义：</p>
+<blockquote>
+<p>Agent 记忆系统，本质上是在解决“信息怎么留住、怎么取回、怎么演化”这三个问题。</p>
+</blockquote>
+<p>一个没有记忆的 Agent，最多只能做“当前这一轮”的响应。<br>一旦任务变长、会话变多、工具链变复杂，它马上会遇到三个问题：</p>
+<ul>
+<li>当前任务做到一半就忘了前面在干什么。</li>
+<li>用户下一次再来时，之前的偏好、背景、上下文都丢了。</li>
+<li>旧信息越积越多，但没有整理、合成和淘汰，最后只会变成噪声。</li>
+</ul>
+<p>所以真正成熟的 Agent 记忆系统，不是“把聊天记录存下来”这么简单，而是要回答：</p>
+<ol>
+<li>什么信息值得记？</li>
+<li>这些信息应该存在哪里？</li>
+<li>什么时候写入？</li>
+<li>什么时候取回？</li>
+<li>如何让记忆随着使用持续优化？</li>
+<li>如何处理冲突、过期和遗忘？</li>
+</ol>
+<p>这 6 个问题，就是整篇文章的主骨架。</p>
+<h2 id="二、第一条学习主线：先分清“短期记忆”和“长期记忆”"><a href="#二、第一条学习主线：先分清“短期记忆”和“长期记忆”" class="headerlink" title="二、第一条学习主线：先分清“短期记忆”和“长期记忆”"></a>二、第一条学习主线：先分清“短期记忆”和“长期记忆”</h2><p>理解记忆系统，第一步一定是把这两层分开。</p>
+<h3 id="1-短期记忆（Short-Term-Memory-Working-Memory）"><a href="#1-短期记忆（Short-Term-Memory-Working-Memory）" class="headerlink" title="1. 短期记忆（Short-Term Memory / Working Memory）"></a>1. 短期记忆（Short-Term Memory / Working Memory）</h3><p>短期记忆服务的是<strong>当前任务、当前会话、当前上下文</strong>。</p>
+<p>它像桌面上正在摊开的资料，特点是：</p>
+<ul>
+<li>跟当前目标强相关；</li>
+<li>生命周期短；</li>
+<li>更新频繁；</li>
+<li>很依赖上下文窗口；</li>
+<li>一旦任务结束，大部分内容就不值得长期保留。</li>
+</ul>
+<h4 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Working Memory</li>
+<li>Session Memory</li>
+<li>Context Window</li>
+<li>Tool State</li>
+<li>Intermediate State</li>
+<li>Task Progress</li>
+<li>Sliding Window</li>
+<li>Context Compression</li>
+</ul>
+<h4 id="典型内容"><a href="#典型内容" class="headerlink" title="典型内容"></a>典型内容</h4><ul>
+<li>用户本轮输入</li>
+<li>模型本轮输出</li>
+<li>工具调用结果</li>
+<li>当前执行步骤</li>
+<li>中间推理状态</li>
+<li>正在处理的临时约束</li>
+</ul>
+<h3 id="2-长期记忆（Long-Term-Memory）"><a href="#2-长期记忆（Long-Term-Memory）" class="headerlink" title="2. 长期记忆（Long-Term Memory）"></a>2. 长期记忆（Long-Term Memory）</h3><p>长期记忆服务的是<strong>跨任务复用、跨会话复用、用户长期画像和经验沉淀</strong>。</p>
+<p>它像抽屉里的归档资料，特点是：</p>
+<ul>
+<li>生命周期长；</li>
+<li>不要求每轮都全量加载；</li>
+<li>更强调稳定性、可检索性和可维护性；</li>
+<li>需要筛选，不是所有对话都值得进入长期记忆。</li>
+</ul>
+<h4 id="关键词-1"><a href="#关键词-1" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Long-Term Memory</li>
+<li>Persistent Memory</li>
+<li>User Profile</li>
+<li>Preference Memory</li>
+<li>Cross-Session Memory</li>
+<li>Historical Experience</li>
+<li>Durable Storage</li>
+</ul>
+<h4 id="典型内容-1"><a href="#典型内容-1" class="headerlink" title="典型内容"></a>典型内容</h4><ul>
+<li>用户技术栈偏好</li>
+<li>用户表达风格偏好</li>
+<li>用户的固定约束条件</li>
+<li>历史项目背景</li>
+<li>过去多次任务提炼出的经验</li>
+</ul>
+<h3 id="3-为什么一定要分层"><a href="#3-为什么一定要分层" class="headerlink" title="3. 为什么一定要分层"></a>3. 为什么一定要分层</h3><p>很多人理解记忆系统时会犯一个错误：<br>把“当前上下文”和“长期知识”混成一个池子。</p>
+<p>这样会带来两个问题：</p>
+<ul>
+<li>当前上下文过重，Token 开销爆炸；</li>
+<li>长期记忆被大量低价值临时信息污染。</li>
+</ul>
+<p>所以第一条最重要的学习结论是：</p>
+<blockquote>
+<p>短期记忆负责“当前任务不失忆”，长期记忆负责“下次再来还能接上”。</p>
+</blockquote>
+<h2 id="三、第二条学习主线：记忆不只是聊天记录，它还有功能分类"><a href="#三、第二条学习主线：记忆不只是聊天记录，它还有功能分类" class="headerlink" title="三、第二条学习主线：记忆不只是聊天记录，它还有功能分类"></a>三、第二条学习主线：记忆不只是聊天记录，它还有功能分类</h2><p>把时间范围分清之后，第二步要理解：<br>记忆系统不是“存对话”，而是“存不同类型的信息”。</p>
+<p>原文中这部分很重要，可以整理成三类核心功能记忆。</p>
+<h3 id="1-事实记忆（Fact-Memory-Semantic-Memory）"><a href="#1-事实记忆（Fact-Memory-Semantic-Memory）" class="headerlink" title="1. 事实记忆（Fact Memory / Semantic Memory）"></a>1. 事实记忆（Fact Memory / Semantic Memory）</h3><p>回答的是：</p>
+<blockquote>
+<p>Agent 知道什么。</p>
+</blockquote>
+<p>这类记忆强调稳定事实和语义知识。</p>
+<h4 id="关键词-2"><a href="#关键词-2" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Fact Memory</li>
+<li>Semantic Memory</li>
+<li>User Facts</li>
+<li>Stable Knowledge</li>
+<li>Entity Attributes</li>
+<li>Preference Facts</li>
+</ul>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><ul>
+<li>用户更偏好 Python 而不是 Java</li>
+<li>用户的职位是产品经理</li>
+<li>用户希望输出简洁而不是学术风格</li>
+</ul>
+<h3 id="2-情景记忆（Episodic-Memory）"><a href="#2-情景记忆（Episodic-Memory）" class="headerlink" title="2. 情景记忆（Episodic Memory）"></a>2. 情景记忆（Episodic Memory）</h3><p>回答的是：</p>
+<blockquote>
+<p>过去发生过什么。</p>
+</blockquote>
+<p>这类记忆更像事件日志，但不是简单原样存档，而是对关键事件的保留。</p>
+<h4 id="关键词-3"><a href="#关键词-3" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Episodic Memory</li>
+<li>Event History</li>
+<li>Session Record</li>
+<li>Interaction Trace</li>
+<li>Task Timeline</li>
+</ul>
+<h4 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h4><ul>
+<li>上次帮用户做过哪一类分析</li>
+<li>某次工具调用失败发生在什么步骤</li>
+<li>某次任务中用户临时改过什么要求</li>
+</ul>
+<h3 id="3-程序记忆-经验记忆（Procedural-Memory-Experience-Memory）"><a href="#3-程序记忆-经验记忆（Procedural-Memory-Experience-Memory）" class="headerlink" title="3. 程序记忆 / 经验记忆（Procedural Memory / Experience Memory）"></a>3. 程序记忆 / 经验记忆（Procedural Memory / Experience Memory）</h3><p>回答的是：</p>
+<blockquote>
+<p>以后类似情况应该怎么做。</p>
+</blockquote>
+<p>这是最容易被忽略、但最接近“Agent 成长”的记忆。</p>
+<h4 id="关键词-4"><a href="#关键词-4" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Procedural Memory</li>
+<li>Experience Memory</li>
+<li>Strategy Memory</li>
+<li>Heuristic</li>
+<li>Reflection Result</li>
+<li>Best Practice</li>
+</ul>
+<h4 id="例子-2"><a href="#例子-2" class="headerlink" title="例子"></a>例子</h4><ul>
+<li>处理长文档时，先摘要再检索更稳</li>
+<li>当前用户更在意工程解释而不是学术定义</li>
+<li>某类任务里先做 metadata filter 再做向量检索效果更好</li>
+</ul>
+<h3 id="4-工作记忆（Working-Memory）"><a href="#4-工作记忆（Working-Memory）" class="headerlink" title="4. 工作记忆（Working Memory）"></a>4. 工作记忆（Working Memory）</h3><p>虽然它常被放在短期记忆里讨论，但从功能角度也值得单独记住。</p>
+<p>它回答的是：</p>
+<blockquote>
+<p>Agent 当前做到哪一步、正在持有什么中间状态。</p>
+</blockquote>
+<h4 id="关键词-5"><a href="#关键词-5" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Working Memory</li>
+<li>Execution State</li>
+<li>Planning State</li>
+<li>Action State</li>
+<li>Scratchpad</li>
+<li>Intermediate Variables</li>
+</ul>
+<h2 id="四、第三条学习主线：记忆的生命周期比“存储”更重要"><a href="#四、第三条学习主线：记忆的生命周期比“存储”更重要" class="headerlink" title="四、第三条学习主线：记忆的生命周期比“存储”更重要"></a>四、第三条学习主线：记忆的生命周期比“存储”更重要</h2><p>真正理解记忆系统，不能只看它“存在哪里”，更要看它“怎么流动”。</p>
+<p>原文这一部分可以整理成一条完整生命周期：</p>
+<ol>
+<li>编码（Encode）</li>
+<li>存储（Store）</li>
+<li>提取（Retrieve）</li>
+<li>巩固（Consolidate）</li>
+<li>反思（Reflect）</li>
+<li>清理 / 遗忘（Forget）</li>
+</ol>
+<h3 id="1-编码（Encode）"><a href="#1-编码（Encode）" class="headerlink" title="1. 编码（Encode）"></a>1. 编码（Encode）</h3><p>原始对话通常太长、太噪、太松散，不能直接作为高质量记忆。</p>
+<p>所以第一步是编码，把原始输入转成结构化信息。</p>
+<h4 id="关键词-6"><a href="#关键词-6" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Encode</li>
+<li>Memory Extraction</li>
+<li>Summarization</li>
+<li>Structuring</li>
+<li>Fact Extraction</li>
+<li>Event Extraction</li>
+</ul>
+<h4 id="核心动作"><a href="#核心动作" class="headerlink" title="核心动作"></a>核心动作</h4><ul>
+<li>从对话中抽取事实</li>
+<li>识别长期有效信息</li>
+<li>把事件压缩成摘要</li>
+<li>为记忆打标签和 metadata</li>
+</ul>
+<h3 id="2-存储（Store）"><a href="#2-存储（Store）" class="headerlink" title="2. 存储（Store）"></a>2. 存储（Store）</h3><p>编码后才进入真正的持久化存储。</p>
+<h4 id="关键词-7"><a href="#关键词-7" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Store</li>
+<li>Persistent Storage</li>
+<li>Vector Store</li>
+<li>KV Store</li>
+<li>Graph DB</li>
+<li>Relational DB</li>
+<li>Markdown Memory</li>
+</ul>
+<h3 id="3-提取（Retrieve）"><a href="#3-提取（Retrieve）" class="headerlink" title="3. 提取（Retrieve）"></a>3. 提取（Retrieve）</h3><p>记忆系统的价值不在于存了多少，而在于<strong>需要时能否取对</strong>。</p>
+<h4 id="关键词-8"><a href="#关键词-8" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Retrieve</li>
+<li>Recall</li>
+<li>Similarity Search</li>
+<li>Hybrid Search</li>
+<li>Metadata Filter</li>
+<li>Temporal Filter</li>
+<li>Personalization Recall</li>
+</ul>
+<h3 id="4-巩固（Consolidate）"><a href="#4-巩固（Consolidate）" class="headerlink" title="4. 巩固（Consolidate）"></a>4. 巩固（Consolidate）</h3><p>并不是每条短期记忆都要原封不动进入长期系统。<br>巩固的作用，是把短期工作记忆整理成长期可复用知识。</p>
+<h4 id="关键词-9"><a href="#关键词-9" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Consolidation</li>
+<li>Promotion</li>
+<li>Short-to-Long Transfer</li>
+<li>Stable Knowledge Formation</li>
+</ul>
+<h3 id="5-反思（Reflect）"><a href="#5-反思（Reflect）" class="headerlink" title="5. 反思（Reflect）"></a>5. 反思（Reflect）</h3><p>反思是记忆系统从“会存”走向“会成长”的关键。</p>
+<h4 id="关键词-10"><a href="#关键词-10" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Reflection</li>
+<li>Self-Improvement</li>
+<li>Experience Distillation</li>
+<li>Failure Analysis</li>
+<li>Heuristic Generation</li>
+</ul>
+<h3 id="6-清理与遗忘（Forget）"><a href="#6-清理与遗忘（Forget）" class="headerlink" title="6. 清理与遗忘（Forget）"></a>6. 清理与遗忘（Forget）</h3><p>如果没有遗忘机制，记忆系统最终只会变成垃圾堆。</p>
+<h4 id="关键词-11"><a href="#关键词-11" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Forgetting</li>
+<li>Cleanup</li>
+<li>Expiration</li>
+<li>Conflict Resolution</li>
+<li>TTL</li>
+<li>Memory Pruning</li>
+</ul>
+<h3 id="7-这一部分最关键的理解"><a href="#7-这一部分最关键的理解" class="headerlink" title="7. 这一部分最关键的理解"></a>7. 这一部分最关键的理解</h3><blockquote>
+<p>记忆系统不是数据库，而是一个有代谢、有筛选、有升级能力的信息循环系统。</p>
+</blockquote>
+<h2 id="五、第四条学习主线：记忆到底可以存成什么形式"><a href="#五、第四条学习主线：记忆到底可以存成什么形式" class="headerlink" title="五、第四条学习主线：记忆到底可以存成什么形式"></a>五、第四条学习主线：记忆到底可以存成什么形式</h2><p>原文这里的意思很重要：<br>“记忆”不是一种单一介质，而是多种存储形态的统称。</p>
+<h3 id="1-外部文本-结构化存储"><a href="#1-外部文本-结构化存储" class="headerlink" title="1. 外部文本 / 结构化存储"></a>1. 外部文本 / 结构化存储</h3><p>这是当前最常见、最易控的一类。</p>
+<h4 id="关键词-12"><a href="#关键词-12" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>External Memory</li>
+<li>Text Memory</li>
+<li>JSON Memory</li>
+<li>Markdown Memory</li>
+<li>Structured Record</li>
+<li>Database Record</li>
+</ul>
+<p>优点：</p>
+<ul>
+<li>可查、可改、可删、可审计</li>
+<li>容易做版本管理</li>
+<li>容易和业务系统集成</li>
+</ul>
+<h3 id="2-向量化记忆"><a href="#2-向量化记忆" class="headerlink" title="2. 向量化记忆"></a>2. 向量化记忆</h3><p>适合语义召回，不要求严格精确匹配。</p>
+<h4 id="关键词-13"><a href="#关键词-13" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Vector Memory</li>
+<li>Embedding</li>
+<li>Similarity Retrieval</li>
+<li>Semantic Recall</li>
+<li>Dense Retrieval</li>
+</ul>
+<p>适合场景：</p>
+<ul>
+<li>“语义相近即可”</li>
+<li>用户偏好、历史经验、长文段摘要的召回</li>
+</ul>
+<h3 id="3-图结构记忆"><a href="#3-图结构记忆" class="headerlink" title="3. 图结构记忆"></a>3. 图结构记忆</h3><p>适合存实体、关系、时序和结构化依赖。</p>
+<h4 id="关键词-14"><a href="#关键词-14" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Knowledge Graph</li>
+<li>Graph Memory</li>
+<li>Entity Relation</li>
+<li>Time-Aware Memory</li>
+<li>Structured Recall</li>
+</ul>
+<p>适合场景：</p>
+<ul>
+<li>人、项目、组织、偏好之间的关系建模</li>
+<li>时间序列变化</li>
+<li>复杂多跳关联检索</li>
+</ul>
+<h3 id="4-参数化记忆"><a href="#4-参数化记忆" class="headerlink" title="4. 参数化记忆"></a>4. 参数化记忆</h3><p>把知识写进模型参数，比如微调、LoRA、SFT。</p>
+<h4 id="关键词-15"><a href="#关键词-15" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Parametric Memory</li>
+<li>Fine-Tuning</li>
+<li>SFT</li>
+<li>LoRA</li>
+<li>Knowledge in Weights</li>
+</ul>
+<p>特点：</p>
+<ul>
+<li>调用时不需要外部检索</li>
+<li>但难修改、难删除、难追责</li>
+</ul>
+<h3 id="5-激活态记忆-潜在记忆"><a href="#5-激活态记忆-潜在记忆" class="headerlink" title="5. 激活态记忆 / 潜在记忆"></a>5. 激活态记忆 / 潜在记忆</h3><p>比如 KV Cache、隐藏状态这类运行期内部状态。</p>
+<h4 id="关键词-16"><a href="#关键词-16" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Latent Memory</li>
+<li>Activation Memory</li>
+<li>KV Cache</li>
+<li>Hidden State</li>
+<li>Inference-Time Memory</li>
+</ul>
+<p>特点：</p>
+<ul>
+<li>离模型最近</li>
+<li>速度快</li>
+<li>生命周期短</li>
+<li>不适合做长期可治理记忆</li>
+</ul>
+<h2 id="六、第五条学习主线：长期记忆和-RAG-到底怎么区分"><a href="#六、第五条学习主线：长期记忆和-RAG-到底怎么区分" class="headerlink" title="六、第五条学习主线：长期记忆和 RAG 到底怎么区分"></a>六、第五条学习主线：长期记忆和 RAG 到底怎么区分</h2><p>这是很容易混淆的点。</p>
+<h3 id="1-RAG-主要解决什么"><a href="#1-RAG-主要解决什么" class="headerlink" title="1. RAG 主要解决什么"></a>1. RAG 主要解决什么</h3><p>RAG 解决的是：</p>
+<blockquote>
+<p>如何把外部知识在当前问题里临时取回来。</p>
+</blockquote>
+<h4 id="关键词-17"><a href="#关键词-17" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>RAG</li>
+<li>Shared Knowledge</li>
+<li>Retrieval-Augmented Generation</li>
+<li>Corpus Search</li>
+<li>Knowledge Base Recall</li>
+</ul>
+<h3 id="2-长期记忆主要解决什么"><a href="#2-长期记忆主要解决什么" class="headerlink" title="2. 长期记忆主要解决什么"></a>2. 长期记忆主要解决什么</h3><p>长期记忆解决的是：</p>
+<blockquote>
+<p>这个 Agent 如何持续记住某个用户、某类任务、某套经验。</p>
+</blockquote>
+<h4 id="关键词-18"><a href="#关键词-18" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Personalized Memory</li>
+<li>Cross-Session Continuity</li>
+<li>User Profile Memory</li>
+<li>Historical Preference</li>
+<li>Private Context</li>
+</ul>
+<h3 id="3-一句话区分"><a href="#3-一句话区分" class="headerlink" title="3. 一句话区分"></a>3. 一句话区分</h3><blockquote>
+<p>RAG 管“世界知识”，长期记忆管“个体化知识”。</p>
+</blockquote>
+<h3 id="4-为什么两者要配合"><a href="#4-为什么两者要配合" class="headerlink" title="4. 为什么两者要配合"></a>4. 为什么两者要配合</h3><p>一个成熟系统通常同时需要：</p>
+<ul>
+<li>RAG：查政策、文档、知识库</li>
+<li>Memory：记用户、记经验、记任务背景</li>
+</ul>
+<p>所以工程上更合理的设计通常不是二选一，而是：</p>
+<ul>
+<li>共享知识走 RAG</li>
+<li>个体知识走 Memory</li>
+<li>最后在召回层做融合</li>
+</ul>
+<h2 id="七、第六条学习主线：主流-Memory-架构到底在解决什么差异"><a href="#七、第六条学习主线：主流-Memory-架构到底在解决什么差异" class="headerlink" title="七、第六条学习主线：主流 Memory 架构到底在解决什么差异"></a>七、第六条学习主线：主流 Memory 架构到底在解决什么差异</h2><p>这一部分最容易陷入“记产品名”，但真正有价值的是理解这些方案各自想解决什么。</p>
+<h3 id="1-LETTA"><a href="#1-LETTA" class="headerlink" title="1. LETTA"></a>1. LETTA</h3><p>更强调上下文分页、虚拟内存式的上下文管理。</p>
+<h4 id="关键词-19"><a href="#关键词-19" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>LETTA</li>
+<li>Virtual Context</li>
+<li>Context Paging</li>
+<li>Memory OS</li>
+</ul>
+<h3 id="2-ZEP"><a href="#2-ZEP" class="headerlink" title="2. ZEP"></a>2. ZEP</h3><p>更强调时间感知、知识图谱和结构化长期记忆。</p>
+<h4 id="关键词-20"><a href="#关键词-20" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>ZEP</li>
+<li>Temporal Graph</li>
+<li>Time-Aware Memory</li>
+<li>Structured User Memory</li>
+</ul>
+<h3 id="3-MemOS"><a href="#3-MemOS" class="headerlink" title="3. MemOS"></a>3. MemOS</h3><p>更强调不同层级记忆之间的迁移和统一调度。</p>
+<h4 id="关键词-21"><a href="#关键词-21" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>MemOS</li>
+<li>Memory Hierarchy</li>
+<li>Text Memory</li>
+<li>Activation Memory</li>
+<li>Parametric Memory</li>
+</ul>
+<h3 id="4-你真正要记住的不是产品名，而是设计方向"><a href="#4-你真正要记住的不是产品名，而是设计方向" class="headerlink" title="4. 你真正要记住的不是产品名，而是设计方向"></a>4. 你真正要记住的不是产品名，而是设计方向</h3><p>这些方案大体对应三种思路：</p>
+<ul>
+<li>把记忆问题当上下文管理问题</li>
+<li>把记忆问题当结构化知识组织问题</li>
+<li>把记忆问题当多层存储协同问题</li>
+</ul>
+<h2 id="八、第七条学习主线：高级演化机制为什么是全文的真正重点"><a href="#八、第七条学习主线：高级演化机制为什么是全文的真正重点" class="headerlink" title="八、第七条学习主线：高级演化机制为什么是全文的真正重点"></a>八、第七条学习主线：高级演化机制为什么是全文的真正重点</h2><p>这其实就是原文最后总结部分最想强调的东西。</p>
+<h3 id="如果只会“写入-检索”，会发生什么"><a href="#如果只会“写入-检索”，会发生什么" class="headerlink" title="如果只会“写入 + 检索”，会发生什么"></a>如果只会“写入 + 检索”，会发生什么</h3><p>系统会越来越像一个噪声仓库：</p>
+<ul>
+<li>内容越积越多</li>
+<li>相互冲突的信息越来越多</li>
+<li>重要信息越来越难找</li>
+<li>老旧偏好和新偏好混在一起</li>
+</ul>
+<p>所以高级记忆系统一定要做三件事：</p>
+<h3 id="1-反思（Reflection）"><a href="#1-反思（Reflection）" class="headerlink" title="1. 反思（Reflection）"></a>1. 反思（Reflection）</h3><p>把一次次事件提升成经验。</p>
+<h4 id="关键词-22"><a href="#关键词-22" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Reflection</li>
+<li>Post-Task Review</li>
+<li>Failure Pattern</li>
+<li>Strategy Distillation</li>
+</ul>
+<h3 id="2-合成（Synthesis）"><a href="#2-合成（Synthesis）" class="headerlink" title="2. 合成（Synthesis）"></a>2. 合成（Synthesis）</h3><p>把零散片段合并成更抽象、更稳定的长期知识。</p>
+<h4 id="关键词-23"><a href="#关键词-23" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Synthesis</li>
+<li>Memory Merge</li>
+<li>Abstraction</li>
+<li>Knowledge Compression</li>
+</ul>
+<h3 id="3-冲突处理与遗忘（Conflict-Forgetting）"><a href="#3-冲突处理与遗忘（Conflict-Forgetting）" class="headerlink" title="3. 冲突处理与遗忘（Conflict + Forgetting）"></a>3. 冲突处理与遗忘（Conflict + Forgetting）</h3><p>当新信息与旧信息冲突时，系统必须能处理：</p>
+<ul>
+<li>是覆盖旧值？</li>
+<li>还是保留版本？</li>
+<li>还是降低旧记忆权重？</li>
+</ul>
+<h4 id="关键词-24"><a href="#关键词-24" class="headerlink" title="关键词"></a>关键词</h4><ul>
+<li>Conflict Resolution</li>
+<li>Versioning</li>
+<li>Recency Weight</li>
+<li>TTL</li>
+<li>Memory Pruning</li>
+</ul>
+<h3 id="4-这一段的真正结论"><a href="#4-这一段的真正结论" class="headerlink" title="4. 这一段的真正结论"></a>4. 这一段的真正结论</h3><blockquote>
+<p>记忆系统的成熟度，不取决于“存了多少”，而取决于“能不能不断把低价值信息淘汰，把高价值经验沉淀出来”。</p>
+</blockquote>
+<h2 id="九、第八条学习主线：检索链路优化往往比“写更多记忆”更重要"><a href="#九、第八条学习主线：检索链路优化往往比“写更多记忆”更重要" class="headerlink" title="九、第八条学习主线：检索链路优化往往比“写更多记忆”更重要"></a>九、第八条学习主线：检索链路优化往往比“写更多记忆”更重要</h2><p>原文里这一点很值得记住。</p>
+<p>很多系统记忆效果差，不是因为“没存进去”，而是因为：</p>
+<ul>
+<li>检索召回不准</li>
+<li>metadata filter 太弱</li>
+<li>时间维度没处理</li>
+<li>rerank 没有做好</li>
+<li>召回后上下文拼装很乱</li>
+</ul>
+<h3 id="关键词-25"><a href="#关键词-25" class="headerlink" title="关键词"></a>关键词</h3><ul>
+<li>Hybrid Retrieval</li>
+<li>Dense + Sparse Retrieval</li>
+<li>Metadata Filtering</li>
+<li>Temporal Filtering</li>
+<li>Ranking / Reranking</li>
+<li>Recall Precision</li>
+<li>Query Expansion</li>
+</ul>
+<h3 id="工程上最重要的结论"><a href="#工程上最重要的结论" class="headerlink" title="工程上最重要的结论"></a>工程上最重要的结论</h3><blockquote>
+<p>在很多真实系统中，检索链路优化的优先级，往往高于继续扩充记忆写入策略。</p>
+</blockquote>
+<p>因为写得再多，取不准就没意义。</p>
+<h2 id="十、如果用-Markdown-做记忆，要怎么理解它的边界"><a href="#十、如果用-Markdown-做记忆，要怎么理解它的边界" class="headerlink" title="十、如果用 Markdown 做记忆，要怎么理解它的边界"></a>十、如果用 Markdown 做记忆，要怎么理解它的边界</h2><p>原文专门讲了 Markdown Memory，这一点很有启发。</p>
+<p>Markdown 之所以适合作为部分 Agent 记忆载体，是因为它：</p>
+<ul>
+<li>可读</li>
+<li>可编辑</li>
+<li>可版本管理</li>
+<li>可和项目一起协作</li>
+</ul>
+<h3 id="关键词-26"><a href="#关键词-26" class="headerlink" title="关键词"></a>关键词</h3><ul>
+<li>Markdown Memory</li>
+<li>CLAUDE.md</li>
+<li>Human-Readable Memory</li>
+<li>Repo-Scoped Memory</li>
+<li>Hierarchical Memory Notes</li>
+</ul>
+<h3 id="适合存什么"><a href="#适合存什么" class="headerlink" title="适合存什么"></a>适合存什么</h3><ul>
+<li>项目级规则</li>
+<li>团队约定</li>
+<li>工具使用说明</li>
+<li>固定风格偏好</li>
+<li>高频工作流程</li>
+</ul>
+<h3 id="不适合直接替代什么"><a href="#不适合直接替代什么" class="headerlink" title="不适合直接替代什么"></a>不适合直接替代什么</h3><ul>
+<li>高频实时工作记忆</li>
+<li>大规模语义召回</li>
+<li>海量个体化长期记录</li>
+</ul>
+<h3 id="一句话理解边界"><a href="#一句话理解边界" class="headerlink" title="一句话理解边界"></a>一句话理解边界</h3><blockquote>
+<p>Markdown 更像“显式知识手册”，不是完整的 Memory Operating System。</p>
+</blockquote>
+<h2 id="十一、把全文真正串起来：一条最清晰的学习路线"><a href="#十一、把全文真正串起来：一条最清晰的学习路线" class="headerlink" title="十一、把全文真正串起来：一条最清晰的学习路线"></a>十一、把全文真正串起来：一条最清晰的学习路线</h2><p>如果按学习顺序来，我建议这样走：</p>
+<h3 id="第一步：先回答“为什么-Agent-需要记忆”"><a href="#第一步：先回答“为什么-Agent-需要记忆”" class="headerlink" title="第一步：先回答“为什么 Agent 需要记忆”"></a>第一步：先回答“为什么 Agent 需要记忆”</h3><p>因为没有记忆，Agent 只能做单轮响应，无法支撑长任务、跨会话和个性化交互。</p>
+<h3 id="第二步：再分清“短期记忆”和“长期记忆”"><a href="#第二步：再分清“短期记忆”和“长期记忆”" class="headerlink" title="第二步：再分清“短期记忆”和“长期记忆”"></a>第二步：再分清“短期记忆”和“长期记忆”</h3><ul>
+<li>短期记忆：解决当前任务连续性</li>
+<li>长期记忆：解决跨任务复用性</li>
+</ul>
+<h3 id="第三步：再理解“记忆里到底存什么”"><a href="#第三步：再理解“记忆里到底存什么”" class="headerlink" title="第三步：再理解“记忆里到底存什么”"></a>第三步：再理解“记忆里到底存什么”</h3><p>把记忆按功能拆成：</p>
+<ul>
+<li>事实记忆</li>
+<li>情景记忆</li>
+<li>经验/程序记忆</li>
+<li>工作记忆</li>
+</ul>
+<p>这样你就不会把所有东西都当聊天记录。</p>
+<h3 id="第四步：再理解“记忆是怎么流动的”"><a href="#第四步：再理解“记忆是怎么流动的”" class="headerlink" title="第四步：再理解“记忆是怎么流动的”"></a>第四步：再理解“记忆是怎么流动的”</h3><p>一定要记住那条生命周期：</p>
+<ul>
+<li>编码</li>
+<li>存储</li>
+<li>提取</li>
+<li>巩固</li>
+<li>反思</li>
+<li>遗忘</li>
+</ul>
+<h3 id="第五步：再理解“记忆可以放在哪里”"><a href="#第五步：再理解“记忆可以放在哪里”" class="headerlink" title="第五步：再理解“记忆可以放在哪里”"></a>第五步：再理解“记忆可以放在哪里”</h3><p>把外部文本、向量库、图数据库、参数记忆、激活态记忆这些层级分清。</p>
+<h3 id="第六步：再把“长期记忆”和“RAG”边界分清"><a href="#第六步：再把“长期记忆”和“RAG”边界分清" class="headerlink" title="第六步：再把“长期记忆”和“RAG”边界分清"></a>第六步：再把“长期记忆”和“RAG”边界分清</h3><p>这是做系统设计时最容易问到的问题。</p>
+<h3 id="第七步：再理解主流-Memory-架构在解决什么差异"><a href="#第七步：再理解主流-Memory-架构在解决什么差异" class="headerlink" title="第七步：再理解主流 Memory 架构在解决什么差异"></a>第七步：再理解主流 Memory 架构在解决什么差异</h3><p>别背产品名，先看它们的设计思想：</p>
+<ul>
+<li>管上下文</li>
+<li>管结构化关系</li>
+<li>管多层记忆迁移</li>
+</ul>
+<h3 id="第八步：最后理解“演化机制”"><a href="#第八步：最后理解“演化机制”" class="headerlink" title="第八步：最后理解“演化机制”"></a>第八步：最后理解“演化机制”</h3><p>只有走到这一步，记忆系统才不是“存储系统”，而是“认知系统”。</p>
+<h2 id="十二、最值得背下来的关键词清单"><a href="#十二、最值得背下来的关键词清单" class="headerlink" title="十二、最值得背下来的关键词清单"></a>十二、最值得背下来的关键词清单</h2><p>如果要做一版复习用关键词表，我会记这些：</p>
+<h3 id="记忆分层"><a href="#记忆分层" class="headerlink" title="记忆分层"></a>记忆分层</h3><ul>
+<li>Short-Term Memory</li>
+<li>Working Memory</li>
+<li>Long-Term Memory</li>
+<li>Persistent Memory</li>
+</ul>
+<h3 id="记忆类型"><a href="#记忆类型" class="headerlink" title="记忆类型"></a>记忆类型</h3><ul>
+<li>Semantic Memory</li>
+<li>Episodic Memory</li>
+<li>Procedural Memory</li>
+<li>Experience Memory</li>
+<li>Fact Memory</li>
+<li>Execution State</li>
+</ul>
+<h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><ul>
+<li>Encode</li>
+<li>Store</li>
+<li>Retrieve</li>
+<li>Consolidate</li>
+<li>Reflect</li>
+<li>Forget</li>
+</ul>
+<h3 id="存储形态"><a href="#存储形态" class="headerlink" title="存储形态"></a>存储形态</h3><ul>
+<li>Text Memory</li>
+<li>Vector Memory</li>
+<li>Graph Memory</li>
+<li>Parametric Memory</li>
+<li>KV Cache</li>
+<li>Markdown Memory</li>
+</ul>
+<h3 id="检索与优化"><a href="#检索与优化" class="headerlink" title="检索与优化"></a>检索与优化</h3><ul>
+<li>Hybrid Retrieval</li>
+<li>Metadata Filter</li>
+<li>Temporal Filter</li>
+<li>Rerank</li>
+<li>Recall Precision</li>
+<li>Conflict Resolution</li>
+<li>Memory Pruning</li>
+</ul>
+<h3 id="架构与产品"><a href="#架构与产品" class="headerlink" title="架构与产品"></a>架构与产品</h3><ul>
+<li>LETTA</li>
+<li>ZEP</li>
+<li>MemOS</li>
+<li>CLAUDE.md</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>如果把整篇文章压缩成一句最核心的话，我会这样说：</p>
+<blockquote>
+<p>Agent 记忆系统不是“把历史都存起来”，而是把短期上下文、长期知识、检索链路、反思机制和遗忘机制组合起来，让 Agent 既能记住该记的东西，又不会被旧信息拖垮。</p>
+</blockquote>
+<p>所以真正的理解路线不是“记名词”，而是按这条链去学：</p>
+<p><strong>为什么需要记忆 -&gt; 记忆有哪些层次 -&gt; 记忆里存什么 -&gt; 记忆怎么流动 -&gt; 记忆放在哪里 -&gt; RAG 和 Memory 怎么分工 -&gt; 系统如何反思、合成和遗忘</strong></p>
+<p>当这条主线清楚以后，短期记忆、长期记忆、RAG、Markdown Memory、LETTA、ZEP、MemOS 这些概念就不再是散的，而会自然归到同一张图里。</p>
+</body></html>
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2025/10/11/2025-10-10/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2026-07-06T19:29:35+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2026年7月6日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2025/10/09/2025-10-09/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Dawnqi's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Dawnqi's Blog">
-    <meta itemprop="description" content="">
-  </span>
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>AI应用开发</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9D%A2%E8%AF%95/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>面试</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/RAG/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>RAG</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Agent/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Agent</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>记忆系统</p></a></div>
+  <span hidden itemprop="keywords">AI应用开发 面试 RAG Agent 记忆系统</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2026/07/06/AI-Agent%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E7%AC%94%E8%AE%B0/&title=AI Agent 记忆系统学习路线笔记：把短期记忆、长期记忆、RAG 与记忆演化机制串起来 - Dawnqi's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2026/07/06/AI-Agent%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E7%AC%94%E8%AE%B0/&title=AI Agent 记忆系统学习路线笔记：把短期记忆、长期记忆、RAG 与记忆演化机制串起来 - Dawnqi's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2026/07/06/AI-Agent%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E7%AC%94%E8%AE%B0/&title=AI Agent 记忆系统学习路线笔记：把短期记忆、长期记忆、RAG 与记忆演化机制串起来 - Dawnqi's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2026/07/06/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E7%B2%BE%E7%AE%80%E7%AC%94%E8%AE%B0/'>
+          <p class='title'>大模型运行机制精简笔记：Token、上下文窗口与采样参数<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+参考原文：LLM 运行机制：Token、上下文窗口与采样参数怎么影响输出
+这篇文章不是原文搬运，而是把我认为最值得记住的知识点重新整理成一份精简笔记，适合复习、面试和工程落地时快速回看。
+
+一...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2026/07/06/AI-Agent%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E7%AC%94%E8%AE%B0/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2025/10/09/2025-10-09/"  itemprop="url">
-        Thu Oct 09 2025 08:00:00 GMT+0800 (中国标准时间)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <html><head></head><body></body></html>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-10-09T23:34:53+08:00">2025-10-09</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%97%A5%E8%AE%B0/">日记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%97%A5%E8%AE%B0/" itemprop="url"><span itemprop="name">日记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2025/10/09/2025-10-09/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2025/10/01/git学习记录/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Dawnqi's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Dawnqi's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2025/10/01/git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"  itemprop="url">
-        git学习记录
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <html><head></head><body></body></html>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-10-01T06:12:15+08:00">2025-10-01</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/">技术记录</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" itemprop="url"><span itemprop="name">技术记录</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2025/10/01/git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2025/10/01/toolkit从源头构建/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Dawnqi's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Dawnqi's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2025/10/01/toolkit%E4%BB%8E%E6%BA%90%E5%A4%B4%E6%9E%84%E5%BB%BA/"  itemprop="url">
-        toolkit从源头构建
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <html><head></head><body></body></html>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-10-01T01:52:12+08:00">2025-10-01</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">技术学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">技术学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2025/10/01/toolkit%E4%BB%8E%E6%BA%90%E5%A4%B4%E6%9E%84%E5%BB%BA/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2025/09/28/hexo+volantis搭建个人博客/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Dawnqi's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Dawnqi's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2025/09/28/hexo+volantis%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"  itemprop="url">
-        hexo+volantis个人博客搭建问题记录
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <html><head></head><body></body></html>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-09-28T22:37:24+08:00">2025-09-28</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">技术学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">技术学习</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2025/09/28/hexo+volantis%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2025/09/27/0928/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Dawnqi's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Dawnqi's Blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2025/09/27/0928/"  itemprop="url">
-        班后随想
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <html><head></head><body></body></html>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2025-09-27T11:34:14+08:00">2025-09-27</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%9D%82%E8%B0%88/" itemprop="url"><span itemprop="name">杂谈</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2025/09/27/0928/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-	
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2816,278 +3190,64 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='images/Profile_Picture.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Dawnqi</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">穷且益坚，不坠青云之志</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="https://s.team/p/fjbm-tpwc/cwvgpgmg"
-              class="social fa-brands fa-steam flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:Dawnqi@qq.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/dawnqi2-cyber"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesE68A80E69CAFE5ADA6E4B9A0"
-            ><div class='name'>技术学习</div><div class='badge'>(8)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"
-            active-action="action-categoriesE68A80E69CAFE8AEB0E5BD95"
-            ><div class='name'>技术记录</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%96%B9%E6%B3%95%E8%AE%B0%E5%BD%95/" href="/categories/%E6%96%B9%E6%B3%95%E8%AE%B0%E5%BD%95/"
-            active-action="action-categoriesE696B9E6B395E8AEB0E5BD95"
-            ><div class='name'>方法记录</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
-            active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%9D%82%E8%B0%88/" href="/categories/%E6%9D%82%E8%B0%88/"
-            active-action="action-categoriesE69D82E8B088"
-            ><div class='name'>杂谈</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/AI/" style="font-size: 17.33px; color: #828282">AI</a> <a href="/tags/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" style="font-size: 20.67px; color: #6c6c6c">AI应用开发</a> <a href="/tags/Agent/" style="font-size: 20.67px; color: #6c6c6c">Agent</a> <a href="/tags/Gradle/" style="font-size: 14px; color: #999">Gradle</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/IDEA/" style="font-size: 14px; color: #999">IDEA</a> <a href="/tags/Java/" style="font-size: 14px; color: #999">Java</a> <a href="/tags/JavaGuide/" style="font-size: 14px; color: #999">JavaGuide</a> <a href="/tags/KFB/" style="font-size: 14px; color: #999">KFB</a> <a href="/tags/Metabase/" style="font-size: 14px; color: #999">Metabase</a> <a href="/tags/Prompt/" style="font-size: 14px; color: #999">Prompt</a> <a href="/tags/PyQt/" style="font-size: 14px; color: #999">PyQt</a> <a href="/tags/Python/" style="font-size: 17.33px; color: #828282">Python</a> <a href="/tags/QuPath/" style="font-size: 14px; color: #999">QuPath</a> <a href="/tags/RAG/" style="font-size: 17.33px; color: #828282">RAG</a> <a href="/tags/SQL/" style="font-size: 14px; color: #999">SQL</a> <a href="/tags/SVS/" style="font-size: 14px; color: #999">SVS</a> <a href="/tags/Volantis/" style="font-size: 14px; color: #999">Volantis</a> <a href="/tags/WSI/" style="font-size: 14px; color: #999">WSI</a> <a href="/tags/c-%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">c++学习</a> <a href="/tags/codex/" style="font-size: 14px; color: #999">codex</a> <a href="/tags/openai/" style="font-size: 14px; color: #999">openai</a> <a href="/tags/openslide/" style="font-size: 14px; color: #999">openslide</a> <a href="/tags/python/" style="font-size: 17.33px; color: #828282">python</a> <a href="/tags/toolkit/" style="font-size: 14px; color: #999">toolkit</a> <a href="/tags/vscode/" style="font-size: 14px; color: #999">vscode</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 14px; color: #999">博客搭建</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/" style="font-size: 14px; color: #999">图像格式转换</a> <a href="/tags/%E5%A4%8D%E4%B9%A0/" style="font-size: 14px; color: #999">复习</a> <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/" style="font-size: 17.33px; color: #828282">大模型</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 14px; color: #999">数据库</a> <a href="/tags/%E6%97%A5%E8%AE%B0/" style="font-size: 17.33px; color: #828282">日记</a> <a href="/tags/%E6%9C%9F%E6%9D%83%E7%AD%96%E7%95%A5/" style="font-size: 14px; color: #999">期权策略</a> <a href="/tags/%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F/" style="font-size: 14px; color: #999">记忆系统</a> <a href="/tags/%E9%87%8F%E5%8C%96%E7%A0%94%E7%A9%B6/" style="font-size: 14px; color: #999">量化研究</a> <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" style="font-size: 17.33px; color: #828282">问题记录</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 20.67px; color: #6c6c6c">随笔</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 24px; color: #555">面试</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget qrcode desktop mobile pjax">
-  
-
-  <div class='content article-entry'>
-    
-      <img src='/images/QQ.png'
-      
-        height='64px'
-      />
-    
-      <img src='/images/wx.png'
-      
-        height='64px'
-      />
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>18 篇</div>
-        </div>
-      
-
-      
-
-
-      
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2026-07-06 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2026/07/06/AI-Agent%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E7%AC%94%E8%AE%B0/"><div class="item"><time>2026-07-06</time><span>技术学习</span></div><span>AI Agent 记忆系统学习路线笔记：把短期记忆、长期记忆、RAG 与记忆演化机制串起来</span></a></li><li><a class="widget-last" href="/2026/07/06/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E7%B2%BE%E7%AE%80%E7%AC%94%E8%AE%B0/"><div class="item"><time>2026-07-06</time><span>技术学习</span></div><span>大模型运行机制精简笔记：Token、上下文窗口与采样参数</span></a></li><li><a class="widget-last" href="/2026/06/27/ai-app-interview-one-week-review/"><div class="item"><time>2026-07-02</time><span>技术学习</span></div><span>AI 应用开发面试一周冲刺复习手册</span></a></li><li><a class="widget-last" href="/2026/06/29/Option-Strategy-Research-Agent%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%E7%AD%96%E7%95%A5/"><div class="item"><time>2026-06-29</time><span>技术学习</span></div><span>候选人视角：期权策略研究 Agent 项目面试复习策略</span></a></li><li><a class="widget-last" href="/2026/06/28/JavaGuide-AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/"><div class="item"><time>2026-06-28</time><span>技术学习</span></div><span>JavaGuide AI / 大模型应用开发学习资料整理</span></a></li></ul>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget text desktop pjax">
-  
-  <header>
-    
-      <a target="_blank" rel="noopener" href='https://baidu.com'><i class="fab fa-github fa-fw" aria-hidden="true"></i><span class='name'>点个赞吧</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <p>您的赞对我来说很重要，如果您喜欢本主题，希望能够给下面的项目点个赞来支持一下。</p>
-
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/xaoxuu/ProHUD"></a></p>
-
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/xaoxuu/ValueX"></a></p>
-
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/xaoxuu/Inspire"></a></p>
-
-    
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%85%88%E6%8A%93%E4%B8%80%E5%8F%A5%E6%80%BB%E7%BA%B2%EF%BC%9AAgent-%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E5%88%B0%E5%BA%95%E5%9C%A8%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88"><span class="toc-text">一、先抓一句总纲：Agent 记忆系统到底在解决什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%AC%AC%E4%B8%80%E6%9D%A1%E5%AD%A6%E4%B9%A0%E4%B8%BB%E7%BA%BF%EF%BC%9A%E5%85%88%E5%88%86%E6%B8%85%E2%80%9C%E7%9F%AD%E6%9C%9F%E8%AE%B0%E5%BF%86%E2%80%9D%E5%92%8C%E2%80%9C%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86%E2%80%9D"><span class="toc-text">二、第一条学习主线：先分清“短期记忆”和“长期记忆”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%9F%AD%E6%9C%9F%E8%AE%B0%E5%BF%86%EF%BC%88Short-Term-Memory-Working-Memory%EF%BC%89"><span class="toc-text">1. 短期记忆（Short-Term Memory &#x2F; Working Memory）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D"><span class="toc-text">关键词</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B8%E5%9E%8B%E5%86%85%E5%AE%B9"><span class="toc-text">典型内容</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86%EF%BC%88Long-Term-Memory%EF%BC%89"><span class="toc-text">2. 长期记忆（Long-Term Memory）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-1"><span class="toc-text">关键词</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B8%E5%9E%8B%E5%86%85%E5%AE%B9-1"><span class="toc-text">典型内容</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%80%E5%AE%9A%E8%A6%81%E5%88%86%E5%B1%82"><span class="toc-text">3. 为什么一定要分层</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%AC%AC%E4%BA%8C%E6%9D%A1%E5%AD%A6%E4%B9%A0%E4%B8%BB%E7%BA%BF%EF%BC%9A%E8%AE%B0%E5%BF%86%E4%B8%8D%E5%8F%AA%E6%98%AF%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95%EF%BC%8C%E5%AE%83%E8%BF%98%E6%9C%89%E5%8A%9F%E8%83%BD%E5%88%86%E7%B1%BB"><span class="toc-text">三、第二条学习主线：记忆不只是聊天记录，它还有功能分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BA%8B%E5%AE%9E%E8%AE%B0%E5%BF%86%EF%BC%88Fact-Memory-Semantic-Memory%EF%BC%89"><span class="toc-text">1. 事实记忆（Fact Memory &#x2F; Semantic Memory）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-2"><span class="toc-text">关键词</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-text">例子</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%83%85%E6%99%AF%E8%AE%B0%E5%BF%86%EF%BC%88Episodic-Memory%EF%BC%89"><span class="toc-text">2. 情景记忆（Episodic Memory）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-3"><span class="toc-text">关键词</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90-1"><span class="toc-text">例子</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%A8%8B%E5%BA%8F%E8%AE%B0%E5%BF%86-%E7%BB%8F%E9%AA%8C%E8%AE%B0%E5%BF%86%EF%BC%88Procedural-Memory-Experience-Memory%EF%BC%89"><span class="toc-text">3. 程序记忆 &#x2F; 经验记忆（Procedural Memory &#x2F; Experience Memory）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-4"><span class="toc-text">关键词</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90-2"><span class="toc-text">例子</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BF%86%EF%BC%88Working-Memory%EF%BC%89"><span class="toc-text">4. 工作记忆（Working Memory）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-5"><span class="toc-text">关键词</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%AC%AC%E4%B8%89%E6%9D%A1%E5%AD%A6%E4%B9%A0%E4%B8%BB%E7%BA%BF%EF%BC%9A%E8%AE%B0%E5%BF%86%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%AF%94%E2%80%9C%E5%AD%98%E5%82%A8%E2%80%9D%E6%9B%B4%E9%87%8D%E8%A6%81"><span class="toc-text">四、第三条学习主线：记忆的生命周期比“存储”更重要</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BC%96%E7%A0%81%EF%BC%88Encode%EF%BC%89"><span class="toc-text">1. 编码（Encode）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-6"><span class="toc-text">关键词</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%8A%A8%E4%BD%9C"><span class="toc-text">核心动作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AD%98%E5%82%A8%EF%BC%88Store%EF%BC%89"><span class="toc-text">2. 存储（Store）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-7"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%8F%90%E5%8F%96%EF%BC%88Retrieve%EF%BC%89"><span class="toc-text">3. 提取（Retrieve）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-8"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%B7%A9%E5%9B%BA%EF%BC%88Consolidate%EF%BC%89"><span class="toc-text">4. 巩固（Consolidate）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-9"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%8F%8D%E6%80%9D%EF%BC%88Reflect%EF%BC%89"><span class="toc-text">5. 反思（Reflect）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-10"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E6%B8%85%E7%90%86%E4%B8%8E%E9%81%97%E5%BF%98%EF%BC%88Forget%EF%BC%89"><span class="toc-text">6. 清理与遗忘（Forget）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-11"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E8%BF%99%E4%B8%80%E9%83%A8%E5%88%86%E6%9C%80%E5%85%B3%E9%94%AE%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">7. 这一部分最关键的理解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%AC%AC%E5%9B%9B%E6%9D%A1%E5%AD%A6%E4%B9%A0%E4%B8%BB%E7%BA%BF%EF%BC%9A%E8%AE%B0%E5%BF%86%E5%88%B0%E5%BA%95%E5%8F%AF%E4%BB%A5%E5%AD%98%E6%88%90%E4%BB%80%E4%B9%88%E5%BD%A2%E5%BC%8F"><span class="toc-text">五、第四条学习主线：记忆到底可以存成什么形式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%A4%96%E9%83%A8%E6%96%87%E6%9C%AC-%E7%BB%93%E6%9E%84%E5%8C%96%E5%AD%98%E5%82%A8"><span class="toc-text">1. 外部文本 &#x2F; 结构化存储</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-12"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%90%91%E9%87%8F%E5%8C%96%E8%AE%B0%E5%BF%86"><span class="toc-text">2. 向量化记忆</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-13"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%9B%BE%E7%BB%93%E6%9E%84%E8%AE%B0%E5%BF%86"><span class="toc-text">3. 图结构记忆</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-14"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%8F%82%E6%95%B0%E5%8C%96%E8%AE%B0%E5%BF%86"><span class="toc-text">4. 参数化记忆</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-15"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%BF%80%E6%B4%BB%E6%80%81%E8%AE%B0%E5%BF%86-%E6%BD%9C%E5%9C%A8%E8%AE%B0%E5%BF%86"><span class="toc-text">5. 激活态记忆 &#x2F; 潜在记忆</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-16"><span class="toc-text">关键词</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E7%AC%AC%E4%BA%94%E6%9D%A1%E5%AD%A6%E4%B9%A0%E4%B8%BB%E7%BA%BF%EF%BC%9A%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86%E5%92%8C-RAG-%E5%88%B0%E5%BA%95%E6%80%8E%E4%B9%88%E5%8C%BA%E5%88%86"><span class="toc-text">六、第五条学习主线：长期记忆和 RAG 到底怎么区分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-RAG-%E4%B8%BB%E8%A6%81%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88"><span class="toc-text">1. RAG 主要解决什么</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-17"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86%E4%B8%BB%E8%A6%81%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88"><span class="toc-text">2. 长期记忆主要解决什么</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-18"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%80%E5%8F%A5%E8%AF%9D%E5%8C%BA%E5%88%86"><span class="toc-text">3. 一句话区分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%A4%E8%80%85%E8%A6%81%E9%85%8D%E5%90%88"><span class="toc-text">4. 为什么两者要配合</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E7%AC%AC%E5%85%AD%E6%9D%A1%E5%AD%A6%E4%B9%A0%E4%B8%BB%E7%BA%BF%EF%BC%9A%E4%B8%BB%E6%B5%81-Memory-%E6%9E%B6%E6%9E%84%E5%88%B0%E5%BA%95%E5%9C%A8%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E5%B7%AE%E5%BC%82"><span class="toc-text">七、第六条学习主线：主流 Memory 架构到底在解决什么差异</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-LETTA"><span class="toc-text">1. LETTA</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-19"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-ZEP"><span class="toc-text">2. ZEP</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-20"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-MemOS"><span class="toc-text">3. MemOS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-21"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BD%A0%E7%9C%9F%E6%AD%A3%E8%A6%81%E8%AE%B0%E4%BD%8F%E7%9A%84%E4%B8%8D%E6%98%AF%E4%BA%A7%E5%93%81%E5%90%8D%EF%BC%8C%E8%80%8C%E6%98%AF%E8%AE%BE%E8%AE%A1%E6%96%B9%E5%90%91"><span class="toc-text">4. 你真正要记住的不是产品名，而是设计方向</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E7%AC%AC%E4%B8%83%E6%9D%A1%E5%AD%A6%E4%B9%A0%E4%B8%BB%E7%BA%BF%EF%BC%9A%E9%AB%98%E7%BA%A7%E6%BC%94%E5%8C%96%E6%9C%BA%E5%88%B6%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%A8%E6%96%87%E7%9A%84%E7%9C%9F%E6%AD%A3%E9%87%8D%E7%82%B9"><span class="toc-text">八、第七条学习主线：高级演化机制为什么是全文的真正重点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E5%8F%AA%E4%BC%9A%E2%80%9C%E5%86%99%E5%85%A5-%E6%A3%80%E7%B4%A2%E2%80%9D%EF%BC%8C%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88"><span class="toc-text">如果只会“写入 + 检索”，会发生什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8F%8D%E6%80%9D%EF%BC%88Reflection%EF%BC%89"><span class="toc-text">1. 反思（Reflection）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-22"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%90%88%E6%88%90%EF%BC%88Synthesis%EF%BC%89"><span class="toc-text">2. 合成（Synthesis）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-23"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%86%B2%E7%AA%81%E5%A4%84%E7%90%86%E4%B8%8E%E9%81%97%E5%BF%98%EF%BC%88Conflict-Forgetting%EF%BC%89"><span class="toc-text">3. 冲突处理与遗忘（Conflict + Forgetting）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-24"><span class="toc-text">关键词</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%BF%99%E4%B8%80%E6%AE%B5%E7%9A%84%E7%9C%9F%E6%AD%A3%E7%BB%93%E8%AE%BA"><span class="toc-text">4. 这一段的真正结论</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E7%AC%AC%E5%85%AB%E6%9D%A1%E5%AD%A6%E4%B9%A0%E4%B8%BB%E7%BA%BF%EF%BC%9A%E6%A3%80%E7%B4%A2%E9%93%BE%E8%B7%AF%E4%BC%98%E5%8C%96%E5%BE%80%E5%BE%80%E6%AF%94%E2%80%9C%E5%86%99%E6%9B%B4%E5%A4%9A%E8%AE%B0%E5%BF%86%E2%80%9D%E6%9B%B4%E9%87%8D%E8%A6%81"><span class="toc-text">九、第八条学习主线：检索链路优化往往比“写更多记忆”更重要</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-25"><span class="toc-text">关键词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E7%A8%8B%E4%B8%8A%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E7%BB%93%E8%AE%BA"><span class="toc-text">工程上最重要的结论</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E5%A6%82%E6%9E%9C%E7%94%A8-Markdown-%E5%81%9A%E8%AE%B0%E5%BF%86%EF%BC%8C%E8%A6%81%E6%80%8E%E4%B9%88%E7%90%86%E8%A7%A3%E5%AE%83%E7%9A%84%E8%BE%B9%E7%95%8C"><span class="toc-text">十、如果用 Markdown 做记忆，要怎么理解它的边界</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D-26"><span class="toc-text">关键词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E5%90%88%E5%AD%98%E4%BB%80%E4%B9%88"><span class="toc-text">适合存什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E9%80%82%E5%90%88%E7%9B%B4%E6%8E%A5%E6%9B%BF%E4%BB%A3%E4%BB%80%E4%B9%88"><span class="toc-text">不适合直接替代什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E5%8F%A5%E8%AF%9D%E7%90%86%E8%A7%A3%E8%BE%B9%E7%95%8C"><span class="toc-text">一句话理解边界</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E6%8A%8A%E5%85%A8%E6%96%87%E7%9C%9F%E6%AD%A3%E4%B8%B2%E8%B5%B7%E6%9D%A5%EF%BC%9A%E4%B8%80%E6%9D%A1%E6%9C%80%E6%B8%85%E6%99%B0%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF"><span class="toc-text">十一、把全文真正串起来：一条最清晰的学习路线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%85%88%E5%9B%9E%E7%AD%94%E2%80%9C%E4%B8%BA%E4%BB%80%E4%B9%88-Agent-%E9%9C%80%E8%A6%81%E8%AE%B0%E5%BF%86%E2%80%9D"><span class="toc-text">第一步：先回答“为什么 Agent 需要记忆”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%86%8D%E5%88%86%E6%B8%85%E2%80%9C%E7%9F%AD%E6%9C%9F%E8%AE%B0%E5%BF%86%E2%80%9D%E5%92%8C%E2%80%9C%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86%E2%80%9D"><span class="toc-text">第二步：再分清“短期记忆”和“长期记忆”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%86%8D%E7%90%86%E8%A7%A3%E2%80%9C%E8%AE%B0%E5%BF%86%E9%87%8C%E5%88%B0%E5%BA%95%E5%AD%98%E4%BB%80%E4%B9%88%E2%80%9D"><span class="toc-text">第三步：再理解“记忆里到底存什么”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E5%86%8D%E7%90%86%E8%A7%A3%E2%80%9C%E8%AE%B0%E5%BF%86%E6%98%AF%E6%80%8E%E4%B9%88%E6%B5%81%E5%8A%A8%E7%9A%84%E2%80%9D"><span class="toc-text">第四步：再理解“记忆是怎么流动的”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E5%86%8D%E7%90%86%E8%A7%A3%E2%80%9C%E8%AE%B0%E5%BF%86%E5%8F%AF%E4%BB%A5%E6%94%BE%E5%9C%A8%E5%93%AA%E9%87%8C%E2%80%9D"><span class="toc-text">第五步：再理解“记忆可以放在哪里”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E6%AD%A5%EF%BC%9A%E5%86%8D%E6%8A%8A%E2%80%9C%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86%E2%80%9D%E5%92%8C%E2%80%9CRAG%E2%80%9D%E8%BE%B9%E7%95%8C%E5%88%86%E6%B8%85"><span class="toc-text">第六步：再把“长期记忆”和“RAG”边界分清</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E6%AD%A5%EF%BC%9A%E5%86%8D%E7%90%86%E8%A7%A3%E4%B8%BB%E6%B5%81-Memory-%E6%9E%B6%E6%9E%84%E5%9C%A8%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E5%B7%AE%E5%BC%82"><span class="toc-text">第七步：再理解主流 Memory 架构在解决什么差异</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E6%AD%A5%EF%BC%9A%E6%9C%80%E5%90%8E%E7%90%86%E8%A7%A3%E2%80%9C%E6%BC%94%E5%8C%96%E6%9C%BA%E5%88%B6%E2%80%9D"><span class="toc-text">第八步：最后理解“演化机制”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81%E6%9C%80%E5%80%BC%E5%BE%97%E8%83%8C%E4%B8%8B%E6%9D%A5%E7%9A%84%E5%85%B3%E9%94%AE%E8%AF%8D%E6%B8%85%E5%8D%95"><span class="toc-text">十二、最值得背下来的关键词清单</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E5%88%86%E5%B1%82"><span class="toc-text">记忆分层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E7%B1%BB%E5%9E%8B"><span class="toc-text">记忆类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">生命周期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%BD%A2%E6%80%81"><span class="toc-text">存储形态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E7%B4%A2%E4%B8%8E%E4%BC%98%E5%8C%96"><span class="toc-text">检索与优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%B6%E6%9E%84%E4%B8%8E%E4%BA%A7%E5%93%81"><span class="toc-text">架构与产品</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3103,13 +3263,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3118,14 +3279,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -3998,7 +4159,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Dawnqi's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/archives/2025/","name":"2025年"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Dawnqi's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Dawnqi's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/技术学习/","name":"技术学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2026/07/06/AI-Agent记忆系统学习路线笔记/","name":"AI Agent 记忆系统学习路线笔记：把短期记忆、长期记忆、RAG 与记忆演化机制串起来"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Dawnqi's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"AI Agent 记忆系统学习路线笔记：把短期记忆、长期记忆、RAG 与记忆演化机制串起来","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2026/07/06/AI-Agent%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E7%AC%94%E8%AE%B0/"},"author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2026/07/06/AI-Agent%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E7%AC%94%E8%AE%B0/","wordCount":0,"datePublished":"2026-07-06T15:10:00.000Z","dateModified":"2026-07-06T11:29:35.760Z","articleSection":"技术学习","keywords":"AI应用开发,面试,RAG,Agent,记忆系统","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
