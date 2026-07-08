@@ -1,0 +1,4759 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#5.8.0'>
+  <meta name="generator" content="Hexo 8.0.0">
+  <meta name="Volantis" content="5.8.0">
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+  <link rel="canonical" href="http://example.com/2026/07/08/大模型基础面试题四板块整理/"/>
+  <!-- 渲染优化 -->
+    <meta http-equiv='x-dns-prefetch-control' content='on' />
+      <link rel='dns-prefetch' href='https://unpkg.com'>
+      <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <!-- import head_begin begin -->
+  <!-- import head_begin end -->
+  <!-- Custom Files headBegin begin-->
+  
+  <!-- Custom Files headBegin end-->
+  <!-- front-matter head_begin begin -->
+  <!-- front-matter head_begin end -->
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <!-- feed -->
+  <!-- 页面元数据 -->
+  <title>大模型基础面试题四板块整理 - Dawnqi's Blog</title>
+  <meta name="keywords" content="AI应用开发,面试,大模型,API,结构化输出,null">
+  <meta desc name="description" content="Dawnqi's Blog - Dawnqi - Dawnqi's Blog">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="大模型基础面试题四板块整理">
+<meta property="og:url" content="http://example.com/2026/07/08/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E5%9B%9B%E6%9D%BF%E5%9D%97%E6%95%B4%E7%90%86/index.html">
+<meta property="og:site_name" content="Dawnqi&#39;s Blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2026-07-08T15:10:00.000Z">
+<meta property="article:modified_time" content="2026-07-08T14:33:27.474Z">
+<meta property="article:author" content="Dawnqi">
+<meta property="article:tag" content="AI应用开发">
+<meta property="article:tag" content="API">
+<meta property="article:tag" content="大模型">
+<meta property="article:tag" content="结构化输出">
+<meta property="article:tag" content="面试">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+  <style>
+    /* 首屏样式 */
+    #safearea {
+  display: none;
+}
+:root {
+  --color-site-body: #f4f4f4;
+  --color-site-bg: #f4f4f4;
+  --color-site-inner: #fff;
+  --color-site-footer: #666;
+  --color-card: #fff;
+  --color-text: #444;
+  --color-block: #f6f6f6;
+  --color-inlinecode: #c74f00;
+  --color-codeblock: #fff7ea;
+  --color-h1: #3a3a3a;
+  --color-h2: #3a3a3a;
+  --color-h3: #333;
+  --color-h4: #444;
+  --color-h5: #555;
+  --color-h6: #666;
+  --color-p: #444;
+  --color-list: #666;
+  --color-list-hl: #30ad91;
+  --color-meta: #888;
+  --color-read-bkg: #e0d8c8;
+  --color-read-post: #f8f1e2;
+  --color-copyright-bkg: #f5f5f5;
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+*::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+*::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: #3dd9b6;
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #ff5722;
+}
+html {
+  color: var(--color-text);
+  width: 100%;
+  height: 100%;
+  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-size: 16px;
+}
+html >::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+html >::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+html >::-webkit-scrollbar-thumb {
+  background: #54b5a0 linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+html >::-webkit-scrollbar-thumb:hover {
+  background: #54b5a0 linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
+}
+body {
+  background-color: var(--color-site-body);
+  text-rendering: optimizelegibility;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body.modal-active {
+  overflow: hidden;
+}
+@media screen and (max-width: 680px) {
+  body.modal-active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+a {
+  color: #2092ec;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+a:hover {
+  color: #ff5722;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+ul,
+ol {
+  padding-left: 0;
+}
+ul li,
+ol li {
+  list-style: none;
+}
+header {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+img {
+  border: 0;
+  background: none;
+  max-width: 100%;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  height: 0;
+  border: 0;
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-bottom: 1px solid rgba(68,68,68,0.1);
+}
+button,
+input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+@supports (backdrop-filter: blur(20px)) {
+  .blur {
+    background: rgba(255,255,255,0.9) !important;
+    backdrop-filter: saturate(200%) blur(20px);
+  }
+}
+.shadow {
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+}
+.shadow.floatable {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.shadow.floatable:hover {
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1), 0 8px 16px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1), 0 8px 16px 0px rgba(0,0,0,0.1);
+}
+#l_cover {
+  min-height: 64px;
+}
+.cover-wrapper {
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  height: 100vh;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  color: var(--color-site-inner);
+  padding: 0 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: -100px;
+}
+.cover-wrapper .cover-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+}
+.cover-wrapper .cover-bg.lazyload:not(.loaded) {
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+}
+.cover-wrapper .cover-bg.lazyload.loaded {
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-name: fadeIn;
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+.cover-wrapper .cover-body {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.cover-wrapper#full {
+  height: calc(100vh + 100px);
+  padding-bottom: 100px;
+}
+.cover-wrapper#half {
+  max-height: 640px;
+  min-height: 400px;
+  height: calc(36vh - 64px + 200px);
+}
+.cover-wrapper #scroll-down {
+  width: 100%;
+  height: 64px;
+  position: absolute;
+  bottom: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+.cover-wrapper #scroll-down .scroll-down-effects {
+  color: #fff;
+  font-size: 24px;
+  line-height: 64px;
+  position: absolute;
+  width: 24px;
+  left: calc(50% - 12px);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  animation: scroll-down-effect 1.5s infinite;
+  -webkit-animation: scroll-down-effect 1.5s infinite;
+  -khtml-animation: scroll-down-effect 1.5s infinite;
+  -moz-animation: scroll-down-effect 1.5s infinite;
+  -o-animation: scroll-down-effect 1.5s infinite;
+  -ms-animation: scroll-down-effect 1.5s infinite;
+}
+@-moz-keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+.cover-wrapper .cover-body {
+  margin-top: 64px;
+  margin-bottom: 100px;
+}
+.cover-wrapper .cover-body,
+.cover-wrapper .cover-body .top,
+.cover-wrapper .cover-body .bottom {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  max-width: 100%;
+}
+.cover-wrapper .cover-body .bottom {
+  margin-top: 32px;
+}
+.cover-wrapper .cover-body .title {
+  font-family: "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
+  font-size: 3.125rem;
+  line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.cover-wrapper .cover-body .subtitle {
+  font-size: 20px;
+}
+.cover-wrapper .cover-body .logo {
+  max-height: 120px;
+  max-width: calc(100% - 4 * 16px);
+}
+@media screen and (min-height: 1024px) {
+  .cover-wrapper .cover-body .title {
+    font-size: 3rem;
+  }
+  .cover-wrapper .cover-body .subtitle {
+    font-size: 1.05rem;
+  }
+  .cover-wrapper .cover-body .logo {
+    max-height: 150px;
+  }
+}
+.cover-wrapper .cover-body .m_search {
+  position: relative;
+  max-width: calc(100% - 16px);
+  width: 320px;
+  vertical-align: middle;
+}
+.cover-wrapper .cover-body .m_search .form {
+  position: relative;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  width: 100%;
+}
+.cover-wrapper .cover-body .m_search .icon,
+.cover-wrapper .cover-body .m_search .input {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.cover-wrapper .cover-body .m_search .icon {
+  position: absolute;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  line-height: 2.5rem;
+  width: 32px;
+  top: 0;
+  left: 5px;
+  color: rgba(68,68,68,0.75);
+}
+.cover-wrapper .cover-body .m_search .input {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  height: 2.5rem;
+  width: 100%;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 0.875rem;
+  -webkit-appearance: none;
+  padding-left: 36px;
+  border-radius: 1.4rem;
+  -webkit-border-radius: 1.4rem;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  border: none;
+  color: var(--color-text);
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper .cover-body .m_search .input {
+    padding-left: 36px;
+  }
+}
+.cover-wrapper .cover-body .m_search .input:hover {
+  background: rgba(255,255,255,0.8);
+}
+.cover-wrapper .cover-body .m_search .input:focus {
+  background: #fff;
+}
+.cover-wrapper .list-h {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -khtml-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  align-items: stretch;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.cover-wrapper .list-h a {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  font-weight: 600;
+}
+.cover-wrapper .list-h a img {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  margin: 4px;
+  min-width: 40px;
+  max-width: 44px;
+}
+@media screen and (max-width: 768px) {
+  .cover-wrapper .list-h a img {
+    min-width: 36px;
+    max-width: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper .list-h a img {
+    margin: 2px 4px;
+    min-width: 32px;
+    max-width: 36px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .cover-wrapper .list-h a img {
+    min-width: 28px;
+    max-width: 32px;
+  }
+}
+.cover-wrapper {
+  max-width: 100%;
+}
+.cover-wrapper.search .bottom .menu {
+  margin-top: 16px;
+}
+.cover-wrapper.search .bottom .menu .list-h a {
+  white-space: nowrap;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 2px;
+  margin: 4px;
+  color: var(--color-site-inner);
+  opacity: 0.75;
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  border-bottom: 2px solid transparent;
+}
+.cover-wrapper.search .bottom .menu .list-h a i {
+  margin-right: 4px;
+}
+.cover-wrapper.search .bottom .menu .list-h a p {
+  font-size: 0.9375rem;
+}
+.cover-wrapper.search .bottom .menu .list-h a:hover,
+.cover-wrapper.search .bottom .menu .list-h a.active,
+.cover-wrapper.search .bottom .menu .list-h a:active {
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  border-bottom: 2px solid var(--color-site-inner);
+}
+@font-face {
+  font-family: 'UbuntuMono';
+  src: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  font-weight: 'normal';
+  font-style: 'normal';
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Varela Round';
+  src: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
+  font-weight: 'normal';
+  font-style: 'normal';
+  font-display: swap;
+}
+.l_header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: var(--color-card);
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+}
+.l_header.auto {
+  transition: opacity 0.4s ease;
+  -webkit-transition: opacity 0.4s ease;
+  -khtml-transition: opacity 0.4s ease;
+  -moz-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
+  -ms-transition: opacity 0.4s ease;
+  visibility: hidden;
+}
+.l_header.auto.show {
+  opacity: 1 !important;
+  -webkit-opacity: 1 !important;
+  -moz-opacity: 1 !important;
+  visibility: visible;
+}
+.l_header .container {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.l_header #wrapper {
+  height: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.l_header #wrapper .nav-main,
+.l_header #wrapper .nav-sub {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -khtml-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-justify-content: space-between;
+  align-items: center;
+}
+.l_header #wrapper .nav-main {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.l_header #wrapper.sub .nav-main {
+  transform: translateY(-64px);
+  -webkit-transform: translateY(-64px);
+  -khtml-transform: translateY(-64px);
+  -moz-transform: translateY(-64px);
+  -o-transform: translateY(-64px);
+  -ms-transform: translateY(-64px);
+}
+.l_header #wrapper .nav-sub {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  height: 64px;
+  width: calc(100% - 2 * 16px);
+  position: absolute;
+}
+.l_header #wrapper .nav-sub ::-webkit-scrollbar {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+@media screen and (min-width: 2048px) {
+  .l_header #wrapper .nav-sub {
+    max-width: 55vw;
+    margin: auto;
+  }
+}
+.l_header #wrapper.sub .nav-sub {
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+}
+.l_header #wrapper .title {
+  position: relative;
+  color: var(--color-text);
+  padding-left: 24px;
+  max-height: 64px;
+}
+.l_header #wrapper .nav-main .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+  line-height: 64px;
+  padding: 0 24px;
+  font-size: 1.25rem;
+  font-family: "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
+}
+.l_header #wrapper .nav-main .title img {
+  height: 64px;
+}
+.l_header .nav-sub {
+  max-width: 1080px;
+  margin: auto;
+}
+.l_header .nav-sub .title {
+  font-weight: bold;
+  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  line-height: 1.2;
+  max-height: 64px;
+  white-space: normal;
+  flex-shrink: 1;
+}
+.l_header .switcher {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  line-height: 64px;
+  align-items: center;
+}
+.l_header .switcher .s-toc {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .l_header .switcher .s-toc {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: -ms-flexbox /* TWEENER - IE 10 */;
+    display: -webkit-flex /* NEW - Chrome */;
+    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+    display: flex;
+  }
+}
+.l_header .switcher >li {
+  height: 48px;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  margin: 2px;
+}
+@media screen and (max-width: 500px) {
+  .l_header .switcher >li {
+    margin: 0 1px;
+    height: 48px;
+  }
+}
+.l_header .switcher >li >a {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0.85em 1.1em;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border: none;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  color: #3dd9b6;
+}
+.l_header .switcher >li >a:hover {
+  border: none;
+}
+.l_header .switcher >li >a.active,
+.l_header .switcher >li >a:active {
+  border: none;
+  background: var(--color-site-bg);
+}
+@media screen and (max-width: 500px) {
+  .l_header .switcher >li >a {
+    width: 36px;
+    height: 48px;
+  }
+}
+.l_header .nav-sub .switcher {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+}
+.l_header .m_search {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  height: 64px;
+  width: 240px;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+@media screen and (max-width: 1024px) {
+  .l_header .m_search {
+    width: 44px;
+    min-width: 44px;
+  }
+  .l_header .m_search input::placeholder {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  .l_header .m_search:hover {
+    width: 240px;
+  }
+  .l_header .m_search:hover input::placeholder {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@media screen and (min-width: 500px) {
+  .l_header .m_search:hover .input {
+    width: 100%;
+  }
+  .l_header .m_search:hover .input::placeholder {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@media screen and (max-width: 500px) {
+  .l_header .m_search {
+    min-width: 0;
+  }
+  .l_header .m_search input::placeholder {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+.l_header .m_search .form {
+  position: relative;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.l_header .m_search .icon {
+  position: absolute;
+  width: 36px;
+  left: 5px;
+  color: var(--color-meta);
+}
+@media screen and (max-width: 500px) {
+  .l_header .m_search .icon {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
+}
+.l_header .m_search .input {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 1.3;
+  width: 100%;
+  color: var(--color-text);
+  background: #fafafa;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding-left: 40px;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: none;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+@media screen and (min-width: 500px) {
+  .l_header .m_search .input:focus {
+    box-shadow: 0 4px 8px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 4px 8px 0px rgba(0,0,0,0.1);
+  }
+}
+@media screen and (max-width: 500px) {
+  .l_header .m_search .input {
+    background: var(--color-block);
+    padding-left: 8px;
+    border: none;
+  }
+  .l_header .m_search .input:hover,
+  .l_header .m_search .input:focus {
+    border: none;
+  }
+}
+@media (max-width: 500px) {
+  .l_header .m_search {
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    background: #fff;
+    transition: all 0.28s ease;
+    -webkit-transition: all 0.28s ease;
+    -khtml-transition: all 0.28s ease;
+    -moz-transition: all 0.28s ease;
+    -o-transition: all 0.28s ease;
+    -ms-transition: all 0.28s ease;
+  }
+  .l_header .m_search .input {
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    margin-left: 16px;
+    padding-left: 16px;
+  }
+  .l_header.z_search-open .m_search {
+    width: 100%;
+  }
+  .l_header.z_search-open .m_search .input {
+    width: calc(100% - 120px);
+  }
+}
+ul.m-pc >li>a {
+  color: inherit;
+  border-bottom: 2px solid transparent;
+}
+ul.m-pc >li>a:active,
+ul.m-pc >li>a.active {
+  border-bottom: 2px solid #3dd9b6;
+}
+ul.m-pc li:hover >ul.list-v,
+ul.list-v li:hover >ul.list-v {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+ul.nav-list-h {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: stretch;
+}
+ul.nav-list-h>li {
+  position: relative;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  height: 100%;
+  line-height: 2.4;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+ul.nav-list-h>li >a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 600;
+}
+ul.list-v {
+  z-index: 1;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  position: absolute;
+  background: var(--color-card);
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+  margin-top: -6px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding: 8px 0;
+}
+ul.list-v.show {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+ul.list-v hr {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+ul.list-v >li {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+ul.list-v >li.header {
+  font-size: 0.78125rem;
+  font-weight: bold;
+  line-height: 2em;
+  color: var(--color-meta);
+  margin: 8px 16px 4px;
+}
+ul.list-v >li.header i {
+  margin-right: 8px;
+}
+ul.list-v >li ul {
+  margin-left: 0;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  margin-top: -40px;
+}
+ul.list-v .aplayer-container {
+  min-height: 64px;
+  padding: 6px 16px;
+}
+ul.list-v >li>a {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  color: var(--color-list);
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 36px;
+  padding: 0 20px 0 16px;
+  text-overflow: ellipsis;
+  margin: 0 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+@media screen and (max-width: 1024px) {
+  ul.list-v >li>a {
+    line-height: 40px;
+  }
+}
+ul.list-v >li>a >i {
+  margin-right: 8px;
+}
+ul.list-v >li>a:active,
+ul.list-v >li>a.active {
+  color: var(--color-list-hl);
+}
+ul.list-v >li>a:hover {
+  color: var(--color-list-hl);
+  background: var(--color-site-bg);
+}
+.l_header .menu >ul>li>a {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  padding: 0 8px;
+}
+.l_header .menu >ul>li>a >i {
+  margin-right: 4px;
+}
+.l_header ul.nav-list-h>li {
+  color: var(--color-list);
+  line-height: 64px;
+}
+.l_header ul.nav-list-h>li >a {
+  max-height: 64px;
+  overflow: hidden;
+  color: inherit;
+}
+.l_header ul.nav-list-h>li >a:active,
+.l_header ul.nav-list-h>li >a.active {
+  color: #3dd9b6;
+}
+.l_header ul.nav-list-h>li:hover>a {
+  color: var(--color-list-hl);
+}
+.l_header ul.nav-list-h>li i.music {
+  animation: rotate-effect 1.5s linear infinite;
+  -webkit-animation: rotate-effect 1.5s linear infinite;
+  -khtml-animation: rotate-effect 1.5s linear infinite;
+  -moz-animation: rotate-effect 1.5s linear infinite;
+  -o-animation: rotate-effect 1.5s linear infinite;
+  -ms-animation: rotate-effect 1.5s linear infinite;
+}
+@-moz-keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@-o-keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+.menu-phone li ul.list-v {
+  right: calc(100% - 0.5 * 16px);
+}
+.menu-phone li ul.list-v ul {
+  right: calc(100% - 0.5 * 16px);
+}
+#wrapper {
+  max-width: 1080px;
+  margin: auto;
+}
+@media screen and (min-width: 2048px) {
+  #wrapper {
+    max-width: 55vw;
+  }
+}
+#wrapper .menu {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  margin: 0 16px 0 0;
+}
+#wrapper .menu .list-v ul {
+  left: calc(100% - 0.5 * 16px);
+}
+.menu-phone {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  margin-top: 16px;
+  right: 8px;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.menu-phone ul {
+  right: calc(100% - 0.5 * 16px);
+}
+@media screen and (max-width: 500px) {
+  .menu-phone {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: block;
+  }
+}
+.l_header {
+  max-width: 65vw;
+  left: calc((100% - 65vw) * 0.5);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+@media screen and (max-width: 2048px) {
+  .l_header {
+    max-width: 1112px;
+    left: calc((100% - 1112px) * 0.5);
+  }
+}
+@media screen and (max-width: 1112px) {
+  .l_header {
+    left: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .l_header .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .l_header #wrapper .nav-main .title {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .l_header #wrapper .nav-sub {
+    width: 100%;
+  }
+  .l_header #wrapper .nav-sub .title {
+    overflow-y: scroll;
+    margin-top: 2px;
+    padding: 8px 16px;
+  }
+  .l_header #wrapper .switcher {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: -ms-flexbox /* TWEENER - IE 10 */;
+    display: -webkit-flex /* NEW - Chrome */;
+    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+    display: flex;
+    margin-right: 8px;
+  }
+  .l_header .menu {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .list-v li {
+    max-width: 270px;
+  }
+}
+#u-search {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 60px 20px;
+  z-index: 1001;
+}
+@media screen and (max-width: 680px) {
+  #u-search {
+    padding: 0px;
+  }
+}
+
+  </style>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+    '.kill-t{'+
+      'font-size: 2rem;'+
+    '}'+
+    '.kill-c{'+
+      'font-size: 1.2rem;'+
+    '}'+
+		'#l_header,#l_body{'+
+			'display: none;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        `<span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>`+
+        `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+    .kill-t{
+      font-size: 2rem;
+    }
+    .kill-c{
+      font-size: 1.2rem;
+    }
+		#l_header,#l_body{
+			display: none;
+		}
+	</style>
+    <div class="kill-noscript">
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
+
+
+  <script>
+  /************这个文件存放不需要重载的全局变量和全局函数*********/
+  window.volantis = {}; // volantis 全局变量
+  volantis.debug = "env"; // 调试模式
+  volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
+
+  volantis.GLOBAL_CONFIG ={
+    debug: "env",
+    cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
+    default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
+    lastupdate: new Date(1783521326272),
+    sidebar: {
+      for_page: ["blogger","category","tagcloud","qrcode","webinfo","lastupdate","repos"],
+      for_post: ["toc"],
+      webinfo: {
+        lastupd: {
+          enable: true,
+          friendlyShow: true
+        },
+        runtime: {
+          data: "2020/01/01",
+          unit: "天"
+        }
+      }
+    },
+    plugins: {
+      message: {"enable":true,"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/css/iziToast.min.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/js/iziToast.min.js","icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
+      fancybox: {"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.umd.js"},
+      
+      
+      
+      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","menus.link","hr","menus.darkMode","plugins.articlePage","music"],"options":{"iconPrefix":"fa-solid","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-solid fa-search","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-solid fa-image","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"help","name":"常见问题","icon":"fa-solid fa-question","link":"https://volantis.js.org/faqs/","group":"link"},{"id":"examples","name":"示例博客","icon":"fa-solid fa-rss","link":"https://volantis.js.org/examples/","group":"link"},{"id":"contributors","name":"加入社区","icon":"fa-solid fa-fan","link":"https://volantis.js.org/contributors/","group":"link"},"hr",{"id":"source_docs","name":"本站源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/volantis-docs/","group":"link"},{"id":"source_theme","name":"主题源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"darkMode":[{"id":"darkMode","name":"暗黑模式","icon":"fa-solid fa-moon","event":"volantis.dark.toggle()","group":"darkMode"}]}}
+      
+    }
+  }
+
+  /******************** volantis.EventListener ********************************/
+  // 事件监听器 see: /source/js/app.js
+  volantis.EventListener = {}
+  // 这里存放pjax切换页面时将被移除的事件监听器
+  volantis.EventListener.list = []
+  //构造方法
+  function volantisEventListener(type, f, ele) {
+    this.type = type
+    this.f = f
+    this.ele = ele
+  }
+  // 移除事件监听器
+  volantis.EventListener.remove = () => {
+    volantis.EventListener.list.forEach(function (i) {
+      i.ele.removeEventListener(i.type, i.f, false)
+    })
+    volantis.EventListener.list = []
+  }
+  /******************** volantis.dom.$ ********************************/
+  // 注：这里没有选择器，也没有forEach一次只处理一个dom，这里重新封装主题常用的dom方法，返回的是dom对象，对象包含了以下方法，同时保留dom的原生API
+  function volantisDom(ele) {
+    if (!ele) ele = document.createElement("div")
+    this.ele = ele;
+    // ==============================================================
+    this.ele.find = (c) => {
+      let q = this.ele.querySelector(c)
+      if (q)
+        return new volantisDom(q)
+    }
+    // ==============================================================
+    this.ele.hasClass = (c) => {
+      return this.ele.className.match(new RegExp('(\\s|^)' + c + '(\\s|$)'));
+    }
+    this.ele.addClass = (c) => {
+      this.ele.classList.add(c);
+      return this.ele
+    }
+    this.ele.removeClass = (c) => {
+      this.ele.classList.remove(c);
+      return this.ele
+    }
+    this.ele.toggleClass = (c) => {
+      if (this.ele.hasClass(c)) {
+        this.ele.removeClass(c)
+      } else {
+        this.ele.addClass(c)
+      }
+      return this.ele
+    }
+    // ==============================================================
+    // 参数 r 为 true 表示pjax切换页面时事件监听器将被移除，false不移除
+    this.ele.on = (c, f, r = 1) => {
+      this.ele.addEventListener(c, f, false)
+      if (r) {
+        volantis.EventListener.list.push(new volantisEventListener(c, f, this.ele))
+      }
+      return this.ele
+    }
+    this.ele.click = (f, r) => {
+      this.ele.on("click", f, r)
+      return this.ele
+    }
+    this.ele.scroll = (f, r) => {
+      this.ele.on("scroll", f, r)
+      return this.ele
+    }
+    // ==============================================================
+    this.ele.html = (c) => {
+      // if(c=== undefined){
+      //   return this.ele.innerHTML
+      // }else{
+      this.ele.innerHTML = c
+      return this.ele
+      // }
+    }
+    // ==============================================================
+    this.ele.hide = (c) => {
+      this.ele.style.display = "none"
+      return this.ele
+    }
+    this.ele.show = (c) => {
+      this.ele.style.display = "block"
+      return this.ele
+    }
+    // ==============================================================
+    return this.ele
+  }
+  volantis.dom.$ = (ele) => {
+    return !!ele ? new volantisDom(ele) : null;
+  }
+  /******************** RunItem ********************************/
+  function RunItem() {
+    this.list = []; // 存放回调函数
+    this.start = () => {
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].run();
+      }
+    };
+    this.push = (fn, name, setRequestAnimationFrame = true) => {
+      let myfn = fn
+      if (setRequestAnimationFrame) {
+        myfn = ()=>{
+          volantis.requestAnimationFrame(fn)
+        }
+      }
+      var f = new Item(myfn, name);
+      this.list.push(f);
+    };
+    this.remove = (name) =>{
+      for (let index = 0; index < this.list.length; index++) {
+        const e = this.list[index];
+        if (e.name == name) {
+          this.list.splice(index,1);
+        }
+      }
+    }
+    // 构造一个可以run的对象
+    function Item(fn, name) {
+      // 函数名称
+      this.name = name || fn.name;
+      // run方法
+      this.run = () => {
+        try {
+          fn()
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    }
+  }
+  /******************** Pjax ********************************/
+  // /layout/_plugins/pjax/index.ejs
+  // volantis.pjax.send(callBack[,"callBackName"]) 传入pjax:send回调函数
+  // volantis.pjax.push(callBack[,"callBackName"]) 传入pjax:complete回调函数
+  // volantis.pjax.error(callBack[,"callBackName"]) 传入pjax:error回调函数
+  volantis.pjax = {};
+  volantis.pjax.method = {
+    complete: new RunItem(),
+    error: new RunItem(),
+    send: new RunItem(),
+  };
+  volantis.pjax = Object.assign(volantis.pjax, {
+    push: volantis.pjax.method.complete.push,
+    error: volantis.pjax.method.error.push,
+    send: volantis.pjax.method.send.push,
+  });
+  /******************** RightMenu ********************************/
+  // volantis.rightmenu.handle(callBack[,"callBackName"]) 外部菜单项控制
+  // 可在 volantis.mouseEvent 处获取右键事件
+  volantis.rightmenu = {};
+  volantis.rightmenu.method = {
+    handle: new RunItem(),
+  }
+  volantis.rightmenu = Object.assign(volantis.rightmenu, {
+    handle: volantis.rightmenu.method.handle.push,
+  });
+  /********************  Dark Mode  ********************************/
+  // /layout/_partial/scripts/darkmode.ejs
+  // volantis.dark.mode 当前模式 dark or light
+  // volantis.dark.toggle() 暗黑模式触发器
+  // volantis.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
+  volantis.dark = {};
+  volantis.dark.method = {
+    toggle: new RunItem(),
+  };
+  volantis.dark = Object.assign(volantis.dark, {
+    push: volantis.dark.method.toggle.push,
+  });
+  /********************  Message  ********************************/
+  // VolantisApp.message
+  /********************  isMobile  ********************************/
+  // /source/js/app.js
+  // volantis.isMobile
+  // volantis.isMobileOld
+  /********************脚本动态加载函数********************************/
+  // volantis.js(src, cb)  cb 可以传入onload回调函数 或者 JSON对象 例如: volantis.js("src", ()=>{}) 或 volantis.js("src", {defer:true,onload:()=>{}})
+  // volantis.css(src)
+
+  // 返回Promise对象，如下方法同步加载资源，这利于处理文件资源之间的依赖关系，例如：APlayer 需要在 MetingJS 之前加载
+  // (async () => {
+  //     await volantis.js("...theme.plugins.aplayer.js.aplayer...")
+  //     await volantis.js("...theme.plugins.aplayer.js.meting...")
+  // })();
+
+  // 已经加入了setTimeout
+  volantis.js = (src, cb) => {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var HEAD = document.getElementsByTagName("head")[0] || document.documentElement;
+        var script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        if (cb) {
+          if (JSON.stringify(cb)) {
+            for (let p in cb) {
+              if (p == "onload") {
+                script[p] = () => {
+                  cb[p]()
+                  resolve()
+                }
+              } else {
+                script[p] = cb[p]
+                script.onload = resolve
+              }
+            }
+          } else {
+            script.onload = () => {
+              cb()
+              resolve()
+            };
+          }
+        } else {
+          script.onload = resolve
+        }
+        script.setAttribute("src", src);
+        HEAD.appendChild(script);
+      });
+    });
+  }
+  volantis.css = (src) => {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = src;
+        link.onload = resolve;
+        document.getElementsByTagName("head")[0].appendChild(link);
+      });
+    });
+  }
+  /********************按需加载的插件********************************/
+  // volantis.import.jQuery().then(()=>{})
+  volantis.import = {
+    jQuery: () => {
+      if (typeof jQuery == "undefined") {
+        return volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/jquery/dist/jquery.min.js")
+      } else {
+        return new Promise(resolve => {
+          resolve()
+        });
+      }
+    }
+  }
+  /********************** requestAnimationFrame ********************************/
+  // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  volantis.requestAnimationFrame = (fn)=>{
+    if (!window.requestAnimationFrame) {
+      window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+    }
+    window.requestAnimationFrame(fn)
+  }
+  /************************ layoutHelper *****************************************/
+  volantis.layoutHelper = (helper, html, opt)=>{
+    opt = Object.assign({clean:false, pjax:true}, opt)
+    function myhelper(helper, html, clean) {
+      volantis.tempDiv = document.createElement("div");
+      volantis.tempDiv.innerHTML = html;
+      let layoutHelper = document.querySelector("#layoutHelper-"+helper)
+      if (layoutHelper) {
+        if (clean) {
+          layoutHelper.innerHTML = ""
+        }
+        layoutHelper.append(volantis.tempDiv);
+      }
+    }
+    myhelper(helper, html, opt.clean)
+    if (opt.pjax) {
+      volantis.pjax.push(()=>{
+        myhelper(helper, html, opt.clean)
+      },"layoutHelper-"+helper)
+    }
+  }
+  /****************************** 滚动事件处理 ****************************************/
+  volantis.scroll = {
+    engine: new RunItem(),
+    unengine: new RunItem(),
+  };
+  volantis.scroll = Object.assign(volantis.scroll, {
+    push: volantis.scroll.engine.push,
+  });
+  // 滚动条距离顶部的距离
+  volantis.scroll.getScrollTop = () =>{
+    let scrollPos;
+    if (window.pageYOffset) {
+      scrollPos = window.pageYOffset;
+    } else if (document.compatMode && document.compatMode != 'BackCompat') {
+      scrollPos = document.documentElement.scrollTop;
+    } else if (document.body) {
+      scrollPos = document.body.scrollTop;
+    }
+    return scrollPos;
+  }
+  // 使用 requestAnimationFrame 处理滚动事件
+  // `volantis.scroll.del` 中存储了一个数值, 该数值检测一定时间间隔内滚动条滚动的位移, 数值的检测频率是浏览器的刷新频率. 数值为正数时, 表示向下滚动. 数值为负数时, 表示向上滚动.
+  volantis.scroll.handleScrollEvents = () => {
+    volantis.scroll.lastScrollTop = volantis.scroll.getScrollTop()
+    function loop() {
+      const scrollTop = volantis.scroll.getScrollTop();
+      if (volantis.scroll.lastScrollTop !== scrollTop) {
+        volantis.scroll.del = scrollTop - volantis.scroll.lastScrollTop;
+        volantis.scroll.lastScrollTop = scrollTop;
+        // if (volantis.scroll.del > 0) {
+        //   console.log("向下滚动");
+        // } else {
+        //   console.log("向上滚动");
+        // }
+        // 注销过期的unengine未滚动事件
+        volantis.scroll.unengine.list=[]
+        volantis.scroll.engine.start();
+      }else{
+        volantis.scroll.unengine.start();
+      }
+      volantis.requestAnimationFrame(loop)
+    }
+    volantis.requestAnimationFrame(loop)
+  }
+  volantis.scroll.handleScrollEvents()
+  volantis.scroll.ele = null;
+  // 触发页面滚动至目标元素位置
+  volantis.scroll.to = (ele, option = {}) => {
+    if (!ele) return;
+    volantis.scroll.ele = ele;
+    // 默认配置
+    opt = {
+      top: ele.getBoundingClientRect().top + document.documentElement.scrollTop,
+      behavior: "smooth"
+    }
+    // 定义配置
+    if ("top" in option) {
+      opt.top = option.top
+    }
+    if ("behavior" in option) {
+      opt.behavior = option.behavior
+    }
+    if ("addTop" in option) {
+      opt.top += option.addTop
+    }
+    if (!("observerDic" in option)) {
+      option.observerDic = 100
+    }
+    // 滚动
+    window.scrollTo(opt);
+    // 监视器
+    // 监视并矫正元素滚动到指定位置
+    // 用于处理 lazyload 引起的 cls 导致的定位失败问题
+    // option.observer = false
+    if (option.observer) {
+      setTimeout(() => {
+        if (volantis.scroll.ele != ele) {
+          return
+        }
+        volantis.scroll.unengine.push(() => {
+          let me = ele.getBoundingClientRect().top
+          if(!(me >= -option.observerDic && me <= option.observerDic)){
+            volantis.scroll.to(ele, option)
+          }
+          volantis.scroll.unengine.remove("unengineObserver")
+        },"unengineObserver")
+      },1000)
+    }
+  }
+  /********************** Content Visibility ********************************/
+  // 见 source/css/first.styl 如果遇到任何问题 删除 .post-story 即可
+  // 一个元素被声明 content-visibility 属性后 如果元素不在 viewport 中 浏览器不会计算其后代元素样式和属性 从而节省 Style & Layout 耗时
+  // content-visibility 的副作用: 锚点失效 等等(实验初期 暂不明确), 使用此方法清除样式
+  volantis.cleanContentVisibility = ()=>{
+    if (document.querySelector(".post-story")) {
+      console.log("cleanContentVisibility");
+      document.querySelectorAll(".post-story").forEach(e=>{
+        e.classList.remove("post-story")
+      })
+    }
+  }
+  /******************************************************************************/
+  /******************************************************************************/
+  /******************************************************************************/
+  //图像加载出错时的处理
+  function errorImgAvatar(img) {
+    img.src = "https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg";
+    img.onerror = null;
+  }
+  function errorImgCover(img) {
+    img.src = "https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg";
+    img.onerror = null;
+  }
+  /******************************************************************************/
+</script>
+
+  <!-- import head_end begin -->
+  <!-- import head_end end -->
+  <!-- Custom Files headEnd begin-->
+  
+  <!-- Custom Files headEnd end-->
+  <!-- front-matter head_end begin -->
+  <!-- front-matter head_end end -->
+</head>
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <!-- import body_begin begin-->
+    <!-- import body_begin end-->
+    <!-- Custom Files bodyBegin begin-->
+    
+    <!-- Custom Files bodyBegin end-->
+    <!-- front-matter body_begin begin -->
+    <!-- front-matter body_begin end -->
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
+        
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='images/Profile_Picture.jpg'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="博客"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/friends/" title="友链"
+                  
+                  
+                  
+                    active-action="action-friends"
+                  >
+                  <i class='fa-solid fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+          
+				</ul>
+			</div>
+      
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fa-solid fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+      
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
+				
+				<li>
+          <a class="s-menu fa-solid fa-bars fa-fw" target="_self" href="/" onclick="return false;" title="menu"></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="博客"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-rss fa-fw'></i>博客
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/friends/" title="友链"
+                  
+                  
+                  
+                    active-action="action-friends"
+                  >
+                  <i class='fa-solid fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fa-solid fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+
+      <!-- Custom Files header begin -->
+      
+      <!-- Custom Files header end -->
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+      <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
+      <div id="none" class='cover-wrapper post search' style="display: none;">
+        
+  <div class='cover-bg lazyload placeholder' data-bg="images/bg.png"></div>
+
+<div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">Dawnqi's Blog</p>
+    
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="搜索" />
+          <i class="icon fa-solid fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/"
+              
+              
+              active-action="action-home">
+              <p>主页</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              active-action="action-tags">
+              <p>标签</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              active-action="action-archives">
+              <p>博客</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://github.com/dawnqi12-cyber/dawnqi12-cyber.github.io"
+              
+              
+              active-action="action-https:githubcomdawnqi12-cyberdawnqi12-cybergithubio">
+              <p>源码</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+      </div>
+    
+  
+</div>
+
+      <div id="safearea">
+        <div class="body-wrapper">
+          
+<div id="l_main" class=''>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2026/07/08/大模型基础面试题四板块整理/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Dawnqi's Blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="Dawnqi's Blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+
+
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title" itemprop="name headline">
+        大模型基础面试题四板块整理
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">技术学习</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">技术学习</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2026-07-08T23:10:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2026年7月8日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <html><head></head><body><h1 id="LLM-运行机制相关面试题"><a href="#LLM-运行机制相关面试题" class="headerlink" title="LLM 运行机制相关面试题"></a>LLM 运行机制相关面试题</h1><h2 id="1-Token-是什么？为什么中文、英文、代码消耗的-Token-不一样？"><a href="#1-Token-是什么？为什么中文、英文、代码消耗的-Token-不一样？" class="headerlink" title="1. Token 是什么？为什么中文、英文、代码消耗的 Token 不一样？"></a>1. Token 是什么？为什么中文、英文、代码消耗的 Token 不一样？</h2><p><strong>Token 是大模型处理文本的最小计量单位，可以理解为模型眼中的“文本切片”。</strong> 它不一定等于一个字、一个词或一个字符，而是由模型使用的分词器根据训练语料和编码规则切分出来的片段。</p>
+<p>在工程上，Token 主要用于三件事：</p>
+<ul>
+<li>计量上下文长度，例如一个模型支持 <code>128K tokens</code> 上下文。</li>
+<li>计算调用成本，通常输入 Token 和输出 Token 分别计费。</li>
+<li>控制生成长度，例如限制最多输出 <code>2048 tokens</code>。</li>
+</ul>
+<p>中文、英文和代码消耗 Token 不一样，核心原因是它们在分词器中的切分方式不同：</p>
+<ul>
+<li><strong>英文</strong>通常会按常见词根、单词、子词切分。例如 <code>development</code> 可能被切成一个或几个 Token，常见英文单词通常比较省 Token。</li>
+<li><strong>中文</strong>没有天然空格分词，很多中文字符可能会被单独切分，或者几个常见字组成一个 Token。因此中文并不一定比英文省 Token，具体取决于分词器。</li>
+<li><strong>代码</strong>包含大量符号、缩进、变量名、括号、换行和不常见标识符，很多片段可能被拆得更细，所以同样字符数下，代码往往更耗 Token。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>Token 不是字符，也不是单词，而是模型分词器切出来的文本单元。不同语言和内容形态的统计规律不同，所以中文、英文、代码的 Token 消耗不同。做 AI 应用时，Token 会直接影响成本、延迟和上下文容量。</p>
+</blockquote>
+<h2 id="2-上下文窗口是什么？上下文窗口越大，效果一定越好吗？"><a href="#2-上下文窗口是什么？上下文窗口越大，效果一定越好吗？" class="headerlink" title="2. 上下文窗口是什么？上下文窗口越大，效果一定越好吗？"></a>2. 上下文窗口是什么？上下文窗口越大，效果一定越好吗？</h2><p><strong>上下文窗口指模型一次请求中能够“看到”的最大 Token 数量，包括系统提示词、用户输入、历史对话、工具结果、RAG 检索内容和模型输出。</strong></p>
+<p>例如一个模型支持 <code>128K tokens</code> 上下文，并不代表输入可以完整占满 <code>128K</code>，因为还要给输出预留 Token。假设最多上下文是 <code>128K</code>，如果输入已经占了 <code>126K</code>，那模型可生成的空间就很少。</p>
+<p>上下文窗口变大有明显好处：</p>
+<ul>
+<li>可以处理更长文档、更多历史对话和更复杂任务。</li>
+<li>可以减少过早截断上下文导致的信息丢失。</li>
+<li>在代码审查、合同分析、长文档问答等场景中更方便。</li>
+</ul>
+<p>但上下文窗口越大，效果不一定越好，原因包括：</p>
+<ul>
+<li><strong>注意力稀释</strong>：信息太多时，模型不一定能稳定关注关键内容。</li>
+<li><strong>噪声增加</strong>：无关内容越多，越容易干扰推理。</li>
+<li><strong>成本更高</strong>：输入 Token 越多，调用成本通常越高。</li>
+<li><strong>延迟更高</strong>：长上下文会增加推理时间。</li>
+<li><strong>可靠性不线性提升</strong>：模型虽然“能看到”，但不代表一定“用得好”。</li>
+</ul>
+<p>生产环境中，更推荐“有效上下文”而不是“最大上下文”。也就是说，只放和当前任务最相关、最可信、最结构化的信息。</p>
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>上下文窗口是模型一次推理能处理的最大 Token 范围。窗口大能提升长任务处理能力，但不等于效果一定更好。工程上要控制上下文质量，避免把大量无关内容直接塞给模型。</p>
+</blockquote>
+<h2 id="3-什么是-Lost-in-the-Middle-问题？长上下文场景下怎么缓解？"><a href="#3-什么是-Lost-in-the-Middle-问题？长上下文场景下怎么缓解？" class="headerlink" title="3. 什么是 Lost in the Middle 问题？长上下文场景下怎么缓解？"></a>3. 什么是 Lost in the Middle 问题？长上下文场景下怎么缓解？</h2><p><strong>Lost in the Middle 指的是在长上下文中，模型对开头和结尾的信息更敏感，而容易忽略中间位置的关键信息。</strong></p>
+<p>例如把一份很长的资料塞进上下文，关键证据刚好位于中间，模型可能明明“看到了”这段内容，却在回答时没有正确使用它。这说明长上下文不是简单的“放进去就能记住”。</p>
+<p>常见原因包括：</p>
+<ul>
+<li>Transformer 注意力机制在长序列中对信息位置存在偏好。</li>
+<li>上下文越长，相关信息和噪声混在一起，检索和利用难度变高。</li>
+<li>生成答案时，模型更容易依赖靠近指令或靠近输出位置的信息。</li>
+</ul>
+<p>长上下文场景下可以这样缓解：</p>
+<ul>
+<li><strong>把最重要的信息放在开头或靠近问题的位置</strong>，不要把关键证据埋在中间。</li>
+<li><strong>对长文档先做分块、摘要和结构化提取</strong>，再让模型基于压缩后的内容回答。</li>
+<li><strong>使用 RAG 检索相关片段</strong>，只把高相关内容放入上下文。</li>
+<li><strong>对证据排序</strong>，把最相关、最权威、最新的证据排在前面。</li>
+<li><strong>重复强调关键约束</strong>，例如在系统提示词和用户问题附近都写明回答依据。</li>
+<li><strong>使用引用和编号</strong>，让模型按证据编号回答，降低遗漏概率。</li>
+<li><strong>分阶段推理</strong>，先找证据，再基于证据回答，而不是一次性生成最终答案。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>Lost in the Middle 是长上下文中的信息利用问题，不是单纯的上下文长度问题。缓解思路是减少噪声、调整关键信息位置、用 RAG 精准召回、对证据结构化，并把任务拆成“找证据”和“生成答案”两个阶段。</p>
+</blockquote>
+<h2 id="4-Temperature、Top-P、Top-K-分别控制什么？生产环境怎么设置更稳？"><a href="#4-Temperature、Top-P、Top-K-分别控制什么？生产环境怎么设置更稳？" class="headerlink" title="4. Temperature、Top-P、Top-K 分别控制什么？生产环境怎么设置更稳？"></a>4. Temperature、Top-P、Top-K 分别控制什么？生产环境怎么设置更稳？</h2><p>这三个参数都和模型生成的随机性有关，但控制方式不同。</p>
+<p><strong>Temperature 控制概率分布的平滑程度。</strong></p>
+<ul>
+<li>Temperature 越低，模型越倾向选择高概率词，输出更稳定、更保守。</li>
+<li>Temperature 越高，低概率词也更可能被选中，输出更发散、更有创意。</li>
+<li>常见范围是 <code>0</code> 到 <code>2</code>，但生产中通常不会设置太高。</li>
+</ul>
+<p><strong>Top-P 又叫 nucleus sampling，控制从累计概率达到 P 的候选 Token 集合中采样。</strong></p>
+<ul>
+<li><code>top_p = 0.9</code> 表示只从累计概率前 90% 的候选 Token 中采样。</li>
+<li>Top-P 会动态调整候选集合大小。</li>
+<li>它适合控制生成多样性，同时避免特别低概率的离谱输出。</li>
+</ul>
+<p><strong>Top-K 控制每一步只从概率最高的 K 个候选 Token 中采样。</strong></p>
+<ul>
+<li><code>top_k = 40</code> 表示每一步最多只考虑概率最高的 40 个 Token。</li>
+<li>Top-K 是固定候选数量，不像 Top-P 那样按累计概率动态变化。</li>
+<li>部分 API 不暴露 Top-K，更多暴露 Temperature 和 Top-P。</li>
+</ul>
+<p>生产环境更稳的设置建议：</p>
+<ul>
+<li><strong>事实问答、RAG、客服、代码生成</strong>：低 Temperature，例如 <code>0</code> 到 <code>0.3</code>。</li>
+<li><strong>分类、抽取、结构化输出</strong>：尽量低 Temperature，并配合 JSON Schema 或函数调用。</li>
+<li><strong>创意写作、营销文案、头脑风暴</strong>：可以适当提高，例如 <code>0.7</code> 到 <code>1.0</code>。</li>
+<li><strong>不要同时大幅调整多个采样参数</strong>，否则不容易判断效果变化来自哪里。</li>
+<li><strong>优先固定参数并做评测</strong>，不要凭感觉调参。</li>
+</ul>
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>Temperature 控制随机性强弱，Top-P 控制候选 Token 的累计概率范围，Top-K 控制候选 Token 的数量。生产环境如果追求稳定，一般使用较低 Temperature，配合结构化输出约束、评测集和重试机制。</p>
+</blockquote>
+<h2 id="5-为什么-Temperature-设置为-0，模型输出仍然可能不完全一致？"><a href="#5-为什么-Temperature-设置为-0，模型输出仍然可能不完全一致？" class="headerlink" title="5. 为什么 Temperature 设置为 0，模型输出仍然可能不完全一致？"></a>5. 为什么 Temperature 设置为 0，模型输出仍然可能不完全一致？</h2><p>Temperature 设置为 <code>0</code> 通常表示尽量选择最高概率 Token，让输出更接近确定性，但它不保证绝对一致。</p>
+<p>原因主要有几类：</p>
+<ul>
+<li><strong>底层推理并非完全确定</strong>：GPU 并行计算、浮点数精度、算子实现和并发调度可能带来极小差异。</li>
+<li><strong>概率接近时容易发生选择差异</strong>：当多个候选 Token 的概率非常接近时，微小数值差异可能改变最终选择。</li>
+<li><strong>服务端实现可能变化</strong>：模型版本、系统提示词、路由策略、安全策略或推理框架升级都可能影响结果。</li>
+<li><strong>上下文并不完全相同</strong>：哪怕多一个空格、换行、历史消息或工具结果，输出也可能不同。</li>
+<li><strong>部分接口的 <code>temperature = 0</code> 不是数学意义上的完全贪心解码</strong>，不同厂商实现可能略有差别。</li>
+</ul>
+<p>如果生产环境需要尽量稳定，可以使用这些方法：</p>
+<ul>
+<li>固定模型版本，不使用自动升级别名。</li>
+<li>固定 Prompt 模板、参数和上下文拼接顺序。</li>
+<li>使用结构化输出约束，例如 JSON Schema。</li>
+<li>对关键任务增加后处理校验。</li>
+<li>对非确定性结果做幂等设计和缓存。</li>
+<li>使用评测集监控输出漂移。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>Temperature 为 0 只能降低随机性，不能保证完全确定性。大模型推理涉及浮点计算、并行执行、服务端版本和上下文细节，都会导致轻微差异。工程上要通过版本固定、结构化约束、缓存和评测来提升稳定性。</p>
+</blockquote>
+<h2 id="6-大模型为什么会产生幻觉？常见缓解方案有哪些？"><a href="#6-大模型为什么会产生幻觉？常见缓解方案有哪些？" class="headerlink" title="6. 大模型为什么会产生幻觉？常见缓解方案有哪些？"></a>6. 大模型为什么会产生幻觉？常见缓解方案有哪些？</h2><p><strong>幻觉是指模型生成了看似合理但事实错误、无依据或与上下文不一致的内容。</strong></p>
+<p>大模型产生幻觉的根本原因是：它本质上是在根据上下文预测下一个 Token，而不是像数据库一样检索事实。它擅长生成符合语言规律的内容，但不天然保证事实正确。</p>
+<p>常见原因包括：</p>
+<ul>
+<li><strong>训练数据中存在错误、过时或相互矛盾的信息</strong>。</li>
+<li><strong>模型没有访问实时知识或私有知识</strong>，但仍然尝试补全答案。</li>
+<li><strong>Prompt 要求过于开放</strong>，没有要求引用依据或承认不知道。</li>
+<li><strong>上下文证据不足</strong>，模型只能根据模式猜测。</li>
+<li><strong>问题本身包含错误前提</strong>，模型可能顺着错误前提回答。</li>
+<li><strong>生成目标偏向流畅性</strong>，模型会优先生成自然、完整的回答。</li>
+</ul>
+<p>常见缓解方案包括：</p>
+<ul>
+<li><strong>RAG</strong>：从知识库、数据库、文档系统中检索证据，让模型基于证据回答。</li>
+<li><strong>工具调用</strong>：对计算、查询、搜索、订单状态等任务调用外部工具，而不是让模型猜。</li>
+<li><strong>强约束 Prompt</strong>：要求“只基于给定资料回答，资料不足则说明无法判断”。</li>
+<li><strong>引用来源</strong>：要求答案引用文档片段、链接、ID 或数据库字段。</li>
+<li><strong>结构化输出</strong>：用 JSON Schema、函数调用或枚举值约束输出空间。</li>
+<li><strong>后处理校验</strong>：对数字、日期、代码、SQL、权限等结果做程序化验证。</li>
+<li><strong>多阶段流程</strong>：先检索证据，再判断证据是否足够，最后生成答案。</li>
+<li><strong>人工审核</strong>：高风险场景必须引入人工确认。</li>
+<li><strong>评测和监控</strong>：建立幻觉率、引用准确率、拒答率等指标。</li>
+</ul>
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>幻觉来自大模型的生成式本质，它生成的是高概率文本，不是事实查询结果。缓解幻觉不能只靠 Prompt，而要结合 RAG、工具调用、结构化约束、证据引用、后处理校验和评测监控。</p>
+</blockquote>
+<h2 id="7-Token-预算怎么估算？输入、输出、历史消息、RAG-证据如何取舍？"><a href="#7-Token-预算怎么估算？输入、输出、历史消息、RAG-证据如何取舍？" class="headerlink" title="7. Token 预算怎么估算？输入、输出、历史消息、RAG 证据如何取舍？"></a>7. Token 预算怎么估算？输入、输出、历史消息、RAG 证据如何取舍？</h2><p>Token 预算就是在模型上下文窗口和成本限制内，合理分配输入、输出、历史消息和外部证据的 Token。</p>
+<p>一个完整请求通常包括：</p>
+<ul>
+<li>系统提示词。</li>
+<li>开发者或业务规则提示词。</li>
+<li>用户当前问题。</li>
+<li>历史对话。</li>
+<li>RAG 检索证据。</li>
+<li>工具调用结果。</li>
+<li>预留输出 Token。</li>
+</ul>
+<p>估算 Token 预算时，可以先用这个公式：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">总上下文窗口 &gt;= 系统提示词 + 当前问题 + 历史消息 + RAG 证据 + 工具结果 + 预留输出</span><br></pre></td></tr></tbody></table></figure>
+
+<p>例如模型上下文窗口是 <code>32K tokens</code>，可以粗略分配：</p>
+<ul>
+<li>系统提示词和业务规则：<code>1K - 3K</code></li>
+<li>当前用户问题：<code>1K - 2K</code></li>
+<li>历史对话摘要：<code>2K - 6K</code></li>
+<li>RAG 证据：<code>10K - 18K</code></li>
+<li>工具结果：<code>1K - 4K</code></li>
+<li>预留输出：<code>2K - 4K</code></li>
+</ul>
+<p>具体取舍原则如下：</p>
+<ul>
+<li><strong>当前用户问题优先级最高</strong>，不能被压缩到丢失意图。</li>
+<li><strong>系统规则必须保留</strong>，尤其是安全、权限、格式、业务边界。</li>
+<li><strong>历史消息不应原样无限追加</strong>，应该做摘要、裁剪或只保留与当前任务相关的部分。</li>
+<li><strong>RAG 证据宁可少而准，不要多而杂</strong>，相关性和可信度比数量更重要。</li>
+<li><strong>输出 Token 必须预留</strong>，否则模型可能回答不完整。</li>
+<li><strong>工具结果要结构化压缩</strong>，例如只保留关键字段，不要直接塞完整 JSON 日志。</li>
+<li><strong>长文档任务要分阶段处理</strong>，不要把所有材料一次性塞入。</li>
+</ul>
+<p>常见工程策略：</p>
+<ul>
+<li>使用 tokenizer 在请求前精确计算 Token。</li>
+<li>对历史对话做滚动摘要。</li>
+<li>对 RAG 结果按相关性、权限、时间和来源质量排序。</li>
+<li>对文档 chunk 做去重和压缩。</li>
+<li>为不同任务配置不同预算模板。</li>
+<li>如果超预算，按“低相关证据、旧历史、冗余工具结果”的顺序裁剪。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>Token 预算本质是在上下文窗口、成本、延迟和答案质量之间做权衡。当前问题、系统规则和输出空间优先保留；历史消息要摘要化；RAG 证据要少而准；工具结果要结构化压缩。</p>
+</blockquote>
+<h2 id="8-长上下文窗口会不会取代-RAG？二者分别适合什么场景？"><a href="#8-长上下文窗口会不会取代-RAG？二者分别适合什么场景？" class="headerlink" title="8. 长上下文窗口会不会取代 RAG？二者分别适合什么场景？"></a>8. 长上下文窗口会不会取代 RAG？二者分别适合什么场景？</h2><p><strong>长上下文窗口不会完全取代 RAG，它们解决的问题不同，更常见的是组合使用。</strong></p>
+<p>长上下文窗口的优势是简单直接，可以把大量材料一次性放进模型，让模型在一个请求中综合分析。它适合这些场景：</p>
+<ul>
+<li>单份或少量长文档分析。</li>
+<li>合同、论文、代码文件的整体审阅。</li>
+<li>用户明确提供材料，并希望模型在材料内部做总结、对比、抽取。</li>
+<li>信息规模不大，但单次任务需要完整上下文。</li>
+<li>对实时更新和权限过滤要求不复杂的场景。</li>
+</ul>
+<p>RAG 的优势是从大规模外部知识库中动态检索相关内容，再把少量高相关证据提供给模型。它适合这些场景：</p>
+<ul>
+<li>企业知识库问答。</li>
+<li>海量文档检索。</li>
+<li>内容经常更新的业务知识。</li>
+<li>需要权限控制、多租户隔离的系统。</li>
+<li>需要引用来源和可追溯答案的场景。</li>
+<li>需要控制成本和延迟的生产应用。</li>
+</ul>
+<p>长上下文不能完全替代 RAG，主要原因是：</p>
+<ul>
+<li>企业知识库可能远大于任何上下文窗口。</li>
+<li>把所有内容都塞进上下文成本高、延迟高。</li>
+<li>长上下文中仍然有 Lost in the Middle 问题。</li>
+<li>RAG 可以做权限过滤、实时更新、来源追踪和召回排序。</li>
+<li>RAG 可以把“找信息”和“生成答案”解耦，系统可控性更好。</li>
+</ul>
+<p>比较合理的架构是：</p>
+<ul>
+<li>用 RAG 从大规模知识库中召回最相关材料。</li>
+<li>用长上下文承载更多高质量证据、历史和工具结果。</li>
+<li>用重排序、摘要和引用机制提升证据利用率。</li>
+<li>对关键场景增加校验和人工审核。</li>
+</ul>
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>长上下文提升了模型一次性处理材料的能力，但不会取代 RAG。长上下文适合处理用户已提供的有限长材料，RAG 适合从大规模、动态、需要权限控制和来源追踪的知识库中取证。生产系统通常是 RAG 加长上下文，而不是二选一。</p>
+</blockquote>
+<h1 id="API-调用工程相关面试题"><a href="#API-调用工程相关面试题" class="headerlink" title="API 调用工程相关面试题"></a>API 调用工程相关面试题</h1><h2 id="1-大模型-API-调用的完整链路是什么？"><a href="#1-大模型-API-调用的完整链路是什么？" class="headerlink" title="1. 大模型 API 调用的完整链路是什么？"></a>1. 大模型 API 调用的完整链路是什么？</h2><p><strong>大模型 API 调用不是简单地发一个 HTTP 请求拿结果，而是一条完整的生产调用链路。</strong> 在真实业务里，模型通常要被当作一个慢、贵、不完全稳定、输出不可完全控的外部依赖来治理。</p>
+<p>一个相对完整的调用链路可以分为这些阶段：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">用户请求</span><br><span class="line">-&gt; 鉴权与参数校验</span><br><span class="line">-&gt; 业务上下文准备</span><br><span class="line">-&gt; Prompt 组装</span><br><span class="line">-&gt; 历史消息裁剪或摘要</span><br><span class="line">-&gt; RAG 检索或工具上下文注入</span><br><span class="line">-&gt; Token 预算检查</span><br><span class="line">-&gt; 模型路由</span><br><span class="line">-&gt; 限流与配额校验</span><br><span class="line">-&gt; 发起模型 API 调用</span><br><span class="line">-&gt; 超时控制</span><br><span class="line">-&gt; 流式或非流式返回</span><br><span class="line">-&gt; 结构化解析</span><br><span class="line">-&gt; 结果校验与安全过滤</span><br><span class="line">-&gt; 业务落库或返回前端</span><br><span class="line">-&gt; 日志、Trace、成本统计和评测采样</span><br></pre></td></tr></tbody></table></figure>
+
+<p>其中比较关键的工程点包括：</p>
+<ul>
+<li><strong>请求校验</strong>：校验用户权限、输入长度、敏感参数、业务状态，避免非法请求直接进入模型。</li>
+<li><strong>Prompt 组装</strong>：把系统提示词、业务规则、用户问题、历史上下文和外部证据按固定模板拼接。</li>
+<li><strong>上下文治理</strong>：对历史消息做摘要，对 RAG 证据做筛选，避免超过 Token 上限。</li>
+<li><strong>模型路由</strong>：根据任务类型、成本、延迟、质量要求选择不同模型。</li>
+<li><strong>限流与熔断</strong>：防止单租户、单用户或异常流量打爆模型服务。</li>
+<li><strong>超时与重试</strong>：对可恢复错误做有限重试，对不可恢复错误快速失败。</li>
+<li><strong>结构化解析</strong>：如果输出要进入业务系统，必须做 JSON Schema、枚举、类型和业务规则校验。</li>
+<li><strong>观测与审计</strong>：记录调用日志、Token 消耗、延迟、错误码、模型版本和用户反馈。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>大模型 API 调用链路包括请求校验、Prompt 组装、上下文注入、Token 预算、模型路由、限流、超时、重试、流式返回、结构化解析、结果校验、日志和评测。生产系统不能把模型 API 当成普通 HTTP 接口直接裸调。</p>
+</blockquote>
+<h2 id="2-Streaming-为什么能改善用户体验？它能减少总耗时和-Token-成本吗？"><a href="#2-Streaming-为什么能改善用户体验？它能减少总耗时和-Token-成本吗？" class="headerlink" title="2. Streaming 为什么能改善用户体验？它能减少总耗时和 Token 成本吗？"></a>2. Streaming 为什么能改善用户体验？它能减少总耗时和 Token 成本吗？</h2><p><strong>Streaming 的核心价值是改善首字延迟和交互感，而不是必然减少总耗时或 Token 成本。</strong></p>
+<p>普通非流式调用通常是模型生成完整答案后，服务端一次性返回给前端。用户需要等待整个生成过程完成，页面才有内容展示。如果答案较长，用户会明显感觉“卡住了”。</p>
+<p>流式输出则是模型边生成边返回，前端边接收边展示。它带来的体验改善主要有：</p>
+<ul>
+<li><strong>首字时间更短</strong>：用户更快看到第一个 Token 或第一段内容。</li>
+<li><strong>等待感降低</strong>：即使完整答案还没生成完，用户也能看到系统正在工作。</li>
+<li><strong>可中途停止</strong>：用户发现方向不对时可以点击停止，减少无效生成。</li>
+<li><strong>更适合长回答</strong>：写作、代码生成、总结报告等长输出任务体验明显更好。</li>
+<li><strong>便于做渐进式 UI</strong>：例如边生成边展示引用、步骤、工具调用状态。</li>
+</ul>
+<p>但 Streaming 不一定减少总耗时：</p>
+<ul>
+<li>模型完整生成同样数量 Token 所需的计算量基本没有减少。</li>
+<li>网络传输从“一次返回”变成“多次小块返回”，甚至可能有额外开销。</li>
+<li>如果后端还要做完整后处理，最终完成时间未必更短。</li>
+</ul>
+<p>Streaming 也不直接减少 Token 成本：</p>
+<ul>
+<li>成本通常按输入 Token 和输出 Token 计费。</li>
+<li>如果最终生成的内容一样，Token 成本基本一样。</li>
+<li>只有在用户中途停止、系统提前截断或减少无效输出时，才可能间接降低成本。</li>
+</ul>
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>Streaming 改善的是用户感知延迟，尤其是首字延迟，而不是必然降低模型总推理时间。它本身不减少 Token 单价或计算量，但可以通过中途停止、减少无效生成来间接节省成本。</p>
+</blockquote>
+<h2 id="3-SSE、WebSocket、HTTP-Chunked-在流式输出场景下怎么选？"><a href="#3-SSE、WebSocket、HTTP-Chunked-在流式输出场景下怎么选？" class="headerlink" title="3. SSE、WebSocket、HTTP Chunked 在流式输出场景下怎么选？"></a>3. SSE、WebSocket、HTTP Chunked 在流式输出场景下怎么选？</h2><p>这三种方式都能实现流式输出，但适用场景不同。</p>
+<p><strong>SSE，也就是 Server-Sent Events，适合服务端向浏览器单向推送文本事件。</strong></p>
+<p>优点：</p>
+<ul>
+<li>浏览器原生支持 <code>EventSource</code>。</li>
+<li>基于 HTTP，接入成本低。</li>
+<li>自动重连机制比较方便。</li>
+<li>很适合大模型文本流式输出，因为大多数场景是服务端持续向前端推 Token。</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>主要是单向通信，客户端如果要发消息通常需要额外 HTTP 请求。</li>
+<li>不适合高频双向互动。</li>
+<li>某些代理、网关或服务端框架需要额外配置缓冲策略。</li>
+</ul>
+<p><strong>WebSocket 适合双向、低延迟、持续连接的交互场景。</strong></p>
+<p>优点：</p>
+<ul>
+<li>支持客户端和服务端双向通信。</li>
+<li>适合实时语音、多人协作、Agent 运行状态同步、复杂交互式会话。</li>
+<li>可以在同一连接里发送控制指令，例如暂停、继续、取消、确认工具调用。</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>连接管理更复杂。</li>
+<li>对负载均衡、心跳、断线重连、鉴权和扩缩容要求更高。</li>
+<li>对简单文本生成来说可能偏重。</li>
+</ul>
+<p><strong>HTTP Chunked 是 HTTP 层的分块传输机制，适合服务端逐块返回响应体。</strong></p>
+<p>优点：</p>
+<ul>
+<li>协议层简单，很多后端框架可以直接支持。</li>
+<li>不一定要求浏览器使用 SSE 格式。</li>
+<li>适合后端服务之间的流式转发。</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>浏览器端处理体验通常不如 SSE 标准化。</li>
+<li>缺少 SSE 那样的事件语义和自动重连约定。</li>
+<li>中间代理可能缓冲响应，导致“看起来不流式”。</li>
+</ul>
+<p>选择建议：</p>
+<ul>
+<li><strong>普通 ChatGPT 类文本流式输出</strong>：优先 SSE。</li>
+<li><strong>需要双向控制、实时音视频、复杂 Agent 交互</strong>：选择 WebSocket。</li>
+<li><strong>后端到后端转发、简单分块下载、内部服务流式传输</strong>：可以使用 HTTP Chunked。</li>
+<li><strong>企业生产环境</strong>：无论选哪种，都要验证网关、Nginx、CDN、负载均衡是否会缓冲流式响应。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>大模型文本流式输出多数是服务端到客户端的单向推送，所以 SSE 通常最合适；如果需要双向实时控制，用 WebSocket；如果只是 HTTP 层分块传输或后端转发，可以用 HTTP Chunked。选型时还要关注代理缓冲、断线重连和连接治理。</p>
+</blockquote>
+<h2 id="4-哪些大模型-API-错误可以重试？哪些错误不能重试？"><a href="#4-哪些大模型-API-错误可以重试？哪些错误不能重试？" class="headerlink" title="4. 哪些大模型 API 错误可以重试？哪些错误不能重试？"></a>4. 哪些大模型 API 错误可以重试？哪些错误不能重试？</h2><p>判断是否重试的核心原则是：<strong>错误是否可能是临时性的，以及重试是否会造成副作用。</strong></p>
+<p>通常可以重试的错误包括：</p>
+<ul>
+<li><strong>网络超时</strong>：连接超时、读超时、临时网络抖动。</li>
+<li><strong>服务端 5xx 错误</strong>：例如 <code>500</code>、<code>502</code>、<code>503</code>、<code>504</code>。</li>
+<li><strong>限流错误</strong>：例如 <code>429</code>，但要按服务端返回的 <code>Retry-After</code> 或退避策略重试。</li>
+<li><strong>连接被中断</strong>：流式输出过程中连接断开，但要结合幂等和已输出内容处理。</li>
+<li><strong>供应商临时不可用</strong>：可以重试同模型，也可以 fallback 到备用模型。</li>
+</ul>
+<p>通常不应该重试的错误包括：</p>
+<ul>
+<li><strong>鉴权失败</strong>：例如 API Key 错误、签名错误、权限不足。</li>
+<li><strong>请求参数错误</strong>：例如模型名不存在、字段格式错误、JSON 非法。</li>
+<li><strong>上下文超限</strong>：输入 Token 超过模型窗口，重试不会自动变好，必须裁剪上下文。</li>
+<li><strong>内容安全拦截</strong>：请求或输出触发安全策略，直接重试通常没有意义。</li>
+<li><strong>余额不足或配额耗尽</strong>：需要充值、扩容或切换租户预算，而不是盲目重试。</li>
+<li><strong>业务校验失败</strong>：例如用户无权限、订单状态不允许操作。</li>
+</ul>
+<p>重试策略建议：</p>
+<ul>
+<li>使用指数退避，例如 <code>100ms -&gt; 300ms -&gt; 1s -&gt; 3s</code>。</li>
+<li>增加随机抖动，避免大量请求同时重试造成雪崩。</li>
+<li>设置最大重试次数和总超时时间。</li>
+<li>对流式请求要特别处理已经返回给用户的部分内容。</li>
+<li>重试前必须确认请求幂等，尤其是涉及工具调用、扣费、落库时。</li>
+<li>多次失败后进入降级，例如切换备用模型、返回简化答案或提示稍后重试。</li>
+</ul>
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>网络抖动、5xx、429、临时不可用这类瞬时错误可以有限重试；鉴权失败、参数错误、上下文超限、安全拦截、余额不足这类确定性错误不应盲目重试。重试必须配合超时、退避、抖动、幂等和降级。</p>
+</blockquote>
+<h2 id="5-为什么大模型调用必须做幂等？"><a href="#5-为什么大模型调用必须做幂等？" class="headerlink" title="5. 为什么大模型调用必须做幂等？"></a>5. 为什么大模型调用必须做幂等？</h2><p><strong>大模型调用必须做幂等，是因为模型调用慢、容易超时、可能重试，而且经常和业务副作用绑定。</strong></p>
+<p>幂等指同一个请求执行一次和执行多次，最终业务结果应该一致，不应该重复产生副作用。</p>
+<p>如果没有幂等，大模型调用中的重试和断线恢复可能造成严重问题：</p>
+<ul>
+<li><strong>重复扣费</strong>：用户点击一次生成，后端超时重试，可能产生多次模型调用费用。</li>
+<li><strong>重复落库</strong>：同一条 AI 回复被保存多次。</li>
+<li><strong>重复发消息</strong>：客服、邮件、短信场景可能重复通知用户。</li>
+<li><strong>重复执行工具</strong>：Function Calling 场景下可能重复退款、重复下单、重复创建工单。</li>
+<li><strong>状态错乱</strong>：第一次请求其实已经成功，但客户端以为失败后再次提交。</li>
+</ul>
+<p>大模型场景比普通 API 更需要幂等，原因是：</p>
+<ul>
+<li>模型延迟高，请求更容易超时。</li>
+<li>流式输出可能中途断开，服务端和客户端对状态认知不一致。</li>
+<li>输出不完全确定，重试后内容可能不一样。</li>
+<li>Agent 或工具调用链路中，一个请求可能包含多个中间步骤和外部副作用。</li>
+</ul>
+<p>常见幂等设计包括：</p>
+<ul>
+<li><strong>请求幂等键</strong>：客户端或服务端生成 <code>request_id</code>、<code>idempotency_key</code>。</li>
+<li><strong>结果缓存</strong>：同一个幂等键重复请求时返回已有结果或当前执行状态。</li>
+<li><strong>状态机控制</strong>：请求状态从 <code>pending</code>、<code>running</code>、<code>succeeded</code>、<code>failed</code> 明确流转。</li>
+<li><strong>工具调用去重</strong>：对外部工具执行记录 <code>tool_call_id</code>，避免重复执行。</li>
+<li><strong>数据库唯一约束</strong>：对订单、退款、消息发送等关键副作用加唯一键。</li>
+<li><strong>重试只重试安全阶段</strong>：如果已经进入不可重复的业务执行阶段，要先查状态再决定。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>大模型调用必须幂等，因为超时、重试、流式断开和工具调用都可能导致同一请求被执行多次。没有幂等会造成重复扣费、重复落库、重复发消息甚至重复退款。生产里要用幂等键、状态机、结果缓存、唯一约束和工具调用去重来治理。</p>
+</blockquote>
+<h2 id="6-大模型限流为什么不能只按-QPS-做？"><a href="#6-大模型限流为什么不能只按-QPS-做？" class="headerlink" title="6. 大模型限流为什么不能只按 QPS 做？"></a>6. 大模型限流为什么不能只按 QPS 做？</h2><p><strong>大模型限流不能只按 QPS 做，因为每个请求的资源消耗差异非常大。</strong></p>
+<p>普通 HTTP API 的单次请求成本通常比较接近，所以 QPS 是一个重要指标。但大模型调用不同，一个请求可能只有几十 Token，也可能有几十万 Token；可能输出一句话，也可能生成一篇长报告。只看 QPS 会严重低估真实负载。</p>
+<p>大模型限流至少要考虑这些维度：</p>
+<ul>
+<li><strong>QPS</strong>：每秒请求数，控制入口流量。</li>
+<li><strong>RPM</strong>：每分钟请求数，很多模型供应商按分钟限额。</li>
+<li><strong>TPM</strong>：每分钟 Token 数，包括输入和输出 Token。</li>
+<li><strong>并发数</strong>：长生成会占用连接和推理资源，低 QPS 也可能高并发。</li>
+<li><strong>输入 Token 数</strong>：长上下文请求更贵、更慢。</li>
+<li><strong>最大输出 Token 数</strong>：用户设置很大的输出上限，会放大成本和延迟。</li>
+<li><strong>租户配额</strong>：不同客户、团队、应用有不同预算。</li>
+<li><strong>模型维度</strong>：不同模型价格、吞吐和限额不同。</li>
+<li><strong>工具调用和 RAG 成本</strong>：一次用户请求可能触发检索、重排、多个模型调用和外部工具。</li>
+</ul>
+<p>举个例子：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">请求 A：输入 500 tokens，输出 100 tokens</span><br><span class="line">请求 B：输入 100000 tokens，输出 8000 tokens</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这两个请求在 QPS 上都算 <code>1</code>，但成本、延迟和资源消耗完全不是一个量级。</p>
+<p>生产中的限流策略通常包括：</p>
+<ul>
+<li>按用户、租户、应用、模型分别限流。</li>
+<li>同时限制 QPS、RPM、TPM、并发数和预算。</li>
+<li>对超长输入或超大输出上限单独限流。</li>
+<li>对低优先级任务排队或降级。</li>
+<li>对异常调用设置熔断。</li>
+<li>做成本预估，超过预算时提前拒绝或要求用户确认。</li>
+</ul>
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>大模型请求的资源消耗和 Token 数强相关，同样一个 QPS 可能对应完全不同的成本和延迟。所以限流不能只看 QPS，还要看 RPM、TPM、并发数、输入长度、输出上限、模型类型、租户预算和工具链路消耗。</p>
+</blockquote>
+<h2 id="7-模型网关通常要承担哪些能力？"><a href="#7-模型网关通常要承担哪些能力？" class="headerlink" title="7. 模型网关通常要承担哪些能力？"></a>7. 模型网关通常要承担哪些能力？</h2><p><strong>模型网关是业务系统和底层模型供应商之间的统一接入层，核心目标是屏蔽模型差异、提升稳定性、控制成本并增强可观测性。</strong></p>
+<p>如果没有模型网关，业务代码会直接耦合不同模型厂商的 API 格式、错误码、参数、鉴权和流式协议。一旦要切模型、做 fallback、统计成本或统一限流，会非常困难。</p>
+<p>模型网关通常承担这些能力：</p>
+<ul>
+<li><strong>统一 API 协议</strong>：对业务侧提供统一的 Chat、Embedding、Rerank、Vision、Audio 等接口。</li>
+<li><strong>模型路由</strong>：根据任务类型、租户、成本、质量和延迟选择模型。</li>
+<li><strong>Fallback 降级</strong>：主模型失败时切换备用模型，或返回降级结果。</li>
+<li><strong>限流与配额</strong>：按用户、租户、应用、模型做 QPS、TPM、并发和预算控制。</li>
+<li><strong>Token 预算管理</strong>：估算输入输出 Token，提前拦截超限请求。</li>
+<li><strong>Prompt 模板管理</strong>：统一管理系统提示词、版本、变量和灰度。</li>
+<li><strong>重试、超时、熔断</strong>：治理模型调用的不稳定性。</li>
+<li><strong>流式协议适配</strong>：对接不同厂商的流式返回格式，统一输出给前端。</li>
+<li><strong>结构化输出适配</strong>：统一 JSON Schema、Function Calling、工具调用格式。</li>
+<li><strong>安全治理</strong>：做敏感词、隐私数据脱敏、内容安全、越权检查。</li>
+<li><strong>日志与 Trace</strong>：记录完整调用链、模型版本、Token、延迟、错误和中间步骤。</li>
+<li><strong>成本归因</strong>：按用户、团队、应用、功能模块统计费用。</li>
+<li><strong>评测与灰度</strong>：支持模型 A/B 测试、Prompt 版本对比和线上采样评估。</li>
+<li><strong>缓存</strong>：对可缓存的确定性结果做语义缓存或请求缓存。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>模型网关负责把大模型从“一个 API”治理成“一个可生产使用的能力层”。它通常承担统一协议、模型路由、fallback、限流、Token 预算、Prompt 管理、重试熔断、流式适配、安全治理、日志观测、成本归因和评测灰度。</p>
+</blockquote>
+<h2 id="8-AI-应用的调用日志里至少要记录哪些字段？"><a href="#8-AI-应用的调用日志里至少要记录哪些字段？" class="headerlink" title="8. AI 应用的调用日志里至少要记录哪些字段？"></a>8. AI 应用的调用日志里至少要记录哪些字段？</h2><p><strong>AI 应用调用日志的目标不是只排查接口错误，还要支持质量分析、成本归因、安全审计和评测回放。</strong></p>
+<p>至少应该记录这些字段：</p>
+<ul>
+<li><strong>请求标识</strong>：<code>request_id</code>、<code>trace_id</code>、<code>session_id</code>、<code>message_id</code>。</li>
+<li><strong>用户与租户信息</strong>：用户 ID、租户 ID、应用 ID、渠道、权限角色。</li>
+<li><strong>模型信息</strong>：模型供应商、模型名称、模型版本、网关路由结果。</li>
+<li><strong>Prompt 信息</strong>：Prompt 模板 ID、模板版本、系统提示词版本、参数变量。</li>
+<li><strong>输入摘要</strong>：用户问题、上下文摘要、RAG 文档 ID、工具结果摘要。</li>
+<li><strong>Token 消耗</strong>：输入 Token、输出 Token、总 Token、缓存命中 Token。</li>
+<li><strong>成本信息</strong>：本次调用费用、计费模型、所属业务模块。</li>
+<li><strong>延迟指标</strong>：请求开始时间、首 Token 时间、总耗时、模型耗时、检索耗时、工具耗时。</li>
+<li><strong>调用参数</strong>：Temperature、Top-P、最大输出 Token、是否流式。</li>
+<li><strong>返回状态</strong>：成功或失败、错误码、错误类型、重试次数、fallback 信息。</li>
+<li><strong>输出摘要</strong>：模型回答、结构化解析结果、引用来源、是否被安全过滤。</li>
+<li><strong>工具调用记录</strong>：工具名称、参数摘要、执行状态、耗时、错误信息、幂等键。</li>
+<li><strong>RAG 记录</strong>：query、召回文档 ID、chunk ID、score、rerank 结果。</li>
+<li><strong>安全与合规字段</strong>：脱敏状态、内容安全结果、是否命中敏感策略。</li>
+<li><strong>用户反馈</strong>：点赞、点踩、人工标注、投诉、是否解决问题。</li>
+</ul>
+<p>需要注意的是，日志不能无脑记录所有原文：</p>
+<ul>
+<li>用户输入和模型输出可能包含隐私、商业秘密或敏感数据。</li>
+<li>应对敏感字段做脱敏、加密或访问控制。</li>
+<li>高风险业务要有审计日志，但普通开发人员不应随意查看完整内容。</li>
+<li>日志保留周期要符合公司安全和合规要求。</li>
+</ul>
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>AI 调用日志至少要能回答四个问题：谁在什么时候调用了哪个模型，输入输出和上下文是什么，消耗了多少 Token 和成本，结果是否成功以及质量如何。所以要记录请求 ID、用户租户、模型版本、Prompt 版本、Token、成本、延迟、错误、重试、RAG 证据、工具调用、安全结果和用户反馈。同时要注意隐私脱敏和权限控制。</p>
+</blockquote>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://javaguide.cn/ai/interview-questions/llm-interview-questions.html">JavaGuide：大模型基础面试题总结</a></li>
+</ul>
+<h1 id="结构化输出与工具调用相关面试题"><a href="#结构化输出与工具调用相关面试题" class="headerlink" title="结构化输出与工具调用相关面试题"></a>结构化输出与工具调用相关面试题</h1><h2 id="1-为什么只写“请返回-JSON”不可靠？"><a href="#1-为什么只写“请返回-JSON”不可靠？" class="headerlink" title="1. 为什么只写“请返回 JSON”不可靠？"></a>1. 为什么只写“请返回 JSON”不可靠？</h2><p><strong>只在 Prompt 里写“请返回 JSON”不可靠，因为这只是自然语言约束，不是强约束。</strong> 大模型仍然是在生成文本，而不是在执行 JSON 序列化函数。</p>
+<p>常见不可靠表现包括：</p>
+<ul>
+<li>输出前后夹杂解释性文本，例如“下面是 JSON：”。</li>
+<li>JSON 语法错误，例如少逗号、少引号、多尾逗号。</li>
+<li>字段名不稳定，例如一会儿叫 <code>user_name</code>，一会儿叫 <code>username</code>。</li>
+<li>字段类型不稳定，例如本应是数组，结果返回字符串。</li>
+<li>必填字段缺失，或者多出业务不接受的字段。</li>
+<li>枚举值不受控，例如状态本应是 <code>pending</code>、<code>success</code>、<code>failed</code>，结果返回 <code>done</code>。</li>
+<li>模型拒答、安全拦截、上下文截断时，返回内容可能根本不是目标 JSON。</li>
+</ul>
+<p>在生产环境中，这会带来三个问题：</p>
+<ul>
+<li><strong>解析不稳定</strong>：后端 <code>JSON.parse</code> 可能失败。</li>
+<li><strong>业务不稳定</strong>：即使 JSON 能解析，也不一定符合业务字段要求。</li>
+<li><strong>安全不稳定</strong>：模型可能输出多余字段、伪造参数或绕过业务限制。</li>
+</ul>
+<p>更稳的做法是：</p>
+<ul>
+<li>使用 JSON Mode 保证输出是合法 JSON。</li>
+<li>使用 Structured Outputs 或 JSON Schema 约束字段结构。</li>
+<li>对模型输出做服务端校验，不信任模型原始输出。</li>
+<li>校验失败后进入重试、修复、降级或人工处理流程。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>“请返回 JSON”只是 Prompt 约束，不能保证语法、字段、类型和业务语义都正确。生产环境要用 JSON Mode、Structured Outputs、JSON Schema、服务端校验和失败兜底来保证稳定性。</p>
+</blockquote>
+<h2 id="2-JSON-Mode-和-Structured-Outputs-有什么区别？"><a href="#2-JSON-Mode-和-Structured-Outputs-有什么区别？" class="headerlink" title="2. JSON Mode 和 Structured Outputs 有什么区别？"></a>2. JSON Mode 和 Structured Outputs 有什么区别？</h2><p><strong>JSON Mode 解决的是“是不是合法 JSON”的问题，Structured Outputs 解决的是“是不是符合指定 Schema”的问题。</strong></p>
+<p>JSON Mode 的特点：</p>
+<ul>
+<li>保证模型输出尽量是合法 JSON。</li>
+<li>适合只需要可解析 JSON，但字段结构不复杂的场景。</li>
+<li>不保证字段名、字段类型、必填项、枚举值符合业务要求。</li>
+<li>即使开启 JSON Mode，仍然需要在 Prompt 中明确要求输出 JSON。</li>
+<li>仍然要处理输出不完整、被截断、拒答等边界情况。</li>
+</ul>
+<p>Structured Outputs 的特点：</p>
+<ul>
+<li>基于 JSON Schema 约束输出结构。</li>
+<li>不仅要求 JSON 合法，还要求字段符合 Schema。</li>
+<li>可以约束对象、数组、类型、必填字段、枚举值、嵌套结构等。</li>
+<li>更适合结构化抽取、表单生成、分类结果、业务参数生成等场景。</li>
+<li>通常比单纯 JSON Mode 更适合生产系统。</li>
+</ul>
+<p>可以用一个例子理解：</p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">{</span></span><br><span class="line">  <span class="attr">"name"</span><span class="punctuation">:</span> <span class="string">"张三"</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">"age"</span><span class="punctuation">:</span> <span class="string">"二十岁"</span></span><br><span class="line"><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这可能是合法 JSON，所以 JSON Mode 可能认为没问题。但如果 Schema 要求 <code>age</code> 必须是整数，那么 Structured Outputs 会要求输出符合这个结构约束。</p>
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>JSON Mode 只保证输出能被当作 JSON 解析，Structured Outputs 则进一步保证输出符合 JSON Schema。生产中只要有稳定字段、类型、枚举或必填项要求，就优先使用 Structured Outputs，而不是只依赖 JSON Mode。</p>
+</blockquote>
+<h2 id="3-JSON-Schema-在大模型应用里解决什么问题？"><a href="#3-JSON-Schema-在大模型应用里解决什么问题？" class="headerlink" title="3. JSON Schema 在大模型应用里解决什么问题？"></a>3. JSON Schema 在大模型应用里解决什么问题？</h2><p><strong>JSON Schema 在大模型应用里解决的是“模型输出和业务系统之间的契约问题”。</strong></p>
+<p>大模型擅长生成自然语言，但业务系统需要稳定、可校验、可落库、可调用的结构化数据。JSON Schema 就是把输出格式从“口头约定”变成“机器可校验的契约”。</p>
+<p>它主要解决这些问题：</p>
+<ul>
+<li><strong>字段稳定性</strong>：规定必须返回哪些字段，字段名是什么。</li>
+<li><strong>类型稳定性</strong>：规定字段是字符串、数字、布尔值、数组还是对象。</li>
+<li><strong>枚举约束</strong>：规定状态、分类、意图只能取指定值。</li>
+<li><strong>嵌套结构约束</strong>：规定复杂对象、数组元素的结构。</li>
+<li><strong>缺省和必填控制</strong>：区分哪些字段必须有，哪些字段可选。</li>
+<li><strong>禁止多余字段</strong>：避免模型输出业务系统不认识的字段。</li>
+<li><strong>自动校验</strong>：后端可以用标准 JSON Schema 校验器做程序化验证。</li>
+<li><strong>跨团队协作</strong>：前端、后端、模型服务可以围绕同一份 Schema 开发。</li>
+</ul>
+<p>常见应用场景包括：</p>
+<ul>
+<li>简历信息抽取。</li>
+<li>发票、合同、病历等文档结构化。</li>
+<li>意图识别和槽位抽取。</li>
+<li>工单分类和优先级判断。</li>
+<li>生成可执行工具参数。</li>
+<li>生成前端 UI 所需的数据结构。</li>
+</ul>
+<p>需要注意的是，JSON Schema 解决的是结构约束，不等于事实正确：</p>
+<ul>
+<li>Schema 可以保证 <code>price</code> 是数字，但不能保证价格一定真实。</li>
+<li>Schema 可以保证 <code>city</code> 是字符串，但不能保证城市一定存在。</li>
+<li>Schema 可以保证 <code>action</code> 在枚举里，但不能保证这个动作一定安全。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>JSON Schema 是大模型输出和业务系统之间的结构化契约，它把“希望模型这样输出”变成“系统可以校验的格式规则”。它能提升字段、类型、枚举和嵌套结构的稳定性，但事实正确性和业务安全仍然需要额外校验。</p>
+</blockquote>
+<h2 id="4-Function-Calling-的完整链路是什么？"><a href="#4-Function-Calling-的完整链路是什么？" class="headerlink" title="4. Function Calling 的完整链路是什么？"></a>4. Function Calling 的完整链路是什么？</h2><p><strong>Function Calling 是让模型在需要外部数据或能力时，生成一个工具调用请求，由应用执行工具，再把工具结果交回模型生成最终回答。</strong></p>
+<p>完整链路通常是：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">用户提问</span><br><span class="line">-&gt; 应用把可用函数列表和参数 Schema 发给模型</span><br><span class="line">-&gt; 模型判断是否需要调用函数</span><br><span class="line">-&gt; 如果需要，模型返回函数名和参数</span><br><span class="line">-&gt; 应用校验函数名、参数、权限和业务规则</span><br><span class="line">-&gt; 应用执行本地函数、HTTP API、数据库查询或其他工具</span><br><span class="line">-&gt; 应用拿到工具结果</span><br><span class="line">-&gt; 应用把工具结果作为 tool result 继续发给模型</span><br><span class="line">-&gt; 模型基于工具结果生成最终回答</span><br><span class="line">-&gt; 应用做输出校验、安全过滤、日志记录并返回用户</span><br></pre></td></tr></tbody></table></figure>
+
+<p>举例：用户问“我上一个订单到哪了？”</p>
+<ul>
+<li>模型不应该凭空回答订单状态。</li>
+<li>应用提供 <code>get_order_status(order_id)</code> 工具。</li>
+<li>模型识别需要查订单，生成工具调用参数。</li>
+<li>后端校验用户是否有权限查询该订单。</li>
+<li>后端调用订单系统拿到物流状态。</li>
+<li>模型再把结果组织成自然语言回复。</li>
+</ul>
+<p>工程上要特别注意：</p>
+<ul>
+<li>模型只负责“建议调用哪个函数、传什么参数”，不应该直接拥有业务权限。</li>
+<li>应用必须校验参数，不能直接信任模型生成的参数。</li>
+<li>工具执行需要超时、重试、幂等和审计。</li>
+<li>工具结果也可能很长，需要摘要或字段裁剪。</li>
+<li>一个任务可能需要多轮工具调用，直到模型得到足够信息。</li>
+</ul>
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>Function Calling 的链路是：注册函数 Schema，模型选择函数并生成参数，应用校验后执行真实函数，再把执行结果回传给模型，模型基于结果生成最终回答。关键点是模型不直接执行业务动作，真正执行和安全校验都在应用侧。</p>
+</blockquote>
+<h2 id="5-Function-Calling-和-MCP-有什么区别？"><a href="#5-Function-Calling-和-MCP-有什么区别？" class="headerlink" title="5. Function Calling 和 MCP 有什么区别？"></a>5. Function Calling 和 MCP 有什么区别？</h2><p><strong>Function Calling 是模型调用应用侧函数的一种 API 能力；MCP 是连接大模型客户端和外部工具、资源的开放协议。</strong></p>
+<p>二者的区别可以从几个维度理解：</p>
+<ul>
+<li><strong>抽象层级不同</strong>：Function Calling 更像一次模型 API 请求中的工具调用机制；MCP 更像工具和资源接入的协议标准。</li>
+<li><strong>管理范围不同</strong>：Function Calling 通常由应用在请求里显式声明函数；MCP Server 可以统一暴露一组工具、资源、提示词和元数据。</li>
+<li><strong>集成方式不同</strong>：Function Calling 常直接绑定应用代码或后端 API；MCP 通过 MCP Client 和 MCP Server 通信，适合把外部系统标准化接入给不同 Agent 或模型客户端。</li>
+<li><strong>复用能力不同</strong>：Function Calling 往往服务于某个应用；MCP Server 可以被多个客户端复用，例如 IDE Agent、桌面 Agent、ChatGPT App 或内部 Agent 平台。</li>
+<li><strong>能力范围不同</strong>：Function Calling 主要是工具调用；MCP 除工具外，还可以提供资源、Prompt 模板、初始化指令、工具元数据等。</li>
+</ul>
+<p>可以这样类比：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Function Calling：我在这次模型请求里告诉模型，你可以调用这些函数。</span><br><span class="line">MCP：我提供一个标准服务器，任何兼容的 Agent 都能发现并调用这里的工具和资源。</span><br></pre></td></tr></tbody></table></figure>
+
+<p>二者也可以组合：</p>
+<ul>
+<li>模型通过工具调用机制决定要用某个能力。</li>
+<li>这个能力背后可能来自 MCP Server。</li>
+<li>应用侧仍然要做权限、审计、参数校验和安全控制。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>Function Calling 是模型调用函数的机制，MCP 是把外部工具和资源标准化暴露给 Agent 的协议。Function Calling 偏单次应用集成，MCP 偏工具生态和跨客户端复用；两者不是替代关系，可以一起使用。</p>
+</blockquote>
+<h2 id="6-MCP-Tool-和普通-HTTP-API-有什么关系？"><a href="#6-MCP-Tool-和普通-HTTP-API-有什么关系？" class="headerlink" title="6. MCP Tool 和普通 HTTP API 有什么关系？"></a>6. MCP Tool 和普通 HTTP API 有什么关系？</h2><p><strong>MCP Tool 往往是普通 HTTP API、数据库、文件系统或内部服务之上的一层 Agent 友好封装。</strong></p>
+<p>普通 HTTP API 是面向程序员和业务系统的接口，通常关心 URL、方法、Header、认证、请求体和响应体。MCP Tool 是面向模型或 Agent 的工具描述，重点是让模型知道：</p>
+<ul>
+<li>这个工具能做什么。</li>
+<li>什么时候该用它。</li>
+<li>输入参数 Schema 是什么。</li>
+<li>输出结果结构是什么。</li>
+<li>是否有副作用。</li>
+<li>是否需要用户确认。</li>
+<li>权限、速率限制和安全边界是什么。</li>
+</ul>
+<p>关系可以这样理解：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">模型 / Agent</span><br><span class="line">-&gt; MCP Tool 描述和调用协议</span><br><span class="line">-&gt; MCP Server</span><br><span class="line">-&gt; 普通 HTTP API / 数据库 / 内部服务 / 第三方 SaaS</span><br></pre></td></tr></tbody></table></figure>
+
+<p>例如一个 <code>create_refund</code> MCP Tool 背后可能调用公司内部退款 HTTP API：</p>
+<ul>
+<li>MCP Tool 对模型暴露的是“创建退款”这个语义化能力。</li>
+<li>MCP Server 负责参数校验、鉴权、日志、幂等和调用退款 API。</li>
+<li>内部 HTTP API 仍然是最终业务执行者。</li>
+</ul>
+<p>MCP Tool 相比直接把 HTTP API 给模型，有几个优势：</p>
+<ul>
+<li>对模型更友好，减少 URL、Header、协议细节。</li>
+<li>可以把多个底层 API 编排成一个高层工具。</li>
+<li>可以统一做权限、安全、审计和确认流程。</li>
+<li>可以标准化工具发现、调用和结果返回。</li>
+<li>可以在不同 Agent 客户端之间复用。</li>
+</ul>
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>MCP Tool 通常不是替代 HTTP API，而是把 HTTP API 等底层能力包装成模型可发现、可理解、可调用的工具接口。HTTP API 负责业务实现，MCP Tool 负责面向 Agent 的语义描述、协议适配和安全治理。</p>
+</blockquote>
+<h2 id="7-Agent-Skill-和-Function-Calling-是一回事吗？"><a href="#7-Agent-Skill-和-Function-Calling-是一回事吗？" class="headerlink" title="7. Agent Skill 和 Function Calling 是一回事吗？"></a>7. Agent Skill 和 Function Calling 是一回事吗？</h2><p><strong>Agent Skill 和 Function Calling 不是一回事。Skill 更偏“可复用工作流和领域知识包”，Function Calling 更偏“模型调用外部函数的执行机制”。</strong></p>
+<p>Agent Skill 通常包含：</p>
+<ul>
+<li><code>SKILL.md</code> 说明文件。</li>
+<li>适用场景描述。</li>
+<li>工作流程步骤。</li>
+<li>Prompt 规范。</li>
+<li>示例和参考文档。</li>
+<li>可选脚本、模板、资源文件。</li>
+</ul>
+<p>它解决的是“Agent 遇到某类任务时应该怎么做”的问题。例如：</p>
+<ul>
+<li>如何做代码评审。</li>
+<li>如何生成一份符合公司风格的 PPT。</li>
+<li>如何处理某类 GitHub PR 评论。</li>
+<li>如何按照团队规范发布版本。</li>
+</ul>
+<p>Function Calling 解决的是“模型如何调用某个确定的外部函数”的问题。例如：</p>
+<ul>
+<li>查询订单。</li>
+<li>创建工单。</li>
+<li>调用天气 API。</li>
+<li>执行数据库检索。</li>
+<li>调用支付、退款、库存等业务接口。</li>
+</ul>
+<p>两者可以配合：</p>
+<ul>
+<li>Skill 定义完整工作流，例如“处理退款咨询”。</li>
+<li>工作流中某一步需要调用 <code>query_order</code> 或 <code>create_refund</code>。</li>
+<li>这一步可以通过 Function Calling 或 MCP Tool 执行。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>Skill 是可复用的任务流程、知识和资源包，告诉 Agent 怎么做一类任务；Function Calling 是模型调用外部函数的机制，帮助 Agent 获取数据或执行动作。Skill 可以编排 Function Calling，但二者不是同一个概念。</p>
+</blockquote>
+<h2 id="8-结构化输出失败后怎么处理？"><a href="#8-结构化输出失败后怎么处理？" class="headerlink" title="8. 结构化输出失败后怎么处理？"></a>8. 结构化输出失败后怎么处理？</h2><p><strong>结构化输出失败后不能直接把错误暴露给用户，也不能盲目继续执行业务动作，而要进入可控的修复和兜底流程。</strong></p>
+<p>常见失败类型包括：</p>
+<ul>
+<li>JSON 解析失败。</li>
+<li>不符合 JSON Schema。</li>
+<li>缺少必填字段。</li>
+<li>字段类型错误。</li>
+<li>枚举值非法。</li>
+<li>输出被截断。</li>
+<li>模型拒答或返回安全说明。</li>
+<li>内容虽然结构正确，但业务校验失败。</li>
+</ul>
+<p>处理流程可以分层：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">模型输出</span><br><span class="line">-&gt; JSON parse</span><br><span class="line">-&gt; Schema 校验</span><br><span class="line">-&gt; 业务规则校验</span><br><span class="line">-&gt; 安全校验</span><br><span class="line">-&gt; 成功则进入业务流程</span><br><span class="line">-&gt; 失败则修复、重试、降级或人工处理</span><br></pre></td></tr></tbody></table></figure>
+
+<p>常见处理策略：</p>
+<ul>
+<li><strong>自动修复</strong>：对轻微格式问题，可以让模型基于错误信息重新输出。</li>
+<li><strong>有限重试</strong>：带上校验错误，要求模型只修正结构，不改变语义。</li>
+<li><strong>降级返回</strong>：如果结构化结果不可靠，返回普通文本或提示用户补充信息。</li>
+<li><strong>默认值兜底</strong>：对低风险可选字段使用默认值，但不能对关键字段乱填。</li>
+<li><strong>人工审核</strong>：高风险场景，例如金融、医疗、法律、退款、发货，失败后进入人工。</li>
+<li><strong>阻断执行</strong>：如果工具参数校验失败，绝不能继续调用真实业务 API。</li>
+<li><strong>日志记录</strong>：记录失败原因、模型版本、Prompt 版本、原始输出和重试次数。</li>
+<li><strong>离线评测</strong>：把失败样本加入评测集，优化 Schema、Prompt 或模型选择。</li>
+</ul>
+<p>需要注意：</p>
+<ul>
+<li>重试次数要有限，避免成本失控。</li>
+<li>不能让模型自己决定是否绕过 Schema。</li>
+<li>不要为了通过校验而把错误数据强行补齐。</li>
+<li>业务动作必须在结构、权限和安全校验全部通过后才执行。</li>
+</ul>
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>结构化输出失败后，要按解析校验、Schema 校验、业务校验、安全校验分层处理。能修复就带错误信息有限重试，不能修复就降级或人工处理；涉及工具调用和业务副作用时，校验失败必须阻断执行。</p>
+</blockquote>
+<h2 id="9-工具调用为什么必须做安全治理？"><a href="#9-工具调用为什么必须做安全治理？" class="headerlink" title="9. 工具调用为什么必须做安全治理？"></a>9. 工具调用为什么必须做安全治理？</h2><p><strong>工具调用必须做安全治理，因为它把模型从“生成文本”升级成了“能够访问数据和执行动作”的系统组件。</strong></p>
+<p>如果没有安全治理，风险会从“答错话”扩大到“做错事”。</p>
+<p>主要风险包括：</p>
+<ul>
+<li><strong>越权访问</strong>：模型调用工具查询了用户无权访问的数据。</li>
+<li><strong>参数伪造</strong>：模型生成了不属于当前用户的 <code>order_id</code>、<code>user_id</code>、<code>account_id</code>。</li>
+<li><strong>重复执行</strong>：重试或多轮调用导致重复下单、重复扣费、重复发消息。</li>
+<li><strong>Prompt Injection</strong>：外部文档或网页中的恶意指令诱导模型调用敏感工具。</li>
+<li><strong>数据泄露</strong>：工具结果包含隐私、密钥、内部字段，被模型输出给用户。</li>
+<li><strong>高危动作误执行</strong>：删除数据、转账、退款、发货、发邮件等动作被错误触发。</li>
+<li><strong>供应链风险</strong>：第三方 MCP Server 或外部工具可能改变行为或收集数据。</li>
+<li><strong>审计缺失</strong>：无法追踪谁在何时通过模型触发了什么动作。</li>
+</ul>
+<p>安全治理措施包括：</p>
+<ul>
+<li><strong>最小权限</strong>：工具只暴露当前任务需要的能力。</li>
+<li><strong>服务端鉴权</strong>：不要相信模型传来的用户 ID 和权限信息。</li>
+<li><strong>参数校验</strong>：所有工具参数都要做类型、范围、枚举和业务规则校验。</li>
+<li><strong>幂等控制</strong>：对有副作用的工具使用幂等键和状态机。</li>
+<li><strong>用户确认</strong>：高风险动作必须让用户显式确认。</li>
+<li><strong>工具分级</strong>：只读工具、低风险写工具、高风险写工具分别治理。</li>
+<li><strong>敏感数据脱敏</strong>：工具结果返回给模型前先裁剪和脱敏。</li>
+<li><strong>Prompt Injection 防护</strong>：外部内容只当数据，不当指令；必要时隔离不可信内容。</li>
+<li><strong>审计日志</strong>：记录工具名、参数摘要、调用人、权限、结果、耗时和审批记录。</li>
+<li><strong>Allowlist</strong>：只允许调用白名单工具和可信 MCP Server。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>工具调用让模型具备访问数据和执行动作的能力，所以安全边界必须从 Prompt 层下沉到服务端。必须做权限校验、参数校验、幂等、用户确认、脱敏、审计和 Prompt Injection 防护，否则模型错误可能直接变成业务事故。</p>
+</blockquote>
+<h2 id="10-面试里怎么一句话概括结构化输出？"><a href="#10-面试里怎么一句话概括结构化输出？" class="headerlink" title="10. 面试里怎么一句话概括结构化输出？"></a>10. 面试里怎么一句话概括结构化输出？</h2><p>可以这样概括：</p>
+<blockquote>
+<p>结构化输出就是用 JSON Schema、工具参数 Schema 或类似机制，把大模型的自然语言生成约束成业务系统可解析、可校验、可执行的稳定数据结构。</p>
+</blockquote>
+<p>如果想更偏工程实践，可以这样说：</p>
+<blockquote>
+<p>结构化输出的核心不是“让模型看起来像 JSON”，而是把模型输出变成可以被程序校验、失败可兜底、业务可消费的数据契约。</p>
+</blockquote>
+<p>如果想更偏面试精简版，可以这样说：</p>
+<blockquote>
+<p>结构化输出是连接大模型和传统软件系统的接口契约。</p>
+</blockquote>
+<h2 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://developers.openai.com/api/docs/guides/structured-outputs">OpenAI API：Structured Outputs</a></li>
+<li><a target="_blank" rel="noopener" href="https://developers.openai.com/api/docs/guides/function-calling">OpenAI API：Function Calling</a></li>
+<li><a target="_blank" rel="noopener" href="https://developers.openai.com/api/docs/guides/tools-connectors-mcp">OpenAI API：MCP and Connectors</a></li>
+<li><a target="_blank" rel="noopener" href="https://developers.openai.com/apps-sdk/concepts/mcp-server">OpenAI Developers：MCP for Apps SDK</a></li>
+<li><a target="_blank" rel="noopener" href="https://developers.openai.com/api/docs/guides/tools-skills">OpenAI API：Skills</a></li>
+</ul>
+<h1 id="AI-应用评测相关面试题"><a href="#AI-应用评测相关面试题" class="headerlink" title="AI 应用评测相关面试题"></a>AI 应用评测相关面试题</h1><h2 id="1-为什么不能只靠公开-benchmark-评估-AI-应用质量？"><a href="#1-为什么不能只靠公开-benchmark-评估-AI-应用质量？" class="headerlink" title="1. 为什么不能只靠公开 benchmark 评估 AI 应用质量？"></a>1. 为什么不能只靠公开 benchmark 评估 AI 应用质量？</h2><p><strong>不能只靠公开 benchmark 评估 AI 应用质量，因为公开 benchmark 评估的是模型通用能力，而 AI 应用质量取决于具体业务链路。</strong></p>
+<p>公开 benchmark 通常适合比较模型在数学、代码、知识问答、推理、多语言等通用任务上的能力，例如模型 A 是否整体比模型 B 更强。但一个真实 AI 应用的效果，不只由基础模型决定，还受到 Prompt、RAG、工具调用、业务规则、权限控制、上下文拼接、输出格式、延迟和成本等因素影响。</p>
+<p>公开 benchmark 的局限包括：</p>
+<ul>
+<li><strong>任务不匹配</strong>：公开题目不一定覆盖你的业务问题、用户语言和真实场景。</li>
+<li><strong>数据分布不同</strong>：线上用户问法、噪声、错别字、领域术语和上下文复杂度不同。</li>
+<li><strong>无法评估业务规则</strong>：例如是否遵守公司政策、权限边界、产品口径。</li>
+<li><strong>无法评估端到端链路</strong>：RAG 检索、工具调用、结构化输出、后处理都不在模型 benchmark 里。</li>
+<li><strong>无法衡量用户体验</strong>：首字延迟、失败率、拒答率、交互轮次、可解释性也很重要。</li>
+<li><strong>可能存在数据污染</strong>：部分公开 benchmark 可能已经出现在模型训练数据里。</li>
+<li><strong>不能代表成本收益</strong>：一个 benchmark 分数高的模型，不一定在业务场景中性价比最好。</li>
+</ul>
+<p>真实 AI 应用更应该建立自己的业务评测体系：</p>
+<ul>
+<li>用公开 benchmark 判断模型基础能力上限。</li>
+<li>用业务 Golden Set 判断应用在核心场景的质量。</li>
+<li>用 Trace 回放评估真实链路变化。</li>
+<li>用线上灰度评估真实用户体验和风险。</li>
+<li>用成本、延迟、稳定性、安全性等指标做综合决策。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>公开 benchmark 只能说明模型的通用能力，不能代表一个 AI 应用的端到端质量。AI 应用要评估的是“模型加 Prompt、RAG、工具、业务规则和用户体验”的整体效果，所以必须建立业务评测集和线上评测闭环。</p>
+</blockquote>
+<h2 id="2-Golden-Set-应该怎么构建？冷启动阶段没有生产日志怎么办？"><a href="#2-Golden-Set-应该怎么构建？冷启动阶段没有生产日志怎么办？" class="headerlink" title="2. Golden Set 应该怎么构建？冷启动阶段没有生产日志怎么办？"></a>2. Golden Set 应该怎么构建？冷启动阶段没有生产日志怎么办？</h2><p><strong>Golden Set 是一组高质量、可复用、带标准答案或评价标准的业务评测样本，用来稳定衡量 AI 应用质量。</strong></p>
+<p>构建 Golden Set 的核心不是样本越多越好，而是覆盖关键场景、边界问题和高风险问题。</p>
+<p>一个好的 Golden Set 通常包括：</p>
+<ul>
+<li><strong>真实用户问题</strong>：来自线上日志、客服工单、搜索词、销售对话等。</li>
+<li><strong>核心业务场景</strong>：覆盖最高频、最高价值、最高风险的任务。</li>
+<li><strong>边界样本</strong>：信息不足、歧义问题、错误前提、越权请求、超长输入。</li>
+<li><strong>负样本</strong>：模型应该拒答、追问或说明无法判断的问题。</li>
+<li><strong>标准答案</strong>：可以是唯一答案、参考答案、评分 Rubric 或关键点列表。</li>
+<li><strong>证据来源</strong>：特别是 RAG 场景，要标注答案应依据哪些文档或字段。</li>
+<li><strong>元数据</strong>：场景类型、难度、风险等级、语言、租户、产品线、期望行为。</li>
+</ul>
+<p>构建流程可以是：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">收集候选样本</span><br><span class="line">-&gt; 去重和脱敏</span><br><span class="line">-&gt; 场景分类</span><br><span class="line">-&gt; 标注标准答案或评分 Rubric</span><br><span class="line">-&gt; 专家审核</span><br><span class="line">-&gt; 分层抽样</span><br><span class="line">-&gt; 固化版本</span><br><span class="line">-&gt; 持续补充线上失败案例</span><br></pre></td></tr></tbody></table></figure>
+
+<p>冷启动阶段没有生产日志，可以从这些来源构建：</p>
+<ul>
+<li>产品需求文档、帮助中心、FAQ、客服知识库。</li>
+<li>历史人工客服工单或销售问答。</li>
+<li>业务专家整理的高频问题和高风险问题。</li>
+<li>竞品或公开论坛中相似用户问题，但要注意合规和脱敏。</li>
+<li>基于真实文档由人工生成问题。</li>
+<li>让大模型辅助生成候选问题，再由业务专家筛选和修正。</li>
+<li>做小规模内测或灰度，收集第一批真实 Trace。</li>
+</ul>
+<p>冷启动时要特别注意：</p>
+<ul>
+<li>不能完全依赖大模型自动生成 Golden Set，否则容易和模型偏好同源。</li>
+<li>要优先覆盖核心路径，而不是追求样本量。</li>
+<li>要把“应该拒答或追问”的样本纳入评测。</li>
+<li>Golden Set 要版本化，避免每次评测样本变化导致结果不可比。</li>
+</ul>
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>Golden Set 要来自真实业务或高可信业务假设，覆盖高频、高价值、高风险和边界场景，并带有标准答案、证据或评分 Rubric。冷启动没有日志时，可以从 PRD、FAQ、客服工单、业务专家和人工构造样本开始，但要专家审核、脱敏、分层和版本化。</p>
+</blockquote>
+<h2 id="3-LLM-as-Judge-有哪些主要偏差？怎么缓解？"><a href="#3-LLM-as-Judge-有哪些主要偏差？怎么缓解？" class="headerlink" title="3. LLM-as-Judge 有哪些主要偏差？怎么缓解？"></a>3. LLM-as-Judge 有哪些主要偏差？怎么缓解？</h2><p><strong>LLM-as-Judge 是用大模型作为裁判来评价模型输出质量，但它本身也会有偏差，不能无条件当作真值。</strong></p>
+<p>主要偏差包括：</p>
+<ul>
+<li><strong>位置偏差</strong>：对先出现或后出现的答案有偏好。</li>
+<li><strong>长度偏差</strong>：倾向给更长、更详细、看起来更完整的答案高分。</li>
+<li><strong>表达偏差</strong>：偏好语言流畅、格式漂亮的答案，即使事实不一定更正确。</li>
+<li><strong>自我偏好</strong>：某些 Judge 模型可能偏好和自己风格相似的答案。</li>
+<li><strong>品牌或模型偏见</strong>：如果知道候选模型名称，可能影响判断。</li>
+<li><strong>宽松偏差</strong>：对看似合理但缺少证据的回答给高分。</li>
+<li><strong>事实核查不足</strong>：Judge 如果没有证据，也可能无法判断答案真假。</li>
+<li><strong>Rubric 理解偏差</strong>：评分标准写得模糊时，Judge 会按自己的理解打分。</li>
+<li><strong>随机性偏差</strong>：同一问题多次评分可能不完全一致。</li>
+</ul>
+<p>缓解方法包括：</p>
+<ul>
+<li><strong>隐藏模型名称</strong>，避免品牌偏见。</li>
+<li><strong>随机打乱答案顺序</strong>，降低位置偏差。</li>
+<li><strong>使用明确 Rubric</strong>，把正确性、完整性、引用、格式、安全性分开评分。</li>
+<li><strong>要求基于证据评分</strong>，特别是 RAG 场景给 Judge 提供标准证据。</li>
+<li><strong>使用 pairwise 比较</strong>，让 Judge 比较两个答案哪个更好，而不是直接打绝对分。</li>
+<li><strong>多 Judge 投票</strong>，使用多个模型或多次评分取一致性。</li>
+<li><strong>校准人工标注集</strong>，定期比较 Judge 和人工的一致性。</li>
+<li><strong>控制输出长度影响</strong>，在 Rubric 中明确“不因答案更长而加分”。</li>
+<li><strong>记录 Judge 版本</strong>，避免 Judge 模型升级导致评测不可比。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>LLM-as-Judge 高效但有位置、长度、表达、自我偏好和事实核查不足等偏差。缓解方式是匿名、随机顺序、明确 Rubric、基于证据评分、多 Judge 投票、人工校准和版本固定。它适合做规模化辅助评测，但不能完全替代人工评测。</p>
+</blockquote>
+<h2 id="4-RAG-评测为什么必须分检索和生成两段？"><a href="#4-RAG-评测为什么必须分检索和生成两段？" class="headerlink" title="4. RAG 评测为什么必须分检索和生成两段？"></a>4. RAG 评测为什么必须分检索和生成两段？</h2><p><strong>RAG 评测必须分检索和生成两段，因为答案错误可能来自检索失败，也可能来自生成失败。</strong></p>
+<p>如果只看最终答案，很难定位问题。例如用户问一个制度条款，模型答错了，可能有两种完全不同的原因：</p>
+<ul>
+<li>检索阶段没有召回正确文档。</li>
+<li>检索召回了正确文档，但生成阶段没有正确使用证据。</li>
+</ul>
+<p>这两类问题的修复方式完全不同：</p>
+<ul>
+<li>检索失败要优化切分、向量模型、关键词召回、混合检索、重排序、权限过滤。</li>
+<li>生成失败要优化 Prompt、证据排序、引用格式、上下文压缩、回答约束。</li>
+</ul>
+<p>检索阶段常见指标包括：</p>
+<ul>
+<li><strong>Recall@K</strong>：正确文档是否出现在前 K 个结果里。</li>
+<li><strong>Precision@K</strong>：前 K 个结果中有多少是相关的。</li>
+<li><strong>MRR</strong>：第一个正确结果排在多靠前。</li>
+<li><strong>nDCG</strong>：相关文档的排序质量。</li>
+<li><strong>权限正确率</strong>：是否只召回用户有权限看的内容。</li>
+<li><strong>证据覆盖率</strong>：回答所需关键证据是否被召回。</li>
+</ul>
+<p>生成阶段常见指标包括：</p>
+<ul>
+<li><strong>答案正确性</strong>：是否基于证据回答正确。</li>
+<li><strong>忠实性</strong>：是否只依据检索证据，不编造。</li>
+<li><strong>引用准确率</strong>：引用是否真实支持答案。</li>
+<li><strong>完整性</strong>：是否覆盖问题所需关键点。</li>
+<li><strong>拒答正确率</strong>：证据不足时是否拒答或说明无法判断。</li>
+<li><strong>格式合规率</strong>：是否符合结构化输出或业务格式。</li>
+</ul>
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>RAG 是“先找证据，再基于证据生成答案”的两段式系统。最终答案错了，可能是没找到证据，也可能是找到了但没用好。只有把检索和生成分开评测，才能定位问题并选择正确优化方向。</p>
+</blockquote>
+<h2 id="5-Agent-评测为什么比普通问答和-RAG-更复杂？"><a href="#5-Agent-评测为什么比普通问答和-RAG-更复杂？" class="headerlink" title="5. Agent 评测为什么比普通问答和 RAG 更复杂？"></a>5. Agent 评测为什么比普通问答和 RAG 更复杂？</h2><p><strong>Agent 评测更复杂，因为 Agent 不只是回答问题，而是在多步骤过程中做计划、调用工具、观察结果、调整策略并可能执行有副作用的动作。</strong></p>
+<p>普通问答主要评估最终答案是否正确。RAG 还要评估检索和生成。Agent 则需要评估整个执行轨迹。</p>
+<p>Agent 的复杂性体现在：</p>
+<ul>
+<li><strong>多步骤决策</strong>：Agent 需要决定先做什么、后做什么。</li>
+<li><strong>工具选择</strong>：要判断是否调用工具、调用哪个工具。</li>
+<li><strong>参数生成</strong>：工具参数必须正确、安全、符合权限。</li>
+<li><strong>环境反馈</strong>：工具结果可能失败、延迟、为空或格式异常。</li>
+<li><strong>状态管理</strong>：多轮任务中要记住目标、约束和中间结果。</li>
+<li><strong>非确定性更强</strong>：同一个任务可能走不同路径，最终都可能成功。</li>
+<li><strong>副作用风险</strong>：可能发邮件、下单、退款、修改文件或数据库。</li>
+<li><strong>长链路误差累积</strong>：前一步小错误可能导致后面全部偏离。</li>
+<li><strong>评价标准多元</strong>：不仅看最终答案，还看过程是否安全、高效、可解释。</li>
+</ul>
+<p>Agent 评测通常要看这些维度：</p>
+<ul>
+<li>任务是否完成。</li>
+<li>工具调用顺序是否合理。</li>
+<li>工具选择是否必要。</li>
+<li>参数是否正确。</li>
+<li>是否遵守权限和安全策略。</li>
+<li>是否正确处理工具失败。</li>
+<li>是否避免不必要的高成本调用。</li>
+<li>是否产生可接受的副作用。</li>
+<li>最终回答是否如实反映执行结果。</li>
+</ul>
+<p>常见评测方法包括：</p>
+<ul>
+<li>使用模拟环境或沙箱，避免真实副作用。</li>
+<li>回放 Trace，评估每一步决策。</li>
+<li>对工具调用做断言，例如必须调用或不能调用某工具。</li>
+<li>评估最终状态，而不只评估最终文本。</li>
+<li>为高风险动作增加人工审批评测。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>Agent 评测比问答和 RAG 更复杂，因为它要评估计划、工具选择、参数、安全、状态、异常处理、成本和最终结果。Agent 的质量不只体现在最后一句话，还体现在整个执行轨迹是否正确、可靠、可控。</p>
+</blockquote>
+<h2 id="6-离线评测、Trace-回放、线上灰度分别解决什么问题？"><a href="#6-离线评测、Trace-回放、线上灰度分别解决什么问题？" class="headerlink" title="6. 离线评测、Trace 回放、线上灰度分别解决什么问题？"></a>6. 离线评测、Trace 回放、线上灰度分别解决什么问题？</h2><p><strong>离线评测、Trace 回放和线上灰度分别对应研发流程中的不同阶段：改动前快速判断、用真实链路复现、在真实流量中验证。</strong></p>
+<p><strong>离线评测解决的是“改动是否大概率变好”的问题。</strong></p>
+<p>特点：</p>
+<ul>
+<li>基于 Golden Set 或固定测试集。</li>
+<li>适合比较模型、Prompt、参数、RAG 策略。</li>
+<li>成本可控、速度快、可重复。</li>
+<li>不影响真实用户。</li>
+<li>缺点是不能完全代表线上分布。</li>
+</ul>
+<p>适用场景：</p>
+<ul>
+<li>Prompt 改版前。</li>
+<li>模型升级前。</li>
+<li>RAG 切分或重排序策略变更前。</li>
+<li>结构化输出 Schema 调整前。</li>
+</ul>
+<p><strong>Trace 回放解决的是“真实历史请求在新系统下会怎样”的问题。</strong></p>
+<p>特点：</p>
+<ul>
+<li>使用线上真实请求链路的记录。</li>
+<li>可以重放用户问题、上下文、检索结果、工具调用结果或完整 Trace。</li>
+<li>更接近真实分布。</li>
+<li>适合发现改动对历史问题的影响。</li>
+<li>缺点是需要做好脱敏、版本控制和外部工具 mock。</li>
+</ul>
+<p>适用场景：</p>
+<ul>
+<li>回归测试线上失败案例。</li>
+<li>比较新旧 Prompt 在真实问题上的差异。</li>
+<li>Agent 工具链升级前验证。</li>
+<li>RAG 知识库或检索策略变更后回放。</li>
+</ul>
+<p><strong>线上灰度解决的是“真实用户环境下是否真的更好”的问题。</strong></p>
+<p>特点：</p>
+<ul>
+<li>在小比例真实流量中验证。</li>
+<li>可以观察真实用户反馈、点击、追问、转人工、投诉、留存等指标。</li>
+<li>能发现离线评测覆盖不到的问题。</li>
+<li>风险更高，需要监控、回滚和分流策略。</li>
+</ul>
+<p>适用场景：</p>
+<ul>
+<li>模型升级上线。</li>
+<li>新 Agent 能力上线。</li>
+<li>新检索策略上线。</li>
+<li>新工具调用能力上线。</li>
+</ul>
+<p>三者关系可以概括为：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">离线评测：便宜、快、可重复</span><br><span class="line">Trace 回放：更贴近真实历史分布</span><br><span class="line">线上灰度：验证真实用户体验和业务指标</span><br></pre></td></tr></tbody></table></figure>
+
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>离线评测用于研发阶段快速比较方案，Trace 回放用于用真实历史请求做回归验证，线上灰度用于在真实用户环境中验证效果、风险和业务指标。三者是递进关系，不是互相替代。</p>
+</blockquote>
+<h2 id="7-CI-里的-AI-评测如何平衡速度和覆盖度？"><a href="#7-CI-里的-AI-评测如何平衡速度和覆盖度？" class="headerlink" title="7. CI 里的 AI 评测如何平衡速度和覆盖度？"></a>7. CI 里的 AI 评测如何平衡速度和覆盖度？</h2><p><strong>CI 里的 AI 评测要分层设计，用少量高价值用例做快速阻断，用更大规模评测放到异步或定时任务中。</strong></p>
+<p>AI 评测通常比普通单元测试慢、贵、不稳定。如果把所有评测都放进每次 CI，会导致：</p>
+<ul>
+<li>构建时间过长。</li>
+<li>Token 成本过高。</li>
+<li>外部模型抖动导致误报。</li>
+<li>开发者不愿意频繁运行。</li>
+</ul>
+<p>比较合理的分层策略是：</p>
+<ul>
+<li><strong>PR 快速评测</strong>：只跑少量核心 Golden Set、关键安全样本和结构化输出样本。</li>
+<li><strong>模块级评测</strong>：改了 RAG 就跑检索评测，改了 Prompt 就跑相关任务集，改了工具就跑工具调用断言。</li>
+<li><strong>夜间全量评测</strong>：跑更大的 Golden Set、Trace 回放和多模型对比。</li>
+<li><strong>发布前评测</strong>：跑完整回归、成本评估、延迟评估和安全评测。</li>
+<li><strong>线上监控</strong>：上线后持续监控真实指标和失败样本。</li>
+</ul>
+<p>CI 中适合做强阻断的指标：</p>
+<ul>
+<li>JSON Schema 合规率。</li>
+<li>安全策略命中是否正确。</li>
+<li>工具调用参数是否通过校验。</li>
+<li>不该调用工具时是否没有调用。</li>
+<li>必须拒答的问题是否拒答。</li>
+<li>核心高风险样本是否通过。</li>
+</ul>
+<p>CI 中不适合过度依赖的指标：</p>
+<ul>
+<li>大规模 LLM-as-Judge 平均分。</li>
+<li>对开放式文本的细微偏好判断。</li>
+<li>对低风险文案质量的主观评分。</li>
+</ul>
+<p>实用优化方法：</p>
+<ul>
+<li>固定模型版本和参数。</li>
+<li>缓存稳定样本结果。</li>
+<li>对测试集做分层抽样。</li>
+<li>将失败样本优先加入快速集。</li>
+<li>设置容忍区间，而不是单次分数微小波动就失败。</li>
+<li>对关键结构化任务使用程序化断言，减少 Judge 成本。</li>
+</ul>
+<p>面试中可以这样总结：</p>
+<blockquote>
+<p>CI 里的 AI 评测要分层：PR 阶段跑小而关键的快速集，主要阻断结构化、安全和高风险回归；夜间或发布前跑大规模 Golden Set 和 Trace 回放。这样既保证速度，又能维持覆盖度和质量信心。</p>
+</blockquote>
+<h2 id="8-如果-LLM-as-Judge-和人工评测结果不一致，应该怎么处理？"><a href="#8-如果-LLM-as-Judge-和人工评测结果不一致，应该怎么处理？" class="headerlink" title="8. 如果 LLM-as-Judge 和人工评测结果不一致，应该怎么处理？"></a>8. 如果 LLM-as-Judge 和人工评测结果不一致，应该怎么处理？</h2><p><strong>LLM-as-Judge 和人工评测不一致时，不能简单认为某一方一定错，而要把它当作评测体系需要校准的信号。</strong></p>
+<p>处理步骤可以是：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">定位不一致样本</span><br><span class="line">-&gt; 判断是人工标准不清，还是 Judge 误判</span><br><span class="line">-&gt; 检查 Rubric、证据、答案和上下文</span><br><span class="line">-&gt; 必要时引入第二人工或专家仲裁</span><br><span class="line">-&gt; 更新评测标准或 Judge Prompt</span><br><span class="line">-&gt; 把样本加入校准集</span><br></pre></td></tr></tbody></table></figure>
+
+<p>常见原因包括：</p>
+<ul>
+<li><strong>Rubric 不清晰</strong>：人工和 Judge 对“好答案”的理解不同。</li>
+<li><strong>Judge 没有足够证据</strong>：人工知道业务背景，但 Judge 不知道。</li>
+<li><strong>人工标注不一致</strong>：不同标注员标准不同，甚至人工也可能错。</li>
+<li><strong>Judge 偏好长答案或漂亮格式</strong>：忽略事实错误或引用不足。</li>
+<li><strong>样本本身有歧义</strong>：问题可能允许多个合理答案。</li>
+<li><strong>业务规则变化</strong>：人工按新规则评，Judge Prompt 还是旧规则。</li>
+</ul>
+<p>处理原则：</p>
+<ul>
+<li>高风险和关键业务指标以人工专家评审为最终标准。</li>
+<li>对大规模低风险样本，可以用 Judge 做辅助筛选。</li>
+<li>建立人工和 Judge 的一致性指标，例如 agreement rate 或 Cohen’s kappa。</li>
+<li>定期用人工标注集校准 Judge Prompt 和评分阈值。</li>
+<li>对不一致样本分类沉淀，反向改进 Rubric。</li>
+<li>不要让 Judge 评价它没有证据判断的事实问题。</li>
+</ul>
+<p>如果最终确认是 Judge 错了：</p>
+<ul>
+<li>优化 Judge Prompt。</li>
+<li>给 Judge 补充证据和评分规则。</li>
+<li>改成 pairwise 比较或多 Judge 投票。</li>
+<li>降低该类指标的自动化权重。</li>
+</ul>
+<p>如果最终确认是人工评测不稳定：</p>
+<ul>
+<li>细化标注指南。</li>
+<li>增加标注员培训。</li>
+<li>引入双人标注和专家仲裁。</li>
+<li>把典型样本加入标注规范。</li>
+</ul>
+<p>面试中可以这样回答：</p>
+<blockquote>
+<p>LLM-as-Judge 和人工不一致时，要先定位样本和原因，检查 Rubric、证据和标注标准。高风险场景以人工专家为准，同时用不一致样本校准 Judge Prompt、评分规则和人工标注指南。Judge 是规模化辅助评测工具，不是绝对真值。</p>
+</blockquote>
+</body></html>
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2026-07-08T22:33:27+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2026年7月8日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>AI应用开发</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9D%A2%E8%AF%95/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>面试</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>大模型</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/API/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>API</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>结构化输出</p></a></div>
+  <span hidden itemprop="keywords">AI应用开发 面试 大模型 API 结构化输出</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2026/07/08/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E5%9B%9B%E6%9D%BF%E5%9D%97%E6%95%B4%E7%90%86/&title=大模型基础面试题四板块整理 - Dawnqi's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2026/07/08/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E5%9B%9B%E6%9D%BF%E5%9D%97%E6%95%B4%E7%90%86/&title=大模型基础面试题四板块整理 - Dawnqi's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2026/07/08/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E5%9B%9B%E6%9D%BF%E5%9D%97%E6%95%B4%E7%90%86/&title=大模型基础面试题四板块整理 - Dawnqi's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2026/07/08/AI%E5%B7%A5%E4%BD%9C%E6%B5%81Workflow-Graph-Loop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/'>
+          <p class='title'>AI 工作流学习笔记：Workflow、Graph 与 Loop 怎么串起来<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+参考原文：AI 工作流中的 Workflow、Graph 与 Loop：从概念到实现
+原文中有几张配图，但页面只看到 Copyright © 2026 Guide，没有明确图片转载授权说明。因...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2026/07/08/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E5%9B%9B%E6%9D%BF%E5%9D%97%E6%95%B4%E7%90%86/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
+  
+
+  
+    
+    
+      
+    
+  
+
+
+<div class="widget-sticky pjax">
+
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Token-%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%AD%E6%96%87%E3%80%81%E8%8B%B1%E6%96%87%E3%80%81%E4%BB%A3%E7%A0%81%E6%B6%88%E8%80%97%E7%9A%84-Token-%E4%B8%8D%E4%B8%80%E6%A0%B7%EF%BC%9F"><span class="toc-text">1. Token 是什么？为什么中文、英文、代码消耗的 Token 不一样？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AA%97%E5%8F%A3%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AA%97%E5%8F%A3%E8%B6%8A%E5%A4%A7%EF%BC%8C%E6%95%88%E6%9E%9C%E4%B8%80%E5%AE%9A%E8%B6%8A%E5%A5%BD%E5%90%97%EF%BC%9F"><span class="toc-text">2. 上下文窗口是什么？上下文窗口越大，效果一定越好吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BB%80%E4%B9%88%E6%98%AF-Lost-in-the-Middle-%E9%97%AE%E9%A2%98%EF%BC%9F%E9%95%BF%E4%B8%8A%E4%B8%8B%E6%96%87%E5%9C%BA%E6%99%AF%E4%B8%8B%E6%80%8E%E4%B9%88%E7%BC%93%E8%A7%A3%EF%BC%9F"><span class="toc-text">3. 什么是 Lost in the Middle 问题？长上下文场景下怎么缓解？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Temperature%E3%80%81Top-P%E3%80%81Top-K-%E5%88%86%E5%88%AB%E6%8E%A7%E5%88%B6%E4%BB%80%E4%B9%88%EF%BC%9F%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E6%80%8E%E4%B9%88%E8%AE%BE%E7%BD%AE%E6%9B%B4%E7%A8%B3%EF%BC%9F"><span class="toc-text">4. Temperature、Top-P、Top-K 分别控制什么？生产环境怎么设置更稳？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E4%B8%BA%E4%BB%80%E4%B9%88-Temperature-%E8%AE%BE%E7%BD%AE%E4%B8%BA-0%EF%BC%8C%E6%A8%A1%E5%9E%8B%E8%BE%93%E5%87%BA%E4%BB%8D%E7%84%B6%E5%8F%AF%E8%83%BD%E4%B8%8D%E5%AE%8C%E5%85%A8%E4%B8%80%E8%87%B4%EF%BC%9F"><span class="toc-text">5. 为什么 Temperature 设置为 0，模型输出仍然可能不完全一致？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E4%BA%A7%E7%94%9F%E5%B9%BB%E8%A7%89%EF%BC%9F%E5%B8%B8%E8%A7%81%E7%BC%93%E8%A7%A3%E6%96%B9%E6%A1%88%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">6. 大模型为什么会产生幻觉？常见缓解方案有哪些？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Token-%E9%A2%84%E7%AE%97%E6%80%8E%E4%B9%88%E4%BC%B0%E7%AE%97%EF%BC%9F%E8%BE%93%E5%85%A5%E3%80%81%E8%BE%93%E5%87%BA%E3%80%81%E5%8E%86%E5%8F%B2%E6%B6%88%E6%81%AF%E3%80%81RAG-%E8%AF%81%E6%8D%AE%E5%A6%82%E4%BD%95%E5%8F%96%E8%88%8D%EF%BC%9F"><span class="toc-text">7. Token 预算怎么估算？输入、输出、历史消息、RAG 证据如何取舍？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E9%95%BF%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AA%97%E5%8F%A3%E4%BC%9A%E4%B8%8D%E4%BC%9A%E5%8F%96%E4%BB%A3-RAG%EF%BC%9F%E4%BA%8C%E8%80%85%E5%88%86%E5%88%AB%E9%80%82%E5%90%88%E4%BB%80%E4%B9%88%E5%9C%BA%E6%99%AF%EF%BC%9F"><span class="toc-text">8. 长上下文窗口会不会取代 RAG？二者分别适合什么场景？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%A4%A7%E6%A8%A1%E5%9E%8B-API-%E8%B0%83%E7%94%A8%E7%9A%84%E5%AE%8C%E6%95%B4%E9%93%BE%E8%B7%AF%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">1. 大模型 API 调用的完整链路是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Streaming-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%83%BD%E6%94%B9%E5%96%84%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%EF%BC%9F%E5%AE%83%E8%83%BD%E5%87%8F%E5%B0%91%E6%80%BB%E8%80%97%E6%97%B6%E5%92%8C-Token-%E6%88%90%E6%9C%AC%E5%90%97%EF%BC%9F"><span class="toc-text">2. Streaming 为什么能改善用户体验？它能减少总耗时和 Token 成本吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-SSE%E3%80%81WebSocket%E3%80%81HTTP-Chunked-%E5%9C%A8%E6%B5%81%E5%BC%8F%E8%BE%93%E5%87%BA%E5%9C%BA%E6%99%AF%E4%B8%8B%E6%80%8E%E4%B9%88%E9%80%89%EF%BC%9F"><span class="toc-text">3. SSE、WebSocket、HTTP Chunked 在流式输出场景下怎么选？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%93%AA%E4%BA%9B%E5%A4%A7%E6%A8%A1%E5%9E%8B-API-%E9%94%99%E8%AF%AF%E5%8F%AF%E4%BB%A5%E9%87%8D%E8%AF%95%EF%BC%9F%E5%93%AA%E4%BA%9B%E9%94%99%E8%AF%AF%E4%B8%8D%E8%83%BD%E9%87%8D%E8%AF%95%EF%BC%9F"><span class="toc-text">4. 哪些大模型 API 错误可以重试？哪些错误不能重试？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%B0%83%E7%94%A8%E5%BF%85%E9%A1%BB%E5%81%9A%E5%B9%82%E7%AD%89%EF%BC%9F"><span class="toc-text">5. 为什么大模型调用必须做幂等？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E9%99%90%E6%B5%81%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E5%8F%AA%E6%8C%89-QPS-%E5%81%9A%EF%BC%9F"><span class="toc-text">6. 大模型限流为什么不能只按 QPS 做？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E6%A8%A1%E5%9E%8B%E7%BD%91%E5%85%B3%E9%80%9A%E5%B8%B8%E8%A6%81%E6%89%BF%E6%8B%85%E5%93%AA%E4%BA%9B%E8%83%BD%E5%8A%9B%EF%BC%9F"><span class="toc-text">7. 模型网关通常要承担哪些能力？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-AI-%E5%BA%94%E7%94%A8%E7%9A%84%E8%B0%83%E7%94%A8%E6%97%A5%E5%BF%97%E9%87%8C%E8%87%B3%E5%B0%91%E8%A6%81%E8%AE%B0%E5%BD%95%E5%93%AA%E4%BA%9B%E5%AD%97%E6%AE%B5%EF%BC%9F"><span class="toc-text">8. AI 应用的调用日志里至少要记录哪些字段？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%AA%E5%86%99%E2%80%9C%E8%AF%B7%E8%BF%94%E5%9B%9E-JSON%E2%80%9D%E4%B8%8D%E5%8F%AF%E9%9D%A0%EF%BC%9F"><span class="toc-text">1. 为什么只写“请返回 JSON”不可靠？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-JSON-Mode-%E5%92%8C-Structured-Outputs-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">2. JSON Mode 和 Structured Outputs 有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-JSON-Schema-%E5%9C%A8%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E9%87%8C%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%9F"><span class="toc-text">3. JSON Schema 在大模型应用里解决什么问题？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Function-Calling-%E7%9A%84%E5%AE%8C%E6%95%B4%E9%93%BE%E8%B7%AF%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">4. Function Calling 的完整链路是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Function-Calling-%E5%92%8C-MCP-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-text">5. Function Calling 和 MCP 有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-MCP-Tool-%E5%92%8C%E6%99%AE%E9%80%9A-HTTP-API-%E6%9C%89%E4%BB%80%E4%B9%88%E5%85%B3%E7%B3%BB%EF%BC%9F"><span class="toc-text">6. MCP Tool 和普通 HTTP API 有什么关系？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Agent-Skill-%E5%92%8C-Function-Calling-%E6%98%AF%E4%B8%80%E5%9B%9E%E4%BA%8B%E5%90%97%EF%BC%9F"><span class="toc-text">7. Agent Skill 和 Function Calling 是一回事吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA%E5%A4%B1%E8%B4%A5%E5%90%8E%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%EF%BC%9F"><span class="toc-text">8. 结构化输出失败后怎么处理？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E5%B7%A5%E5%85%B7%E8%B0%83%E7%94%A8%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E5%81%9A%E5%AE%89%E5%85%A8%E6%B2%BB%E7%90%86%EF%BC%9F"><span class="toc-text">9. 工具调用为什么必须做安全治理？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E9%9D%A2%E8%AF%95%E9%87%8C%E6%80%8E%E4%B9%88%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%A6%82%E6%8B%AC%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA%EF%BC%9F"><span class="toc-text">10. 面试里怎么一句话概括结构化输出？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83-1"><span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E5%8F%AA%E9%9D%A0%E5%85%AC%E5%BC%80-benchmark-%E8%AF%84%E4%BC%B0-AI-%E5%BA%94%E7%94%A8%E8%B4%A8%E9%87%8F%EF%BC%9F"><span class="toc-text">1. 为什么不能只靠公开 benchmark 评估 AI 应用质量？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Golden-Set-%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E6%9E%84%E5%BB%BA%EF%BC%9F%E5%86%B7%E5%90%AF%E5%8A%A8%E9%98%B6%E6%AE%B5%E6%B2%A1%E6%9C%89%E7%94%9F%E4%BA%A7%E6%97%A5%E5%BF%97%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-text">2. Golden Set 应该怎么构建？冷启动阶段没有生产日志怎么办？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-LLM-as-Judge-%E6%9C%89%E5%93%AA%E4%BA%9B%E4%B8%BB%E8%A6%81%E5%81%8F%E5%B7%AE%EF%BC%9F%E6%80%8E%E4%B9%88%E7%BC%93%E8%A7%A3%EF%BC%9F"><span class="toc-text">3. LLM-as-Judge 有哪些主要偏差？怎么缓解？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-RAG-%E8%AF%84%E6%B5%8B%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E5%88%86%E6%A3%80%E7%B4%A2%E5%92%8C%E7%94%9F%E6%88%90%E4%B8%A4%E6%AE%B5%EF%BC%9F"><span class="toc-text">4. RAG 评测为什么必须分检索和生成两段？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Agent-%E8%AF%84%E6%B5%8B%E4%B8%BA%E4%BB%80%E4%B9%88%E6%AF%94%E6%99%AE%E9%80%9A%E9%97%AE%E7%AD%94%E5%92%8C-RAG-%E6%9B%B4%E5%A4%8D%E6%9D%82%EF%BC%9F"><span class="toc-text">5. Agent 评测为什么比普通问答和 RAG 更复杂？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%A6%BB%E7%BA%BF%E8%AF%84%E6%B5%8B%E3%80%81Trace-%E5%9B%9E%E6%94%BE%E3%80%81%E7%BA%BF%E4%B8%8A%E7%81%B0%E5%BA%A6%E5%88%86%E5%88%AB%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%9F"><span class="toc-text">6. 离线评测、Trace 回放、线上灰度分别解决什么问题？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-CI-%E9%87%8C%E7%9A%84-AI-%E8%AF%84%E6%B5%8B%E5%A6%82%E4%BD%95%E5%B9%B3%E8%A1%A1%E9%80%9F%E5%BA%A6%E5%92%8C%E8%A6%86%E7%9B%96%E5%BA%A6%EF%BC%9F"><span class="toc-text">7. CI 里的 AI 评测如何平衡速度和覆盖度？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%A6%82%E6%9E%9C-LLM-as-Judge-%E5%92%8C%E4%BA%BA%E5%B7%A5%E8%AF%84%E6%B5%8B%E7%BB%93%E6%9E%9C%E4%B8%8D%E4%B8%80%E8%87%B4%EF%BC%8C%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86%EF%BC%9F"><span class="toc-text">8. 如果 LLM-as-Judge 和人工评测结果不一致，应该怎么处理？</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
+</div>
+
+
+<!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <!-- Custom Files side begin -->
+  
+  <!-- Custom Files side end -->
+</aside>
+
+
+
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<pjax>
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  pdata.commentConfig={};
+  //  see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs
+  
+    // header
+    var l_header=document.getElementById("l_header");
+    
+    l_header.classList.add("show");
+    
+    
+      // cover
+      var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
+      var scroll_down=document.getElementById('scroll-down');
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
+      scroll_down.style.display="none";
+    
+  
+</script>
+</pjax>
+        </div>
+        
+  
+  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+              <a href="mailto:dawnqi@qq.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+              <a href="https://github.com/dawnqi12-cyber"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=63035382"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+      
+    
+      
+        本站使用
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0" target="_blank" class="codename">Volantis</a>
+        作为主题
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2017-2021 XXX</a></p>
+
+        </div>
+      
+    
+    <!-- Custom Files footer begin-->
+    
+    <!-- Custom Files footer end-->
+  </footer>
+
+
+        <a id="s-top" class="fa-solid fa-arrow-up fa-fw" href="/" onclick="return false;" title="top"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+  /******************** volantis.dom ********************************/
+  // 页面选择器 将dom对象缓存起来 see: /source/js/app.js etc.
+  volantis.dom.bodyAnchor = volantis.dom.$(document.getElementById("safearea")); // 页面主体
+  volantis.dom.topBtn = volantis.dom.$(document.getElementById('s-top')); // 向上
+  volantis.dom.wrapper = volantis.dom.$(document.getElementById('wrapper')); // 整个导航栏
+  volantis.dom.coverAnchor = volantis.dom.$(document.querySelector('#l_cover .cover-wrapper')); // 1个
+  volantis.dom.switcher = volantis.dom.$(document.querySelector('#l_header .switcher .s-search')); // 搜索按钮   移动端 1个
+  volantis.dom.header = volantis.dom.$(document.getElementById('l_header')); // 移动端导航栏
+  volantis.dom.search = volantis.dom.$(document.querySelector('#l_header .m_search')); // 搜索框 桌面端 移动端 1个
+  volantis.dom.mPhoneList = volantis.dom.$(document.querySelectorAll('#l_header .m-phone .list-v')); //  手机端 子菜单 多个
+</script>
+
+<script>
+  
+  volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fortawesome/fontawesome-free/css/all.min.css");
+  
+  
+  
+</script>
+
+<!-- required -->
+
+
+<!-- internal -->
+
+<script src="/js/app.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="rightmenu-wrapper">
+  <ul class="list-v rightmenu" id="rightmenu-content">
+    
+  <li class='navigation menuNavigation-Content'>
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="history.back()"><i class="fa-solid fa-arrow-left fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="history.forward()"><i class="fa-solid fa-arrow-right fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="window.location.reload()"><i class="fa-solid fa-redo fa-fw"></i></a>
+
+
+
+    <a class="nav icon-only fix-cursor-default" onclick="VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)"><i class="fa-solid fa-arrow-up fa-fw"></i></a>
+
+
+  </li>
+
+
+    <hr class="menuLoad-Content" >
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyPaste" data-event="copyPaste" data-group="inputBox">
+      <i class="fa-solid fa-paste fa-fw"></i>
+      粘贴文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyAll" data-event="copyAll" data-group="inputBox">
+      <i class="fa-solid fa-object-ungroup fa-fw"></i>
+      全选文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyCut" data-event="copyCut" data-group="inputBox">
+      <i class="fa-solid fa-cut fa-fw"></i>
+      剪切文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyText" data-event="copyText" data-group="seletctText">
+      <i class="fa-solid fa-copy fa-fw"></i>
+      复制文本
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="searchWord" data-event="OpenSearch(__text__)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      站内搜索
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="bingSearch" data-event="window.open(`https://cn.bing.com/search?q=${__text__}`)" data-group="seletctText">
+      <i class="fa-solid fa-search fa-fw"></i>
+      必应搜索
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="openTab" data-event="window.open(__link__)" data-group="elementCheck">
+      <i class="fa-solid fa-external-link-square-alt fa-fw"></i>
+      新标签页打开
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyLink" data-event="copyLink" data-group="elementCheck">
+      <i class="fa-solid fa-link fa-fw"></i>
+      复制链接地址
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="copyImg" data-event="copyImg" data-group="elementImage">
+      <i class="fa-solid fa-image fa-fw"></i>
+      复制图片
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="googleImg" data-event="window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)" data-group="elementImage">
+      <i class="fa-solid fa-images fa-fw"></i>
+      谷歌识图
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="help" target="_blank" rel="noopener" href="https://volantis.js.org/faqs/" data-group="link">
+      <i class="fa-solid fa-question fa-fw"></i>
+      常见问题
+    </a>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="examples" target="_blank" rel="noopener" href="https://volantis.js.org/examples/" data-group="link">
+      <i class="fa-solid fa-rss fa-fw"></i>
+      示例博客
+    </a>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="contributors" target="_blank" rel="noopener" href="https://volantis.js.org/contributors/" data-group="link">
+      <i class="fa-solid fa-fan fa-fw"></i>
+      加入社区
+    </a>
+  </li>
+
+
+
+    <hr class="menuLoad-Content" >
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="source_docs" target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs/" data-group="link">
+      <i class="fa-solid fa-code-branch fa-fw"></i>
+      本站源码
+    </a>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
+      <i class="fa-solid fa-code-branch fa-fw"></i>
+      主题源码
+    </a>
+  </li>
+
+
+
+    <hr class="menuLoad-Content" >
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="darkMode" data-event="volantis.dark.toggle()" data-group="darkMode">
+      <i class="fa-solid fa-moon fa-fw"></i>
+      暗黑模式
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="printMode" data-event="printMode" data-group="articlePage">
+      <i class="fa-solid fa-print fa-fw"></i>
+      打印页面
+    </span>
+  </li>
+
+
+
+  <li class="menuLoad-Content">
+    <span class="vlts-menu fix-cursor-default event" id="readMode" data-event="readMode" data-group="articlePage">
+      <i class="fa-solid fa-book-open fa-fw"></i>
+      阅读模式
+    </span>
+  </li>
+
+
+<div id="menuMusic">
+  <li class='music name menuOption-Content'>
+    <p class='nav music-title fix-cursor-default'></p>
+  </li>
+  <li class='music ctrl'>
+    <a class='nav icon-only backward fix-cursor-default' href="/" onclick="return false;" title="backward">
+      <i class='fa-solid fa-step-backward fa-fw'></i>
+    </a>
+    <a class='nav icon-only toggle fix-cursor-default' href="/" onclick="return false;" title="toggle">
+      <i class='fa-solid fa-play fa-fw'></i>
+    </a>
+    <a class='nav icon-only forward fix-cursor-default' href="/" onclick="return false;" title="forward">
+      <i class='fa-solid fa-step-forward fa-fw'></i>
+    </a>
+  </li>
+  <li class='music volume'>
+    <div class='nav volume'>
+      <div class="aplayer-volume-bar-wrap">
+        <div class="aplayer-volume-bar fix-cursor-pointer">
+          <div class="aplayer-volume"></div>
+          <i class='left fa-solid fa-volume-off fa-fw'></i>
+          <i class='right fa-solid fa-volume-up fa-fw'></i>
+        </div>
+      </div>
+    </div>
+  </li>
+</div>
+
+  </ul>
+</div>
+<script src="/js/plugins/rightMenus.js"></script>
+<script>
+  const RightMenusFunction = {};
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  //RightMenusFunction['copyPaste'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyAll'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyCut'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyText'] = (fun) => {fun()}
+
+
+
+
+
+  RightMenusFunction['searchWord'] = (__text__) => {OpenSearch(__text__)}
+
+
+
+
+
+  RightMenusFunction['bingSearch'] = (__text__) => {window.open(`https://cn.bing.com/search?q=${__text__}`)}
+
+
+
+
+
+  RightMenusFunction['openTab'] = (__link__) => {window.open(__link__)}
+
+
+
+
+
+  //RightMenusFunction['copyLink'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['copyImg'] = (fun) => {fun()}
+
+
+
+
+
+  RightMenusFunction['googleImg'] = (__link__) => {window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  RightMenusFunction['darkMode'] = () => {volantis.dark.toggle()}
+
+
+
+
+
+  //RightMenusFunction['printMode'] = (fun) => {fun()}
+
+
+
+
+
+  //RightMenusFunction['readMode'] = (fun) => {fun()}
+
+
+
+
+
+</script>
+
+
+
+<!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
+
+
+
+<script>
+  function loadIssuesJS() {
+    
+      const sites_api = document.getElementById('sites-api');
+      if (sites_api != undefined && typeof SitesJS === 'undefined') {
+        volantis.js("/js/plugins/tags/sites.js")
+      }
+    
+    
+      const friends_api = document.getElementById('friends-api');
+      if (friends_api != undefined && typeof FriendsJS === 'undefined') {
+        volantis.js("/js/plugins/tags/friends.js")
+      }
+    
+    
+      const contributors_api = document.getElementById('contributors-api');
+      if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
+        volantis.js("/js/plugins/tags/contributors.js")
+      }
+    
+  };
+  loadIssuesJS()
+  volantis.pjax.push(()=>{
+    loadIssuesJS();
+  })
+
+</script>
+
+
+
+
+  <script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: ["#"],
+	maxRPS: 6,
+	hoverDelay: 0
+  };
+</script>
+<script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js"></script>
+
+
+
+
+
+
+
+
+
+      <script>
+  volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
+
+  volantis.giscus = {};
+
+  function check_giscus() {
+    if (volantis.dark.mode === "dark") {
+      volantis.giscus.Theme = 'dark';
+    } else {
+      volantis.giscus.Theme = 'light';
+    }
+
+    return document.getElementById("giscus_container");
+  }
+
+  function pjax_giscus() {
+    const HEAD = check_giscus();
+    if (!HEAD) return;
+    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"},"repo":"dawnqi12-cyber/comments","repo-id":"R_kgDOP4A8LQ","category":"Announcements","category-id":"DIC_kwDOP4A8Lc4Cv9t5","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
+    const script = document.createElement('script');
+    script.setAttribute('src', 'https://giscus.app/client.js');
+    Object.keys(cfg).forEach(k=>{
+      if (k != "theme") {
+        script.setAttribute('data-'+k, cfg[k]);
+      }
+    })
+    script.setAttribute('data-theme', volantis.giscus.Theme);
+    script.setAttribute('crossorigin', "anonymous");
+    HEAD.appendChild(script);
+  }
+
+  function dark_giscus() {
+    const HEAD = check_giscus();
+    if (!HEAD) return;
+
+    const message = {
+      setConfig: {
+        theme: volantis.giscus.Theme
+      }
+    };
+    const giscusIframe = document.querySelector('iframe.giscus-frame');
+    giscusIframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+  }
+  pjax_giscus();
+  volantis.pjax.push(pjax_giscus);
+  volantis.dark.push(dark_giscus);
+</script>
+
+    
+
+
+
+
+
+<!-- optional -->
+
+  <script>
+  const SearchServiceDataPathRoot = ("/" || "/").endsWith("/") ?
+    "/" || "/" :
+    "//" || "/";
+  const SearchServiceDataPath = SearchServiceDataPathRoot + "content.json";
+
+  function loadSearchScript() {
+    // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
+    return volantis.js("/js/search/hexo.js");
+  }
+
+  function loadSearchService() {
+    loadSearchScript();
+    document.querySelectorAll(".input.u-search-input").forEach((e) => {
+      e.removeEventListener("focus", loadSearchService, false);
+    });
+
+    document.querySelectorAll(".u-search-form").forEach((e) => {
+      e.addEventListener("submit", (event) => {
+        event.preventDefault();
+      }, false);
+    });
+  }
+
+  // 打开并搜索 字符串 s
+  function OpenSearch(s) {
+    if (typeof SearchService === 'undefined')
+      loadSearchScript().then(() => {
+        SearchService.setQueryText(s);
+        SearchService.search();
+      });
+    else {
+      SearchService.setQueryText(s);
+      SearchService.search();
+    }
+  }
+
+  // 访问含有 ?s=xxx  的链接时打开搜索 // 与搜索引擎 structured data 相关: /scripts/helpers/structured-data/lib/config.js
+  if (window.location.search && /^\?s=/g.test(window.location.search)) {
+    let queryText = decodeURI(window.location.search)
+      .replace(/\ /g, "-")
+      .replace(/^\?s=/g, "");
+    OpenSearch(queryText);
+  }
+
+  // 搜索输入框获取焦点时加载搜索
+  document.querySelectorAll(".input.u-search-input").forEach((e) => {
+    e.addEventListener("focus", loadSearchService, false);
+  });
+</script>
+
+
+
+
+
+
+
+  <script>
+
+
+
+  function pjax_highlightjs_copyCode(){
+    if (!(document.querySelector(".highlight .code pre") ||
+      document.querySelector(".article pre code"))) {
+      return;
+    }
+    VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
+  }
+  volantis.requestAnimationFrame(pjax_highlightjs_copyCode)
+  volantis.pjax.push(pjax_highlightjs_copyCode)
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  function load_swiper() {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/swiper/swiper-bundle.min.css");
+    volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/swiper/swiper-bundle.min.js").then(() => {
+      pjax_swiper();
+    });
+  }
+
+  load_swiper();
+
+  function pjax_swiper() {
+    volantis.swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      centeredSlides: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+
+  volantis.pjax.push(() => {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    if (typeof volantis.swiper === "undefined") {
+      load_swiper();
+    } else {
+      pjax_swiper();
+    }
+  });
+</script>
+
+
+<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
+<pjax>
+
+</pjax>
+
+<script>
+  function listennSidebarTOC() {
+    const navItems = document.querySelectorAll(".toc li");
+    if (!navItems.length) return;
+    let targets = []
+    const sections = [...navItems].map((element) => {
+      const link = element.querySelector(".toc-link");
+      const target = document.getElementById(
+        decodeURI(link.getAttribute("href")).replace("#", "")
+      );
+      targets.push(target)
+      // 解除 a 标签 href 的 锚点定位, a 标签 href 的 锚点定位 会随机启用?? 产生错位???
+      link.setAttribute("onclick","return false;")
+      link.setAttribute("toc-action","toc-"+decodeURI(link.getAttribute("href")).replace("#", ""))
+      link.setAttribute("href","/")
+      // 配置 点击 触发新的锚点定位
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        // 这里的 addTop 是通过错位使得 toc 自动展开.
+        volantis.scroll.to(target,{addTop: 5, observer:true})
+        // Anchor id
+        history.pushState(null, document.title, "#" + target.id);
+      });
+      return target;
+    });
+
+    function activateNavByIndex(target) {
+      if (target.classList.contains("active-current")) return;
+
+      document.querySelectorAll(".toc .active").forEach((element) => {
+        element.classList.remove("active", "active-current");
+      });
+      target.classList.add("active", "active-current");
+      let parent = target.parentNode;
+      while (!parent.matches(".toc")) {
+        if (parent.matches("li")) parent.classList.add("active");
+        parent = parent.parentNode;
+      }
+    }
+
+    // 方案一：
+    volantis.activateNavIndex=0
+    activateNavByIndex(navItems[volantis.activateNavIndex])
+    volantis.scroll.push(()=>{
+      if (targets[0].getBoundingClientRect().top >= 0) {
+        volantis.activateNavIndex = 0
+      }else if (targets[targets.length-1].getBoundingClientRect().top < 0) {
+        volantis.activateNavIndex = targets.length-1
+      } else {
+        for (let index = 0; index < targets.length; index++) {
+          const target0 = targets[index];
+          const target1 = targets[(index+1)%targets.length];
+          if (target0.getBoundingClientRect().top < 0&&target1.getBoundingClientRect().top >= 0) {
+            volantis.activateNavIndex=index
+            break;
+          }
+        }
+      }
+      activateNavByIndex(navItems[volantis.activateNavIndex])
+    })
+
+    // 方案二：
+    // IntersectionObserver 不是完美精确到像素级别 也不是低延时性的
+    // function findIndex(entries) {
+    //   let index = 0;
+    //   let entry = entries[index];
+    //   if (entry.boundingClientRect.top > 0) {
+    //     index = sections.indexOf(entry.target);
+    //     return index === 0 ? 0 : index - 1;
+    //   }
+    //   for (; index < entries.length; index++) {
+    //     if (entries[index].boundingClientRect.top <= 0) {
+    //       entry = entries[index];
+    //     } else {
+    //       return sections.indexOf(entry.target);
+    //     }
+    //   }
+    //   return sections.indexOf(entry.target);
+    // }
+    // function createIntersectionObserver(marginTop) {
+    //   marginTop = Math.floor(marginTop + 10000);
+    //   let intersectionObserver = new IntersectionObserver(
+    //     (entries, observe) => {
+    //       let scrollHeight = document.documentElement.scrollHeight;
+    //       if (scrollHeight > marginTop) {
+    //         observe.disconnect();
+    //         createIntersectionObserver(scrollHeight);
+    //         return;
+    //       }
+    //       let index = findIndex(entries);
+    //       activateNavByIndex(navItems[index]);
+    //     }, {
+    //       rootMargin: marginTop + "px 0px -100% 0px",
+    //       threshold: 0,
+    //     }
+    //   );
+    //   sections.forEach((element) => {
+    //     element && intersectionObserver.observe(element);
+    //   });
+    // }
+    // createIntersectionObserver(document.documentElement.scrollHeight);
+  }
+
+  document.addEventListener("DOMContentLoaded", ()=>{
+    volantis.requestAnimationFrame(listennSidebarTOC)
+  });
+  document.addEventListener("pjax:success", ()=>{
+    volantis.requestAnimationFrame(listennSidebarTOC)
+  });
+</script>
+
+
+
+<script>
+  document.onreadystatechange = function () {
+    if (document.readyState == 'complete') {
+      // 页面加载完毕 样式加载失败，或是当前网速慢，或是开启了省流模式
+      const { saveData, effectiveType } = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {}
+      if (getComputedStyle(document.querySelector("#safearea"), null)["display"] == "none" || saveData || /2g/.test(effectiveType)) {
+        document.querySelectorAll(".reveal").forEach(function (e) {
+          e.style["opacity"] = "1";
+        });
+        document.querySelector("#safearea").style["display"] = "block";
+      }
+    }
+  }
+</script>
+
+
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Dawnqi's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/技术学习/","name":"技术学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2026/07/08/大模型基础面试题四板块整理/","name":"大模型基础面试题四板块整理"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Dawnqi's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"大模型基础面试题四板块整理","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2026/07/08/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E5%9B%9B%E6%9D%BF%E5%9D%97%E6%95%B4%E7%90%86/"},"author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2026/07/08/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98%E5%9B%9B%E6%9D%BF%E5%9D%97%E6%95%B4%E7%90%86/","wordCount":0,"datePublished":"2026-07-08T15:10:00.000Z","dateModified":"2026-07-08T14:33:27.474Z","articleSection":"技术学习","keywords":"AI应用开发,面试,大模型,API,结构化输出","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+
+
+
+      
+        <!--
+  pjax重载区域接口：
+  1.  <pjax></pjax> 标签 pjax 标签必须存在于所有页面 否则 pjax error
+  2.  script[data-pjax]
+  3.  .pjax-reload script
+  4.  .pjax
+-->
+
+
+
+<script src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/pjax/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox]):not([onclick="return false;"]):not([onclick="return!1"]):not([target="_blank"]):not([target="view_window"]):not([href$=".xml"])',
+        selectors: [
+          "head title",
+          "head meta[name=keywords]",
+          "head meta[name=description]",
+          
+          "#l_main",
+          "#pjax-header-nav-list",
+          ".pjax",
+          "pjax", // <pjax></pjax> 标签
+          "script[data-pjax], .pjax-reload script" // script标签添加data-pjax 或 script标签外层添加.pjax-reload 的script代码段重载
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000,
+        
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+      volantis.pjax.method.send.start();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+      volantis.pjax.method.complete.start();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      if(volantis.debug) {
+        console.error(e);
+        console.log('pjax error: \n' + JSON.stringify(e));
+      }else{
+        // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+        volantis.pjax.method.error.start();
+        window.location.href = e.triggerElement.href;
+      }
+    });
+</script>
+
+      
+    </div>
+    <!-- import body_end begin-->
+    <!-- import body_end end-->
+    <!-- Custom Files bodyEnd begin-->
+    
+    <!-- Custom Files bodyEnd end-->
+    <!-- front-matter body_end begin -->
+    <!-- front-matter body_end end -->
+  </body>
+</html>
