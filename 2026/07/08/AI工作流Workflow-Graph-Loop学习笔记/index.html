@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://example.com/tags/wsi/"/>
+  
+  <link rel="canonical" href="http://example.com/2026/07/08/ai工作流workflow-graph-loop学习笔记/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,16 +33,24 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>标签：WSI - Dawnqi's Blog</title>
-  <meta name="keywords" content="null">
+  <title>AI 工作流学习笔记：Workflow、Graph 与 Loop 怎么串起来 - Dawnqi's Blog</title>
+  <meta name="keywords" content="AI应用开发,Agent,AI工作流,Workflow,Graph,Loop,null">
   <meta desc name="description" content="Dawnqi's Blog - Dawnqi - Dawnqi's Blog">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Dawnqi&#39;s Blog">
-<meta property="og:url" content="http://example.com/tags/WSI/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="AI 工作流学习笔记：Workflow、Graph 与 Loop 怎么串起来">
+<meta property="og:url" content="http://example.com/2026/07/08/AI%E5%B7%A5%E4%BD%9C%E6%B5%81Workflow-Graph-Loop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Dawnqi&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2026-07-08T14:30:00.000Z">
+<meta property="article:modified_time" content="2026-07-08T12:33:17.801Z">
 <meta property="article:author" content="Dawnqi">
+<meta property="article:tag" content="AI工作流">
+<meta property="article:tag" content="AI应用开发">
+<meta property="article:tag" content="Agent">
+<meta property="article:tag" content="Graph">
+<meta property="article:tag" content="Loop">
+<meta property="article:tag" content="Workflow">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2343,7 +2351,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  search' style="display: none;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="images/bg.png"></div>
 
@@ -2411,25 +2419,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/18/openslide封装成自己的app-PyQt/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2026/07/08/AI工作流Workflow-Graph-Loop学习笔记/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Dawnqi's Blog">
   </span>
@@ -2438,64 +2430,714 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/18/openslide%E5%B0%81%E8%A3%85%E6%88%90%E8%87%AA%E5%B7%B1%E7%9A%84app-PyQt/"  itemprop="url">
-        openslide封装成自己的app(PyQt)
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <html><head></head><body></body></html>
+    
+      <h1 class="title" itemprop="name headline">
+        AI 工作流学习笔记：Workflow、Graph 与 Loop 怎么串起来
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">技术学习</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">技术学习</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-18T10:00:00+08:00">2024-03-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/">技术记录</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" itemprop="url"><span itemprop="name">技术记录</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2026-07-08T22:30:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2026年7月8日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <html><head></head><body><blockquote>
+<p>参考原文：<a target="_blank" rel="noopener" href="https://javaguide.cn/ai/agent/workflow-graph-loop.html">AI 工作流中的 Workflow、Graph 与 Loop：从概念到实现</a></p>
+<p>原文中有几张配图，但页面只看到 <code>Copyright © 2026 Guide</code>，没有明确图片转载授权说明。因此这篇博客只发布文字整理版，不复制原文图片。如果后续确认图片授权允许转载，再单独补图会更稳妥。</p>
+</blockquote>
+<h2 id="一、先抓主线：为什么-AI-系统需要工作流"><a href="#一、先抓主线：为什么-AI-系统需要工作流" class="headerlink" title="一、先抓主线：为什么 AI 系统需要工作流"></a>一、先抓主线：为什么 AI 系统需要工作流</h2><p>传统软件里，流程通常是确定的：</p>
+<ul>
+<li>输入确定；</li>
+<li>步骤确定；</li>
+<li>分支条件明确；</li>
+<li>结果相对稳定。</li>
+</ul>
+<p>但 AI 应用不是这样。LLM 的输出天然有不确定性：</p>
+<ul>
+<li>可能格式不对；</li>
+<li>可能答非所问；</li>
+<li>可能出现幻觉；</li>
+<li>可能工具调用失败；</li>
+<li>可能一次生成达不到质量要求；</li>
+<li>可能因为上下文太长导致关键信息丢失。</li>
+</ul>
+<p>所以真实 AI 应用不是“问一句、答一句”就能稳定交付，而是需要一个能处理不确定性的执行系统。</p>
+<p>这个系统要具备三个能力：</p>
+<ol>
+<li><strong>动态决策</strong>：根据当前生成结果决定下一步去哪。</li>
+<li><strong>自动修正</strong>：结果不达标时能回退、重试、修改。</li>
+<li><strong>可控收敛</strong>：循环不能无限跑，必须有终止条件和安全边界。</li>
+</ol>
+<p>一句话概括：</p>
+<blockquote>
+<p>AI 工作流的核心价值，是把一次性的生成过程，变成一个可迭代、可观察、可控制、可收敛的流程。</p>
+</blockquote>
+<h2 id="二、传统-Workflow-和-AI-Workflow-的区别"><a href="#二、传统-Workflow-和-AI-Workflow-的区别" class="headerlink" title="二、传统 Workflow 和 AI Workflow 的区别"></a>二、传统 Workflow 和 AI Workflow 的区别</h2><h3 id="1-传统-Workflow"><a href="#1-传统-Workflow" class="headerlink" title="1. 传统 Workflow"></a>1. 传统 Workflow</h3><p>传统 Workflow 关注的是：</p>
+<blockquote>
+<p>这件事按什么步骤做完。</p>
+</blockquote>
+<p>它的特点是：</p>
+<ul>
+<li>任务步骤提前设计；</li>
+<li>分支条件大多是确定规则；</li>
+<li>同样输入通常走同样路径；</li>
+<li>适合审批、订单、ETL、定时任务等确定性场景。</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">金额 &gt; 10000 -&gt; 高级审批</span><br><span class="line">金额 &lt;= 10000 -&gt; 普通审批</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这个规则是明确的，不需要模型在运行时理解“质量是否达标”。</p>
+<h3 id="2-AI-Workflow"><a href="#2-AI-Workflow" class="headerlink" title="2. AI Workflow"></a>2. AI Workflow</h3><p>AI Workflow 面对的是不确定输出，所以它更强调：</p>
+<ul>
+<li>运行时评估；</li>
+<li>状态驱动；</li>
+<li>条件回退；</li>
+<li>失败重试；</li>
+<li>质量检查；</li>
+<li>人工介入；</li>
+<li>成本和 Token 控制。</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">生成初稿 -&gt; 审核质量 -&gt; 不达标就修改 -&gt; 再审核 -&gt; 达标后输出</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这里的关键不只是“步骤”，而是：</p>
+<ul>
+<li>审核结论可能每次不同；</li>
+<li>修改方向依赖当前草稿；</li>
+<li>是否继续循环取决于评分、轮次和成本；</li>
+<li>中间状态必须被记录。</li>
+</ul>
+<p>所以 AI Workflow 相比传统 Workflow，更像是：</p>
+<blockquote>
+<p>状态驱动的动态执行图。</p>
+</blockquote>
+<h2 id="三、Workflow、Graph、Loop-三者是什么关系"><a href="#三、Workflow、Graph、Loop-三者是什么关系" class="headerlink" title="三、Workflow、Graph、Loop 三者是什么关系"></a>三、Workflow、Graph、Loop 三者是什么关系</h2><p>原文里最重要的一句话是：</p>
+<blockquote>
+<p>Workflow 是目标与过程，Graph 是结构与载体，Loop 是图上的控制模式。</p>
+</blockquote>
+<p>这句话可以拆开理解。</p>
+<h3 id="1-Workflow：目标和过程"><a href="#1-Workflow：目标和过程" class="headerlink" title="1. Workflow：目标和过程"></a>1. Workflow：目标和过程</h3><p>Workflow 描述的是：</p>
+<blockquote>
+<p>为了完成一个目标，任务应该经历哪些阶段。</p>
+</blockquote>
+<p>例如：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">生成文章 -&gt; 审核文章 -&gt; 修改文章 -&gt; 输出最终稿</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这描述的是任务过程。</p>
+<h3 id="2-Graph：结构和载体"><a href="#2-Graph：结构和载体" class="headerlink" title="2. Graph：结构和载体"></a>2. Graph：结构和载体</h3><p>Graph 把 Workflow 变成可执行结构。</p>
+<p>它包括三个核心元素：</p>
+<ul>
+<li>Node：节点，负责执行具体动作；</li>
+<li>Edge：边，负责控制流转路径；</li>
+<li>State：状态，负责保存和传递上下文。</li>
+</ul>
+<p>如果没有 Graph，Workflow 只是流程描述；<br>有了 Graph，流程才有明确的结构。</p>
+<h3 id="3-Loop：图上的回溯控制"><a href="#3-Loop：图上的回溯控制" class="headerlink" title="3. Loop：图上的回溯控制"></a>3. Loop：图上的回溯控制</h3><p>Loop 是 Graph 里一种特殊控制模式。</p>
+<p>它表示：</p>
+<blockquote>
+<p>某个节点执行完后，根据状态判断是否回到前面的节点继续执行。</p>
+</blockquote>
+<p>比如：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">审核不通过 -&gt; 回到修改节点 -&gt; 再审核</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这就是一个典型 Loop。</p>
+<h3 id="4-三者合起来怎么理解"><a href="#4-三者合起来怎么理解" class="headerlink" title="4. 三者合起来怎么理解"></a>4. 三者合起来怎么理解</h3><p>用一句话串起来：</p>
+<blockquote>
+<p>Workflow 说明要做什么和大致怎么做，Graph 把它组织成节点、边和状态，Loop 让流程在结果不达标时可以回退修正。</p>
+</blockquote>
+<h2 id="四、Graph-的核心元素：Node、Edge、State"><a href="#四、Graph-的核心元素：Node、Edge、State" class="headerlink" title="四、Graph 的核心元素：Node、Edge、State"></a>四、Graph 的核心元素：Node、Edge、State</h2><p>Graph 是 AI 工作流的核心结构。<br>真正做工程实现时，重点就是设计好 Node、Edge、State。</p>
+<h2 id="五、Node：节点是执行单元"><a href="#五、Node：节点是执行单元" class="headerlink" title="五、Node：节点是执行单元"></a>五、Node：节点是执行单元</h2><p>Node 负责执行某个具体职责。</p>
+<p>在“生成文章并审核”的例子中，可以有：</p>
+<ul>
+<li><code>DraftNode</code>：生成初稿；</li>
+<li><code>ReviewNode</code>：评估质量；</li>
+<li><code>ReviseNode</code>：根据反馈修改；</li>
+<li><code>ExitNode</code>：输出最终结果。</li>
+</ul>
+<h3 id="Node-设计关键"><a href="#Node-设计关键" class="headerlink" title="Node 设计关键"></a>Node 设计关键</h3><p>Node 不应该按“这次调用哪个 API”来抽象，而应该按职责抽象。</p>
+<p>好的 Node 关注：</p>
+<ul>
+<li>输入是什么；</li>
+<li>产出是什么；</li>
+<li>修改 State 的哪些字段；</li>
+<li>失败时怎么处理；</li>
+<li>是否需要调用模型或工具。</li>
+</ul>
+<h3 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h3><p>把节点拆得过细：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">检查标题长度 -&gt; 检查语气 -&gt; 检查字数 -&gt; 检查格式 -&gt; 检查关键词</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样短期看起来清楚，但长期会导致：</p>
+<ul>
+<li>图变得很碎；</li>
+<li>修改成本高；</li>
+<li>复用性差；</li>
+<li>新增规则时到处改。</li>
+</ul>
+<p>更稳定的抽象应该是：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">生成 -&gt; 评估 -&gt; 修改 -&gt; 输出</span><br></pre></td></tr></tbody></table></figure>
+
+<p>具体评估细节放在 <code>ReviewNode</code> 内部处理。</p>
+<h2 id="六、Edge：边是控制流规则"><a href="#六、Edge：边是控制流规则" class="headerlink" title="六、Edge：边是控制流规则"></a>六、Edge：边是控制流规则</h2><p>Edge 决定执行路径怎么走。</p>
+<p>常见边类型包括：</p>
+<h3 id="1-顺序边"><a href="#1-顺序边" class="headerlink" title="1. 顺序边"></a>1. 顺序边</h3><p>固定从 A 到 B。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DraftNode -&gt; ReviewNode</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="2-条件边"><a href="#2-条件边" class="headerlink" title="2. 条件边"></a>2. 条件边</h3><p>根据运行时状态选择下一步。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">score &gt;= 80 -&gt; ExitNode</span><br><span class="line">score &lt; 80 -&gt; ReviseNode</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="3-循环边"><a href="#3-循环边" class="headerlink" title="3. 循环边"></a>3. 循环边</h3><p>回到前面某个节点继续执行。</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ReviseNode -&gt; ReviewNode</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="4-并行边"><a href="#4-并行边" class="headerlink" title="4. 并行边"></a>4. 并行边</h3><p>一个节点分发到多个节点并行处理。</p>
+<p>例如多文档摘要、多工具并发检索。</p>
+<h3 id="5-动态路由"><a href="#5-动态路由" class="headerlink" title="5. 动态路由"></a>5. 动态路由</h3><p>候选分支不是固定写死的，而是在运行时决定。</p>
+<p>这类能力适合：</p>
+<ul>
+<li>map-reduce；</li>
+<li>动态拆任务；</li>
+<li>多工具组合；</li>
+<li>多子任务并行。</li>
+</ul>
+<h3 id="Edge-设计关键"><a href="#Edge-设计关键" class="headerlink" title="Edge 设计关键"></a>Edge 设计关键</h3><p>Edge 不只是连线，它是路由规则。<br>一个清晰的 Edge 应该回答：</p>
+<ul>
+<li>什么状态下走这条边？</li>
+<li>什么状态下结束？</li>
+<li>什么状态下回退？</li>
+<li>什么状态下转人工？</li>
+</ul>
+<h2 id="七、State：状态是工作流的运行记忆"><a href="#七、State：状态是工作流的运行记忆" class="headerlink" title="七、State：状态是工作流的运行记忆"></a>七、State：状态是工作流的运行记忆</h2><p>State 是整个 Graph 中最容易被低估的部分。</p>
+<p>如果说 Node 和 Edge 让流程“跑起来”，那么 State 让流程“知道自己跑到哪了”。</p>
+<p>State 负责保存：</p>
+<ul>
+<li>用户输入；</li>
+<li>当前草稿；</li>
+<li>审核评分；</li>
+<li>审核反馈；</li>
+<li>工具调用结果；</li>
+<li>当前轮次；</li>
+<li>错误信息；</li>
+<li>最终输出。</li>
+</ul>
+<h3 id="常见-State-字段"><a href="#常见-State-字段" class="headerlink" title="常见 State 字段"></a>常见 State 字段</h3><figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">input: 用户原始输入</span><br><span class="line">messages: 对话历史</span><br><span class="line">current_draft: 当前草稿</span><br><span class="line">review_score: 审核评分</span><br><span class="line">review_feedback: 审核反馈</span><br><span class="line">iteration_count: 当前迭代次数</span><br><span class="line">tool_result: 工具调用结果</span><br><span class="line">error_info: 错误信息</span><br><span class="line">output: 最终输出</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="State-更新策略"><a href="#State-更新策略" class="headerlink" title="State 更新策略"></a>State 更新策略</h3><p>State 不只是“存值”，还要设计“怎么更新”。</p>
+<p>常见三种策略：</p>
+<h3 id="1-覆盖（Replace）"><a href="#1-覆盖（Replace）" class="headerlink" title="1. 覆盖（Replace）"></a>1. 覆盖（Replace）</h3><p>新值替换旧值。</p>
+<p>适合：</p>
+<ul>
+<li>当前草稿；</li>
+<li>当前评分；</li>
+<li>当前状态；</li>
+<li>最终输出。</li>
+</ul>
+<h3 id="2-追加（Append）"><a href="#2-追加（Append）" class="headerlink" title="2. 追加（Append）"></a>2. 追加（Append）</h3><p>新值追加到列表。</p>
+<p>适合：</p>
+<ul>
+<li>对话历史；</li>
+<li>中间步骤；</li>
+<li>工具调用记录；</li>
+<li>日志。</li>
+</ul>
+<h3 id="3-自定义合并（Reducer）"><a href="#3-自定义合并（Reducer）" class="headerlink" title="3. 自定义合并（Reducer）"></a>3. 自定义合并（Reducer）</h3><p>用自定义逻辑合并新旧值。</p>
+<p>适合：</p>
+<ul>
+<li>并行节点同时写入；</li>
+<li>消息去重；</li>
+<li>根据 ID 更新；</li>
+<li>多路检索结果融合。</li>
+</ul>
+<h3 id="State-设计最容易踩的坑"><a href="#State-设计最容易踩的坑" class="headerlink" title="State 设计最容易踩的坑"></a>State 设计最容易踩的坑</h3><h4 id="太粗"><a href="#太粗" class="headerlink" title="太粗"></a>太粗</h4><p>所有内容塞进一个大对象，最后很难知道谁改了什么。</p>
+<h4 id="太细"><a href="#太细" class="headerlink" title="太细"></a>太细</h4><p>字段拆得太碎，每个节点都要拼装很多字段，调试成本很高。</p>
+<h4 id="并行写冲突"><a href="#并行写冲突" class="headerlink" title="并行写冲突"></a>并行写冲突</h4><p>多个节点同时写同一个覆盖字段，会出现竞态。<br>这种字段必须提前设计合并策略。</p>
+<h2 id="八、Loop：AI-工作流里的可控回溯"><a href="#八、Loop：AI-工作流里的可控回溯" class="headerlink" title="八、Loop：AI 工作流里的可控回溯"></a>八、Loop：AI 工作流里的可控回溯</h2><p>Loop 不是简单“多跑几次”。</p>
+<p>更准确地说：</p>
+<blockquote>
+<p>Loop 是 Graph 中通过回边形成的迭代控制结构。</p>
+</blockquote>
+<p>在 AI 工作流里，Loop 的典型用途是：</p>
+<ul>
+<li>生成结果不达标，回到修改；</li>
+<li>工具调用失败，重试；</li>
+<li>格式校验失败，重新生成；</li>
+<li>人工反馈后，继续修正。</li>
+</ul>
+<h2 id="九、Graph-Loop-和-Agent-Loop-的区别"><a href="#九、Graph-Loop-和-Agent-Loop-的区别" class="headerlink" title="九、Graph Loop 和 Agent Loop 的区别"></a>九、Graph Loop 和 Agent Loop 的区别</h2><p>这两个概念很容易混。</p>
+<h3 id="Agent-Loop"><a href="#Agent-Loop" class="headerlink" title="Agent Loop"></a>Agent Loop</h3><p>Agent Loop 是 Agent 的顶层执行循环：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">思考 -&gt; 行动 -&gt; 观察 -&gt; 再思考</span><br></pre></td></tr></tbody></table></figure>
+
+<p>它是整个 Agent 的运行模式。</p>
+<h3 id="Graph-Loop"><a href="#Graph-Loop" class="headerlink" title="Graph Loop"></a>Graph Loop</h3><p>Graph Loop 是工作流图内部的局部回溯：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">审核 -&gt; 修改 -&gt; 再审核</span><br></pre></td></tr></tbody></table></figure>
+
+<p>它是某个子流程里的控制结构。</p>
+<h3 id="一句话区分"><a href="#一句话区分" class="headerlink" title="一句话区分"></a>一句话区分</h3><blockquote>
+<p>Agent Loop 是外层运行引擎，Graph Loop 是工作流内部的局部迭代机制。</p>
+</blockquote>
+<p>两者可以嵌套：<br>Agent Loop 里可以执行一个带 Graph Loop 的工作流。</p>
+<h2 id="十、Loop-的两种类型"><a href="#十、Loop-的两种类型" class="headerlink" title="十、Loop 的两种类型"></a>十、Loop 的两种类型</h2><h3 id="1-固定次数循环"><a href="#1-固定次数循环" class="headerlink" title="1. 固定次数循环"></a>1. 固定次数循环</h3><p>类似 <code>for</code>。</p>
+<p>例如：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">最多重试 3 次</span><br></pre></td></tr></tbody></table></figure>
+
+<p>优点是安全、可控。<br>缺点是不够灵活。</p>
+<h3 id="2-条件驱动循环"><a href="#2-条件驱动循环" class="headerlink" title="2. 条件驱动循环"></a>2. 条件驱动循环</h3><p>类似 <code>while</code>。</p>
+<p>例如：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">只要评分低于 80 分，就继续修改</span><br></pre></td></tr></tbody></table></figure>
+
+<p>优点是更贴近 AI 任务。<br>缺点是如果没有边界，可能一直跑。</p>
+<h3 id="实际工程建议"><a href="#实际工程建议" class="headerlink" title="实际工程建议"></a>实际工程建议</h3><p>两者通常要结合：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">只要评分低于 80 分就继续修改，但最多迭代 3 轮。</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这才是可控 Loop。</p>
+<h2 id="十一、可靠-Loop-的三个条件"><a href="#十一、可靠-Loop-的三个条件" class="headerlink" title="十一、可靠 Loop 的三个条件"></a>十一、可靠 Loop 的三个条件</h2><p>一个可靠的 Loop 必须有三类约束。</p>
+<h3 id="1-继续条件"><a href="#1-继续条件" class="headerlink" title="1. 继续条件"></a>1. 继续条件</h3><p>为什么还要再来一轮？</p>
+<p>例如：</p>
+<ul>
+<li>评分低于阈值；</li>
+<li>格式校验失败；</li>
+<li>工具调用失败；</li>
+<li>用户要求继续优化。</li>
+</ul>
+<h3 id="2-退出条件"><a href="#2-退出条件" class="headerlink" title="2. 退出条件"></a>2. 退出条件</h3><p>什么时候可以结束？</p>
+<p>例如：</p>
+<ul>
+<li>评分达标；</li>
+<li>输出格式正确；</li>
+<li>用户确认满意；</li>
+<li>达到可接受质量。</li>
+</ul>
+<h3 id="3-安全边界"><a href="#3-安全边界" class="headerlink" title="3. 安全边界"></a>3. 安全边界</h3><p>什么时候必须停？</p>
+<p>例如：</p>
+<ul>
+<li>最大轮次；</li>
+<li>最大 Token；</li>
+<li>最大耗时；</li>
+<li>最大费用；</li>
+<li>连续失败次数；</li>
+<li>熔断条件。</li>
+</ul>
+<h3 id="最重要的一句话"><a href="#最重要的一句话" class="headerlink" title="最重要的一句话"></a>最重要的一句话</h3><blockquote>
+<p>没有安全边界的 Loop，不是自我修正，而是无限打转。</p>
+</blockquote>
+<h2 id="十二、嵌套循环怎么理解"><a href="#十二、嵌套循环怎么理解" class="headerlink" title="十二、嵌套循环怎么理解"></a>十二、嵌套循环怎么理解</h2><p>实际项目里经常有嵌套循环：</p>
+<h3 id="外层循环"><a href="#外层循环" class="headerlink" title="外层循环"></a>外层循环</h3><p>负责整体质量迭代：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">生成 -&gt; 审核 -&gt; 修改 -&gt; 再审核</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="内层循环"><a href="#内层循环" class="headerlink" title="内层循环"></a>内层循环</h3><p>负责某个节点内部的工具重试：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">调用 API -&gt; 失败 -&gt; 指数退避重试</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这两层循环要分开设计：</p>
+<ul>
+<li>计数器独立；</li>
+<li>超时独立；</li>
+<li>失败处理独立；</li>
+<li>安全边界独立。</li>
+</ul>
+<p>否则会出现：</p>
+<ul>
+<li>内层工具重试耗尽外层预算；</li>
+<li>外层已经结束，内层还在重试；</li>
+<li>错误被吞掉，流程看起来还在正常跑。</li>
+</ul>
+<h2 id="十三、框架映射：Spring-AI-Alibaba-和-LangGraph"><a href="#十三、框架映射：Spring-AI-Alibaba-和-LangGraph" class="headerlink" title="十三、框架映射：Spring AI Alibaba 和 LangGraph"></a>十三、框架映射：Spring AI Alibaba 和 LangGraph</h2><p>原文用 Spring AI Alibaba Graph 和 LangGraph 做了对照。<br>对学习来说，最重要的是把概念映射清楚。</p>
+<h3 id="1-State"><a href="#1-State" class="headerlink" title="1. State"></a>1. State</h3><p>Spring AI Alibaba：</p>
+<ul>
+<li><code>OverAllState</code></li>
+<li><code>KeyStrategyFactory</code></li>
+<li><code>ReplaceStrategy</code></li>
+<li><code>AppendStrategy</code></li>
+</ul>
+<p>LangGraph：</p>
+<ul>
+<li><code>TypedDict</code></li>
+<li><code>Annotated[type, reducer]</code></li>
+<li>默认覆盖</li>
+<li>reducer 控制追加或合并</li>
+</ul>
+<h3 id="2-Node"><a href="#2-Node" class="headerlink" title="2. Node"></a>2. Node</h3><p>Spring AI Alibaba：</p>
+<ul>
+<li><code>NodeAction</code></li>
+</ul>
+<p>LangGraph：</p>
+<ul>
+<li>普通函数</li>
+</ul>
+<h3 id="3-Edge"><a href="#3-Edge" class="headerlink" title="3. Edge"></a>3. Edge</h3><p>Spring AI Alibaba：</p>
+<ul>
+<li><code>addEdge</code></li>
+<li><code>addConditionalEdges</code></li>
+</ul>
+<p>LangGraph：</p>
+<ul>
+<li><code>add_edge</code></li>
+<li><code>add_conditional_edges</code></li>
+</ul>
+<h3 id="4-Loop"><a href="#4-Loop" class="headerlink" title="4. Loop"></a>4. Loop</h3><p>两边本质上都是：</p>
+<blockquote>
+<p>条件边回指前序节点。</p>
+</blockquote>
+<p>Spring AI Alibaba 还提供更显式的 <code>LoopAgent</code> / <code>LoopMode</code>。<br>LangGraph 通常需要自己在 State 中维护计数器和退出逻辑。</p>
+<h3 id="5-持久化"><a href="#5-持久化" class="headerlink" title="5. 持久化"></a>5. 持久化</h3><p>两类框架都会支持 checkpoint / saver 思路。</p>
+<p>这很重要，因为带 Loop 的流程可能跑很久，不能中断后从头来。</p>
+<h2 id="十四、工作流抽象能力：不要把图画碎"><a href="#十四、工作流抽象能力：不要把图画碎" class="headerlink" title="十四、工作流抽象能力：不要把图画碎"></a>十四、工作流抽象能力：不要把图画碎</h2><p>原文对抽象能力的提醒很关键。</p>
+<p>很多初学者设计工作流时，会把每个细节都变成一个节点。<br>结果就是图越来越碎，维护越来越难。</p>
+<h3 id="更好的抽象方式"><a href="#更好的抽象方式" class="headerlink" title="更好的抽象方式"></a>更好的抽象方式</h3><p>Node 抽象职责，不抽象 API 调用。</p>
+<p>Edge 抽象流转规则，不在图外写满 <code>if-else</code>。</p>
+<p>State 抽象必须持久记住的信息，不把所有临时变量都塞进去。</p>
+<h3 id="一个稳定结构"><a href="#一个稳定结构" class="headerlink" title="一个稳定结构"></a>一个稳定结构</h3><p>对于“生成并审核”这类场景，稳定结构通常是：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DraftNode -&gt; ReviewNode -&gt; ReviseNode -&gt; ReviewNode -&gt; ExitNode</span><br></pre></td></tr></tbody></table></figure>
+
+<p>而不是：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">检查标题 -&gt; 检查字数 -&gt; 检查格式 -&gt; 检查语气 -&gt; 检查引用 -&gt; 修改标题 -&gt; 修改正文 ...</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="十五、工作流落地常见坑"><a href="#十五、工作流落地常见坑" class="headerlink" title="十五、工作流落地常见坑"></a>十五、工作流落地常见坑</h2><h3 id="1-State-粒度不合理"><a href="#1-State-粒度不合理" class="headerlink" title="1. State 粒度不合理"></a>1. State 粒度不合理</h3><p>太粗：不好查、不好追踪。<br>太细：节点之间传值复杂，容易错。</p>
+<p>建议按业务块拆：</p>
+<ul>
+<li>用户输入；</li>
+<li>当前结果；</li>
+<li>审核结论；</li>
+<li>路由控制；</li>
+<li>错误信息；</li>
+<li>最终输出。</li>
+</ul>
+<h3 id="2-Loop-没有终止条件"><a href="#2-Loop-没有终止条件" class="headerlink" title="2. Loop 没有终止条件"></a>2. Loop 没有终止条件</h3><p>不要只写：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如果不满意就继续优化</span><br></pre></td></tr></tbody></table></figure>
+
+<p>要明确：</p>
+<ul>
+<li>最多几轮？</li>
+<li>评分阈值是多少？</li>
+<li>超时怎么办？</li>
+<li>费用超限怎么办？</li>
+<li>连续失败怎么办？</li>
+</ul>
+<h3 id="3-错误处理只有-try-catch"><a href="#3-错误处理只有-try-catch" class="headerlink" title="3. 错误处理只有 try-catch"></a>3. 错误处理只有 try-catch</h3><p>AI 工作流应该把错误也变成图上的路径。</p>
+<p>常见处理方式：</p>
+<ul>
+<li>重试；</li>
+<li>降级；</li>
+<li>转人工；</li>
+<li>输出当前最优结果并说明限制；</li>
+<li>熔断终止。</li>
+</ul>
+<h3 id="4-Token-与成本失控"><a href="#4-Token-与成本失控" class="headerlink" title="4. Token 与成本失控"></a>4. Token 与成本失控</h3><p>Loop 会放大成本。</p>
+<p>每多一轮，都会增加：</p>
+<ul>
+<li>输入 Token；</li>
+<li>输出 Token；</li>
+<li>工具调用次数；</li>
+<li>等待时间；</li>
+<li>失败风险。</li>
+</ul>
+<p>所以要思考：</p>
+<ul>
+<li>哪些节点必须调用大模型？</li>
+<li>哪些节点可以用规则或代码替代？</li>
+<li>是否可以先粗筛再精修？</li>
+<li>是否达到“足够好”就退出？</li>
+</ul>
+<h3 id="5-节点间数据结构不统一"><a href="#5-节点间数据结构不统一" class="headerlink" title="5. 节点间数据结构不统一"></a>5. 节点间数据结构不统一</h3><p>如果不同节点各自定义字段名和 schema，图复杂后会非常难调试。</p>
+<p>建议尽早统一：</p>
+<ul>
+<li>字段命名；</li>
+<li>JSON Schema；</li>
+<li>Pydantic 模型；</li>
+<li>错误格式；</li>
+<li>状态更新规则。</li>
+</ul>
+<h2 id="十六、安全风险：AI-工作流会放大问题"><a href="#十六、安全风险：AI-工作流会放大问题" class="headerlink" title="十六、安全风险：AI 工作流会放大问题"></a>十六、安全风险：AI 工作流会放大问题</h2><p>工作流给 LLM 输出加了结构，但也引入了新风险。</p>
+<h3 id="1-State-污染"><a href="#1-State-污染" class="headerlink" title="1. State 污染"></a>1. State 污染</h3><p>如果恶意输入被写进 State，后续节点可能继续读取并传播。</p>
+<h3 id="2-Prompt-Injection-级联"><a href="#2-Prompt-Injection-级联" class="headerlink" title="2. Prompt Injection 级联"></a>2. Prompt Injection 级联</h3><p>一个节点被注入，后续节点可能都受到影响。</p>
+<h3 id="3-Loop-放大攻击"><a href="#3-Loop-放大攻击" class="headerlink" title="3. Loop 放大攻击"></a>3. Loop 放大攻击</h3><p>攻击者可能诱导系统反复重试，消耗 Token、时间和费用。</p>
+<h3 id="4-工具调用风险"><a href="#4-工具调用风险" class="headerlink" title="4. 工具调用风险"></a>4. 工具调用风险</h3><p>模型输出一旦影响工具参数，就要做权限控制和参数校验。</p>
+<h3 id="防护方向"><a href="#防护方向" class="headerlink" title="防护方向"></a>防护方向</h3><ul>
+<li>用户输入和系统指令隔离；</li>
+<li>对 LLM 输出做安全检测；</li>
+<li>工具调用加权限边界；</li>
+<li>Loop 加最大轮次和预算；</li>
+<li>State 写入做校验；</li>
+<li>敏感节点加人工确认。</li>
+</ul>
+<h2 id="十七、把整篇文章串起来"><a href="#十七、把整篇文章串起来" class="headerlink" title="十七、把整篇文章串起来"></a>十七、把整篇文章串起来</h2><p>如果按学习路线理解，我建议这样走：</p>
+<h3 id="第一步：先理解为什么需要-Workflow"><a href="#第一步：先理解为什么需要-Workflow" class="headerlink" title="第一步：先理解为什么需要 Workflow"></a>第一步：先理解为什么需要 Workflow</h3><p>因为 AI 输出不稳定，真实任务需要检索、生成、审核、修正、重试和交付。</p>
+<h3 id="第二步：再理解-Graph"><a href="#第二步：再理解-Graph" class="headerlink" title="第二步：再理解 Graph"></a>第二步：再理解 Graph</h3><p>Graph 把 Workflow 变成节点、边、状态组成的可执行结构。</p>
+<h3 id="第三步：再理解-Loop"><a href="#第三步：再理解-Loop" class="headerlink" title="第三步：再理解 Loop"></a>第三步：再理解 Loop</h3><p>Loop 让 Graph 可以在结果不达标时回退修正，而不是一次失败就结束。</p>
+<h3 id="第四步：再理解-State"><a href="#第四步：再理解-State" class="headerlink" title="第四步：再理解 State"></a>第四步：再理解 State</h3><p>State 是整个系统的工作记忆，决定流程能否动态决策、恢复和调试。</p>
+<h3 id="第五步：再看框架实现"><a href="#第五步：再看框架实现" class="headerlink" title="第五步：再看框架实现"></a>第五步：再看框架实现</h3><p>Spring AI Alibaba 和 LangGraph 名字不同，但核心都离不开：</p>
+<ul>
+<li>Node；</li>
+<li>Edge；</li>
+<li>State；</li>
+<li>Conditional Edge；</li>
+<li>Reducer；</li>
+<li>Checkpoint。</li>
+</ul>
+<h3 id="第六步：最后看工程坑"><a href="#第六步：最后看工程坑" class="headerlink" title="第六步：最后看工程坑"></a>第六步：最后看工程坑</h3><p>真正落地时，难点不是图怎么画，而是：</p>
+<ul>
+<li>State 粒度；</li>
+<li>Loop 边界；</li>
+<li>错误恢复；</li>
+<li>Token 成本；</li>
+<li>数据结构；</li>
+<li>安全控制。</li>
+</ul>
+<h2 id="十八、最值得记住的关键词"><a href="#十八、最值得记住的关键词" class="headerlink" title="十八、最值得记住的关键词"></a>十八、最值得记住的关键词</h2><h3 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h3><ul>
+<li>Workflow</li>
+<li>Graph</li>
+<li>Loop</li>
+<li>Node</li>
+<li>Edge</li>
+<li>State</li>
+</ul>
+<h3 id="控制流"><a href="#控制流" class="headerlink" title="控制流"></a>控制流</h3><ul>
+<li>Sequential Edge</li>
+<li>Conditional Edge</li>
+<li>Dynamic Routing</li>
+<li>Back Edge</li>
+<li>Termination Edge</li>
+<li>Parallel Edge</li>
+</ul>
+<h3 id="State-更新"><a href="#State-更新" class="headerlink" title="State 更新"></a>State 更新</h3><ul>
+<li>Replace</li>
+<li>Append</li>
+<li>Reducer</li>
+<li>Concurrent Update</li>
+<li>Checkpoint</li>
+</ul>
+<h3 id="Loop-设计"><a href="#Loop-设计" class="headerlink" title="Loop 设计"></a>Loop 设计</h3><ul>
+<li>Continue Condition</li>
+<li>Exit Condition</li>
+<li>Safety Boundary</li>
+<li>Max Iteration</li>
+<li>Timeout</li>
+<li>Token Budget</li>
+<li>Fallback</li>
+</ul>
+<h3 id="工程落地"><a href="#工程落地" class="headerlink" title="工程落地"></a>工程落地</h3><ul>
+<li>Error Handling</li>
+<li>Retry</li>
+<li>Circuit Breaker</li>
+<li>Human-in-the-Loop</li>
+<li>State Persistence</li>
+<li>Schema Design</li>
+<li>Token Cost Control</li>
+</ul>
+<h3 id="框架关键词"><a href="#框架关键词" class="headerlink" title="框架关键词"></a>框架关键词</h3><ul>
+<li>Spring AI Alibaba Graph</li>
+<li>LangGraph</li>
+<li>NodeAction</li>
+<li>StateGraph</li>
+<li>MemorySaver</li>
+<li>SqliteSaver</li>
+<li>LoopAgent</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>如果把整篇文章压缩成一句话，我会这样说：</p>
+<blockquote>
+<p>AI 工作流不是简单把多个 Prompt 串起来，而是用 Graph 组织节点、边和状态，再用 Loop 处理不确定输出带来的修正、重试和收敛问题。</p>
+</blockquote>
+<p>真正要掌握的不是某个框架 API，而是这套抽象：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Workflow 定目标和过程</span><br><span class="line">Graph 定结构和状态</span><br><span class="line">Loop 定回退和收敛</span><br><span class="line">State 定运行时记忆</span><br><span class="line">Edge 定路由规则</span><br><span class="line">Node 定职责边界</span><br></pre></td></tr></tbody></table></figure>
+
+<p>只要这条线清楚，Spring AI Alibaba、LangGraph、CrewAI 或未来新的工作流框架，底层理解都不会变。</p>
+</body></html>
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2024/03/18/openslide%E5%B0%81%E8%A3%85%E6%88%90%E8%87%AA%E5%B7%B1%E7%9A%84app-PyQt/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2026-07-08T20:33:17+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2026年7月8日</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>AI应用开发</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Agent/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Agent</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/AI%E5%B7%A5%E4%BD%9C%E6%B5%81/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>AI工作流</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Workflow/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Workflow</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Graph/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Graph</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Loop/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Loop</p></a></div>
+  <span hidden itemprop="keywords">AI应用开发 Agent AI工作流 Workflow Graph Loop</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2026/07/08/AI%E5%B7%A5%E4%BD%9C%E6%B5%81Workflow-Graph-Loop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=AI 工作流学习笔记：Workflow、Graph 与 Loop 怎么串起来 - Dawnqi's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2026/07/08/AI%E5%B7%A5%E4%BD%9C%E6%B5%81Workflow-Graph-Loop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=AI 工作流学习笔记：Workflow、Graph 与 Loop 怎么串起来 - Dawnqi's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2026/07/08/AI%E5%B7%A5%E4%BD%9C%E6%B5%81Workflow-Graph-Loop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=AI 工作流学习笔记：Workflow、Graph 与 Loop 怎么串起来 - Dawnqi's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2026/07/07/Agent-Skills%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/'>
+          <p class='title'>Agent Skills 学习笔记：Skill、Prompt、MCP、Function Calling 到底怎么分工<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+参考原文：Agent Skills 是什么？和 Prompt、MCP 到底差在哪？
+这篇文章不是原文搬运，而是把我认为最值得记住的主线重新整理成一份学习笔记。重点不在于复述，而在于把 Skil...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
   
 
 
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2026/07/08/AI%E5%B7%A5%E4%BD%9C%E6%B5%81Workflow-Graph-Loop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-  
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2504,278 +3146,64 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='images/Profile_Picture.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Dawnqi</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">穷且益坚，不坠青云之志</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="https://s.team/p/fjbm-tpwc/cwvgpgmg"
-              class="social fa-brands fa-steam flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:Dawnqi@qq.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/dawnqi2-cyber"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesE68A80E69CAFE5ADA6E4B9A0"
-            ><div class='name'>技术学习</div><div class='badge'>(10)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/" href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"
-            active-action="action-categoriesE68A80E69CAFE8AEB0E5BD95"
-            ><div class='name'>技术记录</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%96%B9%E6%B3%95%E8%AE%B0%E5%BD%95/" href="/categories/%E6%96%B9%E6%B3%95%E8%AE%B0%E5%BD%95/"
-            active-action="action-categoriesE696B9E6B395E8AEB0E5BD95"
-            ><div class='name'>方法记录</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%97%A5%E8%AE%B0/" href="/categories/%E6%97%A5%E8%AE%B0/"
-            active-action="action-categoriesE697A5E8AEB0"
-            ><div class='name'>日记</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%9D%82%E8%B0%88/" href="/categories/%E6%9D%82%E8%B0%88/"
-            active-action="action-categoriesE69D82E8B088"
-            ><div class='name'>杂谈</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/AI/" style="font-size: 16.5px; color: #888">AI</a> <a href="/tags/AI%E5%B7%A5%E4%BD%9C%E6%B5%81/" style="font-size: 14px; color: #999">AI工作流</a> <a href="/tags/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" style="font-size: 24px; color: #555">AI应用开发</a> <a href="/tags/Agent/" style="font-size: 24px; color: #555">Agent</a> <a href="/tags/Gradle/" style="font-size: 14px; color: #999">Gradle</a> <a href="/tags/Graph/" style="font-size: 14px; color: #999">Graph</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/IDEA/" style="font-size: 14px; color: #999">IDEA</a> <a href="/tags/Java/" style="font-size: 14px; color: #999">Java</a> <a href="/tags/JavaGuide/" style="font-size: 14px; color: #999">JavaGuide</a> <a href="/tags/KFB/" style="font-size: 14px; color: #999">KFB</a> <a href="/tags/Loop/" style="font-size: 14px; color: #999">Loop</a> <a href="/tags/MCP/" style="font-size: 14px; color: #999">MCP</a> <a href="/tags/Metabase/" style="font-size: 14px; color: #999">Metabase</a> <a href="/tags/Prompt/" style="font-size: 16.5px; color: #888">Prompt</a> <a href="/tags/PyQt/" style="font-size: 14px; color: #999">PyQt</a> <a href="/tags/Python/" style="font-size: 16.5px; color: #888">Python</a> <a href="/tags/QuPath/" style="font-size: 14px; color: #999">QuPath</a> <a href="/tags/RAG/" style="font-size: 16.5px; color: #888">RAG</a> <a href="/tags/SQL/" style="font-size: 14px; color: #999">SQL</a> <a href="/tags/SVS/" style="font-size: 14px; color: #999">SVS</a> <a href="/tags/Skills/" style="font-size: 14px; color: #999">Skills</a> <a href="/tags/Volantis/" style="font-size: 14px; color: #999">Volantis</a> <a href="/tags/WSI/" style="font-size: 14px; color: #999">WSI</a> <a href="/tags/Workflow/" style="font-size: 14px; color: #999">Workflow</a> <a href="/tags/c-%E5%AD%A6%E4%B9%A0/" style="font-size: 14px; color: #999">c++学习</a> <a href="/tags/codex/" style="font-size: 14px; color: #999">codex</a> <a href="/tags/openai/" style="font-size: 14px; color: #999">openai</a> <a href="/tags/openslide/" style="font-size: 14px; color: #999">openslide</a> <a href="/tags/python/" style="font-size: 16.5px; color: #888">python</a> <a href="/tags/toolkit/" style="font-size: 14px; color: #999">toolkit</a> <a href="/tags/vscode/" style="font-size: 14px; color: #999">vscode</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 14px; color: #999">博客搭建</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/" style="font-size: 14px; color: #999">图像格式转换</a> <a href="/tags/%E5%A4%8D%E4%B9%A0/" style="font-size: 14px; color: #999">复习</a> <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/" style="font-size: 16.5px; color: #888">大模型</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 14px; color: #999">数据库</a> <a href="/tags/%E6%97%A5%E8%AE%B0/" style="font-size: 16.5px; color: #888">日记</a> <a href="/tags/%E6%9C%9F%E6%9D%83%E7%AD%96%E7%95%A5/" style="font-size: 14px; color: #999">期权策略</a> <a href="/tags/%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F/" style="font-size: 14px; color: #999">记忆系统</a> <a href="/tags/%E9%87%8F%E5%8C%96%E7%A0%94%E7%A9%B6/" style="font-size: 14px; color: #999">量化研究</a> <a href="/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" style="font-size: 16.5px; color: #888">问题记录</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 19px; color: #777">随笔</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 21.5px; color: #666">面试</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget qrcode desktop mobile pjax">
-  
-
-  <div class='content article-entry'>
-    
-      <img src='/images/QQ.png'
-      
-        height='64px'
-      />
-    
-      <img src='/images/wx.png'
-      
-        height='64px'
-      />
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>20 篇</div>
-        </div>
-      
-
-      
-
-
-      
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2026-07-08 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2026/07/08/AI%E5%B7%A5%E4%BD%9C%E6%B5%81Workflow-Graph-Loop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><div class="item"><time>2026-07-08</time><span>技术学习</span></div><span>AI 工作流学习笔记：Workflow、Graph 与 Loop 怎么串起来</span></a></li><li><a class="widget-last" href="/2026/07/07/Agent-Skills%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><div class="item"><time>2026-07-07</time><span>技术学习</span></div><span>Agent Skills 学习笔记：Skill、Prompt、MCP、Function Calling 到底怎么分工</span></a></li><li><a class="widget-last" href="/2026/07/06/AI-Agent%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E7%AC%94%E8%AE%B0/"><div class="item"><time>2026-07-06</time><span>技术学习</span></div><span>AI Agent 记忆系统学习路线笔记：把短期记忆、长期记忆、RAG 与记忆演化机制串起来</span></a></li><li><a class="widget-last" href="/2026/07/06/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E7%B2%BE%E7%AE%80%E7%AC%94%E8%AE%B0/"><div class="item"><time>2026-07-06</time><span>技术学习</span></div><span>大模型运行机制精简笔记：Token、上下文窗口与采样参数</span></a></li><li><a class="widget-last" href="/2026/06/27/ai-app-interview-one-week-review/"><div class="item"><time>2026-07-02</time><span>技术学习</span></div><span>AI 应用开发面试一周冲刺复习手册</span></a></li></ul>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget text desktop pjax">
-  
-  <header>
-    
-      <a target="_blank" rel="noopener" href='https://baidu.com'><i class="fab fa-github fa-fw" aria-hidden="true"></i><span class='name'>点个赞吧</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <p>您的赞对我来说很重要，如果您喜欢本主题，希望能够给下面的项目点个赞来支持一下。</p>
-
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/xaoxuu/ProHUD"></a></p>
-
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/xaoxuu/ValueX"></a></p>
-
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/xaoxuu/Inspire"></a></p>
-
-    
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%85%88%E6%8A%93%E4%B8%BB%E7%BA%BF%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88-AI-%E7%B3%BB%E7%BB%9F%E9%9C%80%E8%A6%81%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="toc-text">一、先抓主线：为什么 AI 系统需要工作流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BC%A0%E7%BB%9F-Workflow-%E5%92%8C-AI-Workflow-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">二、传统 Workflow 和 AI Workflow 的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BC%A0%E7%BB%9F-Workflow"><span class="toc-text">1. 传统 Workflow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-AI-Workflow"><span class="toc-text">2. AI Workflow</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81Workflow%E3%80%81Graph%E3%80%81Loop-%E4%B8%89%E8%80%85%E6%98%AF%E4%BB%80%E4%B9%88%E5%85%B3%E7%B3%BB"><span class="toc-text">三、Workflow、Graph、Loop 三者是什么关系</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Workflow%EF%BC%9A%E7%9B%AE%E6%A0%87%E5%92%8C%E8%BF%87%E7%A8%8B"><span class="toc-text">1. Workflow：目标和过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Graph%EF%BC%9A%E7%BB%93%E6%9E%84%E5%92%8C%E8%BD%BD%E4%BD%93"><span class="toc-text">2. Graph：结构和载体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Loop%EF%BC%9A%E5%9B%BE%E4%B8%8A%E7%9A%84%E5%9B%9E%E6%BA%AF%E6%8E%A7%E5%88%B6"><span class="toc-text">3. Loop：图上的回溯控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%B8%89%E8%80%85%E5%90%88%E8%B5%B7%E6%9D%A5%E6%80%8E%E4%B9%88%E7%90%86%E8%A7%A3"><span class="toc-text">4. 三者合起来怎么理解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81Graph-%E7%9A%84%E6%A0%B8%E5%BF%83%E5%85%83%E7%B4%A0%EF%BC%9ANode%E3%80%81Edge%E3%80%81State"><span class="toc-text">四、Graph 的核心元素：Node、Edge、State</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81Node%EF%BC%9A%E8%8A%82%E7%82%B9%E6%98%AF%E6%89%A7%E8%A1%8C%E5%8D%95%E5%85%83"><span class="toc-text">五、Node：节点是执行单元</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node-%E8%AE%BE%E8%AE%A1%E5%85%B3%E9%94%AE"><span class="toc-text">Node 设计关键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF"><span class="toc-text">常见错误</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81Edge%EF%BC%9A%E8%BE%B9%E6%98%AF%E6%8E%A7%E5%88%B6%E6%B5%81%E8%A7%84%E5%88%99"><span class="toc-text">六、Edge：边是控制流规则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%A1%BA%E5%BA%8F%E8%BE%B9"><span class="toc-text">1. 顺序边</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9D%A1%E4%BB%B6%E8%BE%B9"><span class="toc-text">2. 条件边</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%BE%AA%E7%8E%AF%E8%BE%B9"><span class="toc-text">3. 循环边</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%B9%B6%E8%A1%8C%E8%BE%B9"><span class="toc-text">4. 并行边</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1"><span class="toc-text">5. 动态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Edge-%E8%AE%BE%E8%AE%A1%E5%85%B3%E9%94%AE"><span class="toc-text">Edge 设计关键</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81State%EF%BC%9A%E7%8A%B6%E6%80%81%E6%98%AF%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%9A%84%E8%BF%90%E8%A1%8C%E8%AE%B0%E5%BF%86"><span class="toc-text">七、State：状态是工作流的运行记忆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81-State-%E5%AD%97%E6%AE%B5"><span class="toc-text">常见 State 字段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#State-%E6%9B%B4%E6%96%B0%E7%AD%96%E7%95%A5"><span class="toc-text">State 更新策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%A6%86%E7%9B%96%EF%BC%88Replace%EF%BC%89"><span class="toc-text">1. 覆盖（Replace）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%BF%BD%E5%8A%A0%EF%BC%88Append%EF%BC%89"><span class="toc-text">2. 追加（Append）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%90%88%E5%B9%B6%EF%BC%88Reducer%EF%BC%89"><span class="toc-text">3. 自定义合并（Reducer）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#State-%E8%AE%BE%E8%AE%A1%E6%9C%80%E5%AE%B9%E6%98%93%E8%B8%A9%E7%9A%84%E5%9D%91"><span class="toc-text">State 设计最容易踩的坑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%AA%E7%B2%97"><span class="toc-text">太粗</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%AA%E7%BB%86"><span class="toc-text">太细</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B6%E8%A1%8C%E5%86%99%E5%86%B2%E7%AA%81"><span class="toc-text">并行写冲突</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81Loop%EF%BC%9AAI-%E5%B7%A5%E4%BD%9C%E6%B5%81%E9%87%8C%E7%9A%84%E5%8F%AF%E6%8E%A7%E5%9B%9E%E6%BA%AF"><span class="toc-text">八、Loop：AI 工作流里的可控回溯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81Graph-Loop-%E5%92%8C-Agent-Loop-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">九、Graph Loop 和 Agent Loop 的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Agent-Loop"><span class="toc-text">Agent Loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Graph-Loop"><span class="toc-text">Graph Loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E5%8F%A5%E8%AF%9D%E5%8C%BA%E5%88%86"><span class="toc-text">一句话区分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81Loop-%E7%9A%84%E4%B8%A4%E7%A7%8D%E7%B1%BB%E5%9E%8B"><span class="toc-text">十、Loop 的两种类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9B%BA%E5%AE%9A%E6%AC%A1%E6%95%B0%E5%BE%AA%E7%8E%AF"><span class="toc-text">1. 固定次数循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9D%A1%E4%BB%B6%E9%A9%B1%E5%8A%A8%E5%BE%AA%E7%8E%AF"><span class="toc-text">2. 条件驱动循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E9%99%85%E5%B7%A5%E7%A8%8B%E5%BB%BA%E8%AE%AE"><span class="toc-text">实际工程建议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E5%8F%AF%E9%9D%A0-Loop-%E7%9A%84%E4%B8%89%E4%B8%AA%E6%9D%A1%E4%BB%B6"><span class="toc-text">十一、可靠 Loop 的三个条件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BB%A7%E7%BB%AD%E6%9D%A1%E4%BB%B6"><span class="toc-text">1. 继续条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%80%80%E5%87%BA%E6%9D%A1%E4%BB%B6"><span class="toc-text">2. 退出条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AE%89%E5%85%A8%E8%BE%B9%E7%95%8C"><span class="toc-text">3. 安全边界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E4%B8%80%E5%8F%A5%E8%AF%9D"><span class="toc-text">最重要的一句话</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81%E5%B5%8C%E5%A5%97%E5%BE%AA%E7%8E%AF%E6%80%8E%E4%B9%88%E7%90%86%E8%A7%A3"><span class="toc-text">十二、嵌套循环怎么理解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%96%E5%B1%82%E5%BE%AA%E7%8E%AF"><span class="toc-text">外层循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%B1%82%E5%BE%AA%E7%8E%AF"><span class="toc-text">内层循环</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%89%E3%80%81%E6%A1%86%E6%9E%B6%E6%98%A0%E5%B0%84%EF%BC%9ASpring-AI-Alibaba-%E5%92%8C-LangGraph"><span class="toc-text">十三、框架映射：Spring AI Alibaba 和 LangGraph</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-State"><span class="toc-text">1. State</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Node"><span class="toc-text">2. Node</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Edge"><span class="toc-text">3. Edge</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Loop"><span class="toc-text">4. Loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%8C%81%E4%B9%85%E5%8C%96"><span class="toc-text">5. 持久化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E5%9B%9B%E3%80%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%8A%BD%E8%B1%A1%E8%83%BD%E5%8A%9B%EF%BC%9A%E4%B8%8D%E8%A6%81%E6%8A%8A%E5%9B%BE%E7%94%BB%E7%A2%8E"><span class="toc-text">十四、工作流抽象能力：不要把图画碎</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E5%A5%BD%E7%9A%84%E6%8A%BD%E8%B1%A1%E6%96%B9%E5%BC%8F"><span class="toc-text">更好的抽象方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E7%A8%B3%E5%AE%9A%E7%BB%93%E6%9E%84"><span class="toc-text">一个稳定结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%BA%94%E3%80%81%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%90%BD%E5%9C%B0%E5%B8%B8%E8%A7%81%E5%9D%91"><span class="toc-text">十五、工作流落地常见坑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-State-%E7%B2%92%E5%BA%A6%E4%B8%8D%E5%90%88%E7%90%86"><span class="toc-text">1. State 粒度不合理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Loop-%E6%B2%A1%E6%9C%89%E7%BB%88%E6%AD%A2%E6%9D%A1%E4%BB%B6"><span class="toc-text">2. Loop 没有终止条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86%E5%8F%AA%E6%9C%89-try-catch"><span class="toc-text">3. 错误处理只有 try-catch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Token-%E4%B8%8E%E6%88%90%E6%9C%AC%E5%A4%B1%E6%8E%A7"><span class="toc-text">4. Token 与成本失控</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E8%8A%82%E7%82%B9%E9%97%B4%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8D%E7%BB%9F%E4%B8%80"><span class="toc-text">5. 节点间数据结构不统一</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E5%85%AD%E3%80%81%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%EF%BC%9AAI-%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%BC%9A%E6%94%BE%E5%A4%A7%E9%97%AE%E9%A2%98"><span class="toc-text">十六、安全风险：AI 工作流会放大问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-State-%E6%B1%A1%E6%9F%93"><span class="toc-text">1. State 污染</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Prompt-Injection-%E7%BA%A7%E8%81%94"><span class="toc-text">2. Prompt Injection 级联</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Loop-%E6%94%BE%E5%A4%A7%E6%94%BB%E5%87%BB"><span class="toc-text">3. Loop 放大攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%B7%A5%E5%85%B7%E8%B0%83%E7%94%A8%E9%A3%8E%E9%99%A9"><span class="toc-text">4. 工具调用风险</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%B2%E6%8A%A4%E6%96%B9%E5%90%91"><span class="toc-text">防护方向</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%83%E3%80%81%E6%8A%8A%E6%95%B4%E7%AF%87%E6%96%87%E7%AB%A0%E4%B8%B2%E8%B5%B7%E6%9D%A5"><span class="toc-text">十七、把整篇文章串起来</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%85%88%E7%90%86%E8%A7%A3%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81-Workflow"><span class="toc-text">第一步：先理解为什么需要 Workflow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%86%8D%E7%90%86%E8%A7%A3-Graph"><span class="toc-text">第二步：再理解 Graph</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%86%8D%E7%90%86%E8%A7%A3-Loop"><span class="toc-text">第三步：再理解 Loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E5%86%8D%E7%90%86%E8%A7%A3-State"><span class="toc-text">第四步：再理解 State</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E5%86%8D%E7%9C%8B%E6%A1%86%E6%9E%B6%E5%AE%9E%E7%8E%B0"><span class="toc-text">第五步：再看框架实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E6%AD%A5%EF%BC%9A%E6%9C%80%E5%90%8E%E7%9C%8B%E5%B7%A5%E7%A8%8B%E5%9D%91"><span class="toc-text">第六步：最后看工程坑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E5%85%AB%E3%80%81%E6%9C%80%E5%80%BC%E5%BE%97%E8%AE%B0%E4%BD%8F%E7%9A%84%E5%85%B3%E9%94%AE%E8%AF%8D"><span class="toc-text">十八、最值得记住的关键词</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-text">核心概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E6%B5%81"><span class="toc-text">控制流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#State-%E6%9B%B4%E6%96%B0"><span class="toc-text">State 更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loop-%E8%AE%BE%E8%AE%A1"><span class="toc-text">Loop 设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E7%A8%8B%E8%90%BD%E5%9C%B0"><span class="toc-text">工程落地</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%86%E6%9E%B6%E5%85%B3%E9%94%AE%E8%AF%8D"><span class="toc-text">框架关键词</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2791,13 +3219,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3686,7 +4115,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Dawnqi's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/tags/WSI/","name":"WSI"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Dawnqi's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Dawnqi's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/技术学习/","name":"技术学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2026/07/08/AI工作流Workflow-Graph-Loop学习笔记/","name":"AI 工作流学习笔记：Workflow、Graph 与 Loop 怎么串起来"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Dawnqi's Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"AI 工作流学习笔记：Workflow、Graph 与 Loop 怎么串起来","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2026/07/08/AI%E5%B7%A5%E4%BD%9C%E6%B5%81Workflow-Graph-Loop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"},"author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2026/07/08/AI%E5%B7%A5%E4%BD%9C%E6%B5%81Workflow-Graph-Loop%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/","wordCount":0,"datePublished":"2026-07-08T14:30:00.000Z","dateModified":"2026-07-08T12:33:17.801Z","articleSection":"技术学习","keywords":"AI应用开发,Agent,AI工作流,Workflow,Graph,Loop","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
