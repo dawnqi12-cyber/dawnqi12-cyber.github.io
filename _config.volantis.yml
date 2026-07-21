@@ -30,10 +30,6 @@ navbar:
   search: 搜索文章...   # Search bar placeholder
 ############################### Navigation Bar ############################### > end
 
-darkmode:
-  enable: true
-
-
 pages:
   # 友链页面配置
   friends:
@@ -276,6 +272,9 @@ search:
   service: hexo
 
 plugins:
+  darkmode:
+    enable: true
+
   # APlayer is only available in mainland China.
   # APlayer config: https://github.com/metowolf/MetingJS
   aplayer:
