@@ -5,15 +5,19 @@
 # Site
 title: Dawnqi's Blog
 subtitle: ''
-description: ''
+description: '记录技术学习、项目实践、日记与生活感想。'
 keywords:
+  - 技术学习
+  - 项目实践
+  - 日记
+  - 生活感想
 author: Dawnqi
 language: zh-CN
-timezone: ''
+timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://dawnqi12-cyber.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -117,7 +121,7 @@ marked:
   prependRoot: true
   postAsset: true
   external_link:
-    enable: false
+    enable: true
     exclude: []
     nofollow: false
   disableNunjucks: false
