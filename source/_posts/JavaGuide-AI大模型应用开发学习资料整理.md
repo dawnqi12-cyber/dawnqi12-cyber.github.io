@@ -1,6 +1,7 @@
 ---
 title: JavaGuide AI / 大模型应用开发学习资料整理
 date: 2026-06-28 20:06:52
+updated: 2026-06-28 20:06:52
 tags:
 - AI
 - 大模型

@@ -3,7 +3,7 @@ scroll_smooth: true
 ############################### Navigation Bar ############################### > start
 # 注意事项：建议规范全站路径 URL 最后带一个 "/" 例如 "about/"
 navbar:
-  visiable: auto # always, auto
+  visiable: always # always, auto
   logo: # choose [img] or [icon + title]
     img: images/Profile_Picture.jpg
     icon:
@@ -61,37 +61,13 @@ cover:
     home: true
     archive: true
     others: false # can be written in front-matter 'cover: true'
-  background: images/bg.png
+  background: images/bg.webp
   # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
   logo:  # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
   title: "Dawnqi's Blog"
   subtitle: ''
   search: 搜索 # search bar placeholder
-  features:
-    - name: 主页 
-      icon: #
-      img: volantis-static/media/twemoji/assets/svg/1f5c3.svg # https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg
-      url: /
-    - name: 标签
-      icon: #
-      img: volantis-static/media/twemoji/assets/svg/1f516.svg #  https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg
-      url: tags/
-    # - name: 示例
-    #   icon: #
-    #   img: volantis-static/media/twemoji/assets/svg/1f396.svg #  https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg
-    #   url: /examples/
-    # - name: 社区
-    #   icon: #
-    #   img: volantis-static/media/twemoji/assets/svg/1f389.svg #  https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f389.svg
-    #   url: /contributors/
-    - name: 博客
-      icon: #
-      img: volantis-static/media/twemoji/assets/svg/1f4f0.svg #  https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg
-      url: /archives/
-    - name: 源码
-      icon: #
-      img: volantis-static/media/twemoji/assets/svg/1f9ec.svg #  https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg
-      url: https://github.com/dawnqi12-cyber/dawnqi12-cyber.github.io
+  features: []
 ############################### Cover ############################### > end
 
 
@@ -169,7 +145,7 @@ sidebar:
     # qrcode widget
     qrcode:
       class: qrcode
-      display: [desktop, mobile] # [desktop, mobile]
+      display: [desktop] # [desktop, mobile]
       height: 64px  # Automatic height if not set
       images:
         - images/QQ.png # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
@@ -229,20 +205,6 @@ sidebar:
     #     - '[GitHub](https://github.com/yourusername)'
     #     - '[邮箱](mailto:your-email@example.com)'
 
-    repos:
-      class: text
-      display: [desktop]
-      header:
-        icon: fab fa-github
-        title: 点个赞吧
-        url: https://baidu.com
-      content:
-        - '您的赞对我来说很重要，如果您喜欢本主题，希望能够给下面的项目点个赞来支持一下。'
-        - '[](https://github.com/xaoxuu/ProHUD)'
-        - '[](https://github.com/xaoxuu/ValueX)'
-        - '[](https://github.com/xaoxuu/Inspire)'
-    
-    
 ############################### Sidebar ############################### > end
 
 
@@ -272,6 +234,10 @@ search:
   service: hexo
 
 plugins:
+  lazyload:
+    enable: true
+    onlypost: true
+
   darkmode:
     enable: true
 
@@ -309,8 +275,6 @@ rightmenus:
     - plugins.inputBox
     - plugins.seletctText
     - plugins.elementCheck
-    - plugins.elementImage
-    - menus.link
     - hr
     - menus.darkMode
     - plugins.articlePage
@@ -360,8 +324,7 @@ rightmenus:
     seletctText:
       - {id: 'copyText', name: '复制文本', icon: 'fa-solid fa-copy', event: 'copyText', group: 'seletctText'}
       - {id: 'searchWord', name: '站内搜索', icon: 'fa-solid fa-search', event: 'OpenSearch(__text__)', group: 'seletctText'}
-      - {id: 'bingSearch', name: '必应搜索', icon: 'fa-solid fa-search', event: 'window.open(`https://cn.bing.com/search?q=${__text__}`)', group: 'seletctText'}
-      #- {id: 'googleSearch', name: '谷歌搜索', icon: 'fa-solid fa-search', event: 'window.open(`https://www.google.com/search?q=${__text__}`)', group: 'seletctText'}
+    # 图片菜单只保留复制图片，避免把页面内容发送给第三方识图服务。
     # 链接判断组件
     # 生效于链接处的右键行为，__link__ 为链接地址
     elementCheck:
@@ -371,7 +334,6 @@ rightmenus:
     # 生效于图片类的右键行为，__link__ 为链接地址
     elementImage:
       - {id: 'copyImg', name: '复制图片', icon: 'fa-solid fa-image', event: 'copyImg', group: 'elementImage'}
-      - {id: 'googleImg', name: '谷歌识图', icon: 'fa-solid fa-images', event: 'window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)', group: 'elementImage'}
     # 文章页面组件
     # 生效于 post.article 页面
     articlePage:
@@ -379,13 +341,7 @@ rightmenus:
       - {id: 'readMode', name: '阅读模式', icon: 'fa-solid fa-book-open', event: 'readMode', group: 'articlePage'}
   # 右键自定义菜单区域
   menus:
-    link:
-      - {id: 'help', name: '常见问题', icon: 'fa-solid fa-question', link: 'https://volantis.js.org/faqs/', group: 'link'}
-      - {id: 'examples', name: '示例博客', icon: 'fa-solid fa-rss', link: 'https://volantis.js.org/examples/', group: 'link'}
-      - {id: 'contributors', name: '加入社区', icon: 'fa-solid fa-fan', link: 'https://volantis.js.org/contributors/', group: 'link'}
-      - hr
-      - {id: 'source_docs', name: '本站源码', icon: 'fa-solid fa-code-branch', link: 'https://github.com/volantis-x/volantis-docs/', group: 'link'}
-      - {id: 'source_theme', name: '主题源码', icon: 'fa-solid fa-code-branch', link: 'https://github.com/volantis-x/hexo-theme-volantis/', group: 'link'}
+    link: []
     darkMode:
       - {id: 'darkMode', name: '暗黑模式', icon: 'fa-solid fa-moon', event: 'volantis.dark.toggle()', group: 'darkMode'}
 ###

@@ -1,6 +1,7 @@
 ---
 title: Hexo 个人博客项目启动流程
 date: 2026-06-26 22:00:00
+updated: 2026-06-26 22:00:00
 tags:
 - Hexo
 - Volantis

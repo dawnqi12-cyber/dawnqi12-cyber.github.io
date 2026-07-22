@@ -1,6 +1,7 @@
 ---
 title: RAG 相关面试题
 date: 2026-07-08 23:50:00
+updated: 2026-07-08 23:50:00
 tags:
 - RAG
 - 大模型
@@ -1327,4 +1328,3 @@ RAG 是两段式系统：
 面试中可以总结：
 
 > MRR 看正确结果排多前，NDCG 看整体排序质量，Recall@K 看是否召回正确证据，Context Precision 看上下文噪声，Faithfulness 看答案是否忠实于证据。
-

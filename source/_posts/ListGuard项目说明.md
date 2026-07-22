@@ -1,6 +1,7 @@
 ---
 title: ListGuard 项目说明
 date: 2026-07-20 12:00:00
+updated: 2026-07-20 12:00:00
 tags:
 - ListGuard
 - AI应用开发
@@ -263,4 +264,3 @@ Streamlit 启动入口，负责：
 - 增加 Streamlit 端到端测试以及 CI 中的类型检查、Lint 和 Secret Scanning。
 - 增加可导出的合规报告和人工审核记录。
 - 支持按类目配置质量指标和评分权重。
-

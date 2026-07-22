@@ -1,6 +1,7 @@
 ---
 title: Agent Skills 学习笔记：Skill、Prompt、MCP、Function Calling 到底怎么分工
 date: 2026-07-07 22:10:00
+updated: 2026-07-07 22:10:00
 tags:
 - Agent
 - Skills

@@ -116,7 +116,7 @@ marked:
   sanitizeUrl: false
   dompurify: false
   headerIds: true
-  lazyload: false
+  lazyload: true
   figcaption: false
   prependRoot: true
   postAsset: true
@@ -126,6 +126,18 @@ marked:
     nofollow: false
   disableNunjucks: false
   descriptionLists: true
+
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  content: false
+  autodiscovery: true
+
+sitemap:
+  path: sitemap.xml
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
