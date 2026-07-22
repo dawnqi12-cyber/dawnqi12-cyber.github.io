@@ -32,6 +32,7 @@
 <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
+      <link rel="alternate" href="/atom.xml" title="Dawnqi's Blog" type="application/atom+xml">
   <!-- 页面元数据 -->
   <title>大模型运行机制精简笔记：Token、上下文窗口与采样参数 - Dawnqi's Blog</title>
   <meta name="keywords" content="AI应用开发,面试,大模型,Prompt,技术学习,项目实践,日记,生活感想">
@@ -43,7 +44,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2026-07-06T14:30:00.000Z">
-<meta property="article:modified_time" content="2026-07-06T11:06:31.326Z">
+<meta property="article:modified_time" content="2026-07-06T14:30:00.000Z">
 <meta property="article:author" content="Dawnqi">
 <meta property="article:tag" content="AI应用开发">
 <meta property="article:tag" content="Prompt">
@@ -1793,7 +1794,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1784677658184),
+    lastupdate: new Date(1784679007228),
     sidebar: {
       for_page: ["blogger","category","tagcloud","qrcode","webinfo","lastupdate"],
       for_post: ["toc"],
@@ -1814,7 +1815,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
       
       
-      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","plugins.elementImage","menus.link","hr","menus.darkMode","plugins.articlePage","music"],"options":{"iconPrefix":"fa-solid","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"},{"id":"bingSearch","name":"必应搜索","icon":"fa-solid fa-search","event":"window.open(`https://cn.bing.com/search?q=${__text__}`)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-solid fa-image","event":"copyImg","group":"elementImage"},{"id":"googleImg","name":"谷歌识图","icon":"fa-solid fa-images","event":"window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[{"id":"help","name":"常见问题","icon":"fa-solid fa-question","link":"https://volantis.js.org/faqs/","group":"link"},{"id":"examples","name":"示例博客","icon":"fa-solid fa-rss","link":"https://volantis.js.org/examples/","group":"link"},{"id":"contributors","name":"加入社区","icon":"fa-solid fa-fan","link":"https://volantis.js.org/contributors/","group":"link"},"hr",{"id":"source_docs","name":"本站源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/volantis-docs/","group":"link"},{"id":"source_theme","name":"主题源码","icon":"fa-solid fa-code-branch","link":"https://github.com/volantis-x/hexo-theme-volantis/","group":"link"}],"darkMode":[{"id":"darkMode","name":"暗黑模式","icon":"fa-solid fa-moon","event":"volantis.dark.toggle()","group":"darkMode"}]}}
+      rightmenus: {"enable":true,"order":["plugins.navigation","hr","plugins.inputBox","plugins.seletctText","plugins.elementCheck","hr","menus.darkMode","plugins.articlePage","music"],"options":{"iconPrefix":"fa-solid","articleShowLink":true,"musicAlwaysShow":true},"plugins":{"navigation":[{"id":"left","name":"转到上一页","icon":"fa-solid fa-arrow-left","event":"history.back()","group":"navigation"},{"id":"right","name":"转到下一页","icon":"fa-solid fa-arrow-right","event":"history.forward()","group":"navigation"},{"id":"redo","name":"刷新当前页面","icon":"fa-solid fa-redo","event":"window.location.reload()","group":"navigation"},{"id":"up","name":"回到顶部","icon":"fa-solid fa-arrow-up","event":"VolantisApp.scrolltoElement(volantis.dom.bodyAnchor)","group":"navigation"}],"inputBox":[{"id":"copyPaste","name":"粘贴文本","icon":"fa-solid fa-paste","event":"copyPaste","group":"inputBox"},{"id":"copyAll","name":"全选文本","icon":"fa-solid fa-object-ungroup","event":"copyAll","group":"inputBox"},{"id":"copyCut","name":"剪切文本","icon":"fa-solid fa-cut","event":"copyCut","group":"inputBox"}],"seletctText":[{"id":"copyText","name":"复制文本","icon":"fa-solid fa-copy","event":"copyText","group":"seletctText"},{"id":"searchWord","name":"站内搜索","icon":"fa-solid fa-search","event":"OpenSearch(__text__)","group":"seletctText"}],"elementCheck":[{"id":"openTab","name":"新标签页打开","icon":"fa-solid fa-external-link-square-alt","event":"window.open(__link__)","group":"elementCheck"},{"id":"copyLink","name":"复制链接地址","icon":"fa-solid fa-link","event":"copyLink","group":"elementCheck"}],"elementImage":[{"id":"copyImg","name":"复制图片","icon":"fa-solid fa-image","event":"copyImg","group":"elementImage"}],"articlePage":[{"id":"printMode","name":"打印页面","icon":"fa-solid fa-print","event":"printMode","group":"articlePage"},{"id":"readMode","name":"阅读模式","icon":"fa-solid fa-book-open","event":"readMode","group":"articlePage"}]},"menus":{"link":[],"darkMode":[{"id":"darkMode","name":"暗黑模式","icon":"fa-solid fa-moon","event":"volantis.dark.toggle()","group":"darkMode"}]}}
       
     }
   }
@@ -2223,7 +2224,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow floatable blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2480,7 +2481,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="none" class='cover-wrapper post search' style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="images/bg.png"></div>
+  <div class='cover-bg lazyload placeholder' data-bg="images/bg.webp"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -2502,34 +2503,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='menu navigation'>
       <div class='list-h'>
         
-          
-            <a href="/"
-              
-              
-              active-action="action-home">
-              <p>主页</p>
-            </a>
-          
-            <a href="/tags/"
-              
-              
-              active-action="action-tags">
-              <p>标签</p>
-            </a>
-          
-            <a href="/archives/"
-              
-              
-              active-action="action-archives">
-              <p>博客</p>
-            </a>
-          
-            <a target="_blank" rel="noopener" href="https://github.com/dawnqi12-cyber/dawnqi12-cyber.github.io"
-              
-              
-              active-action="action-https:githubcomdawnqi12-cyberdawnqi12-cybergithubio">
-              <p>源码</p>
-            </a>
           
         
       </div>
@@ -2577,7 +2550,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
   <a itemprop="url" class='author' href="/" rel="nofollow">
-    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
     <p itemprop="name">请设置文章作者</p>
   </a>
 </div>
@@ -2627,7 +2600,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <html><head></head><body><blockquote>
-<p>参考原文：<a target="_blank" rel="noopener" href="https://javaguide.cn/ai/llm-basis/llm-operation-mechanism.html">LLM 运行机制：Token、上下文窗口与采样参数怎么影响输出</a></p>
+<p>参考原文：<a href="https://javaguide.cn/ai/llm-basis/llm-operation-mechanism.html" target="_blank" rel="noopener">LLM 运行机制：Token、上下文窗口与采样参数怎么影响输出</a></p>
 <p>这篇文章不是原文搬运，而是把我认为最值得记住的知识点重新整理成一份精简笔记，适合复习、面试和工程落地时快速回看。</p>
 </blockquote>
 <h2 id="一、先抓主线：模型输出为什么会变"><a href="#一、先抓主线：模型输出为什么会变" class="headerlink" title="一、先抓主线：模型输出为什么会变"></a>一、先抓主线：模型输出为什么会变</h2><p>大模型每次回答都不是“直接想到一句完整的话”，而是：</p>
@@ -2901,7 +2874,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2026-07-06T19:06:31+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2026-07-06T22:30:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2026年7月6日</p>
@@ -2931,7 +2904,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png">
           
         </a>
       
@@ -2943,7 +2916,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png">
           
         </a>
       
@@ -2955,7 +2928,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png">
           
         </a>
       
@@ -3063,10 +3036,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3340,15 +3309,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="bingSearch" data-event="window.open(`https://cn.bing.com/search?q=${__text__}`)" data-group="seletctText">
-      <i class="fa-solid fa-search fa-fw"></i>
-      必应搜索
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
     <span class="vlts-menu fix-cursor-default event" id="openTab" data-event="window.open(__link__)" data-group="elementCheck">
       <i class="fa-solid fa-external-link-square-alt fa-fw"></i>
       新标签页打开
@@ -3362,73 +3322,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <i class="fa-solid fa-link fa-fw"></i>
       复制链接地址
     </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="copyImg" data-event="copyImg" data-group="elementImage">
-      <i class="fa-solid fa-image fa-fw"></i>
-      复制图片
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <span class="vlts-menu fix-cursor-default event" id="googleImg" data-event="window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)" data-group="elementImage">
-      <i class="fa-solid fa-images fa-fw"></i>
-      谷歌识图
-    </span>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="help" target="_blank" rel="noopener" href="https://volantis.js.org/faqs/" data-group="link">
-      <i class="fa-solid fa-question fa-fw"></i>
-      常见问题
-    </a>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="examples" target="_blank" rel="noopener" href="https://volantis.js.org/examples/" data-group="link">
-      <i class="fa-solid fa-rss fa-fw"></i>
-      示例博客
-    </a>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="contributors" target="_blank" rel="noopener" href="https://volantis.js.org/contributors/" data-group="link">
-      <i class="fa-solid fa-fan fa-fw"></i>
-      加入社区
-    </a>
-  </li>
-
-
-
-    <hr class="menuLoad-Content" >
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="source_docs" target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs/" data-group="link">
-      <i class="fa-solid fa-code-branch fa-fw"></i>
-      本站源码
-    </a>
-  </li>
-
-
-
-  <li class="menuLoad-Content">
-    <a class="vlts-menu fix-cursor-default" id="source_theme" target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/" data-group="link">
-      <i class="fa-solid fa-code-branch fa-fw"></i>
-      主题源码
-    </a>
   </li>
 
 
@@ -3539,12 +3432,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  RightMenusFunction['bingSearch'] = (__text__) => {window.open(`https://cn.bing.com/search?q=${__text__}`)}
-
-
-
-
-
   RightMenusFunction['openTab'] = (__link__) => {window.open(__link__)}
 
 
@@ -3552,30 +3439,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   //RightMenusFunction['copyLink'] = (fun) => {fun()}
-
-
-
-
-
-  //RightMenusFunction['copyImg'] = (fun) => {fun()}
-
-
-
-
-
-  RightMenusFunction['googleImg'] = (__link__) => {window.open(`https://www.google.com.hk/searchbyimage?image_url=${__link__}`)}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4118,7 +3981,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Dawnqi's Blog","url":"https://dawnqi12-cyber.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dawnqi12-cyber.github.io/","sameAs":["https://github.com/volantis-x"],"description":"记录技术学习、项目实践、日记与生活感想。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dawnqi12-cyber.github.io/","name":"Dawnqi's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dawnqi12-cyber.github.io/categories/技术学习/","name":"技术学习"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dawnqi12-cyber.github.io/2026/07/06/大模型运行机制精简笔记/","name":"大模型运行机制精简笔记：Token、上下文窗口与采样参数"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Dawnqi's Blog","url":"https://dawnqi12-cyber.github.io/","keywords":["技术学习","项目实践","日记","生活感想"],"description":"记录技术学习、项目实践、日记与生活感想。","author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dawnqi12-cyber.github.io/","description":"记录技术学习、项目实践、日记与生活感想。"},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","url":"https://dawnqi12-cyber.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://dawnqi12-cyber.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"大模型运行机制精简笔记：Token、上下文窗口与采样参数","description":"记录技术学习、项目实践、日记与生活感想。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dawnqi12-cyber.github.io/2026/07/06/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E7%B2%BE%E7%AE%80%E7%AC%94%E8%AE%B0/"},"author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dawnqi12-cyber.github.io/"},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://dawnqi12-cyber.github.io/2026/07/06/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E7%B2%BE%E7%AE%80%E7%AC%94%E8%AE%B0/","wordCount":0,"datePublished":"2026-07-06T14:30:00.000Z","dateModified":"2026-07-06T11:06:31.326Z","articleSection":"技术学习","keywords":"AI应用开发,面试,大模型,Prompt","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Dawnqi's Blog","url":"https://dawnqi12-cyber.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dawnqi12-cyber.github.io/","sameAs":["https://github.com/volantis-x"],"description":"记录技术学习、项目实践、日记与生活感想。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://dawnqi12-cyber.github.io/","name":"Dawnqi's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://dawnqi12-cyber.github.io/categories/技术学习/","name":"技术学习"}},{"@type":"ListItem","position":3,"item":{"@id":"https://dawnqi12-cyber.github.io/2026/07/06/大模型运行机制精简笔记/","name":"大模型运行机制精简笔记：Token、上下文窗口与采样参数"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Dawnqi's Blog","url":"https://dawnqi12-cyber.github.io/","keywords":["技术学习","项目实践","日记","生活感想"],"description":"记录技术学习、项目实践、日记与生活感想。","author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dawnqi12-cyber.github.io/","description":"记录技术学习、项目实践、日记与生活感想。"},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","url":"https://dawnqi12-cyber.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://dawnqi12-cyber.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"大模型运行机制精简笔记：Token、上下文窗口与采样参数","description":"记录技术学习、项目实践、日记与生活感想。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://dawnqi12-cyber.github.io/2026/07/06/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E7%B2%BE%E7%AE%80%E7%AC%94%E8%AE%B0/"},"author":{"@type":"Person","name":"Dawnqi","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://dawnqi12-cyber.github.io/"},"publisher":{"@type":"Organization","name":"Dawnqi's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://dawnqi12-cyber.github.io/2026/07/06/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E7%B2%BE%E7%AE%80%E7%AC%94%E8%AE%B0/","wordCount":0,"datePublished":"2026-07-06T14:30:00.000Z","dateModified":"2026-07-06T14:30:00.000Z","articleSection":"技术学习","keywords":"AI应用开发,面试,大模型,Prompt","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
