@@ -34,8 +34,8 @@
     </author>
     <category term="技术学习" scheme="https://dawnqi12-cyber.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     <category term="面试" scheme="https://dawnqi12-cyber.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    <category term="复习" scheme="https://dawnqi12-cyber.github.io/tags/%E5%A4%8D%E4%B9%A0/"/>
     <category term="AI Agent" scheme="https://dawnqi12-cyber.github.io/tags/AI-Agent/"/>
+    <category term="复习" scheme="https://dawnqi12-cyber.github.io/tags/%E5%A4%8D%E4%B9%A0/"/>
     <id>https://dawnqi12-cyber.github.io/2026/07/13/AI-Agent%E5%A4%8D%E4%B9%A0%E6%8C%87%E5%8D%97/</id>
     <link href="https://dawnqi12-cyber.github.io/2026/07/13/AI-Agent%E5%A4%8D%E4%B9%A0%E6%8C%87%E5%8D%97/"/>
     <published>2026-07-13T15:04:05.000Z</published>
@@ -68,10 +68,10 @@
       <name>Dawnqi</name>
     </author>
     <category term="技术学习" scheme="https://dawnqi12-cyber.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    <category term="RAG" scheme="https://dawnqi12-cyber.github.io/tags/RAG/"/>
     <category term="AI应用开发" scheme="https://dawnqi12-cyber.github.io/tags/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"/>
     <category term="面试" scheme="https://dawnqi12-cyber.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     <category term="大模型" scheme="https://dawnqi12-cyber.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
-    <category term="RAG" scheme="https://dawnqi12-cyber.github.io/tags/RAG/"/>
     <id>https://dawnqi12-cyber.github.io/2026/07/08/RAG%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
     <link href="https://dawnqi12-cyber.github.io/2026/07/08/RAG%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <published>2026-07-08T15:50:00.000Z</published>
@@ -87,8 +87,8 @@
     </author>
     <category term="技术学习" scheme="https://dawnqi12-cyber.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     <category term="面试" scheme="https://dawnqi12-cyber.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    <category term="大模型" scheme="https://dawnqi12-cyber.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
     <category term="AI Agent" scheme="https://dawnqi12-cyber.github.io/tags/AI-Agent/"/>
+    <category term="大模型" scheme="https://dawnqi12-cyber.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
     <id>https://dawnqi12-cyber.github.io/2026/07/08/AI-Agent%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
     <link href="https://dawnqi12-cyber.github.io/2026/07/08/AI-Agent%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <published>2026-07-08T15:20:00.000Z</published>
@@ -122,8 +122,8 @@
       <name>Dawnqi</name>
     </author>
     <category term="技术学习" scheme="https://dawnqi12-cyber.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
-    <category term="AI应用开发" scheme="https://dawnqi12-cyber.github.io/tags/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"/>
     <category term="Agent" scheme="https://dawnqi12-cyber.github.io/tags/Agent/"/>
+    <category term="AI应用开发" scheme="https://dawnqi12-cyber.github.io/tags/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"/>
     <category term="AI工作流" scheme="https://dawnqi12-cyber.github.io/tags/AI%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
     <category term="Workflow" scheme="https://dawnqi12-cyber.github.io/tags/Workflow/"/>
     <category term="Graph" scheme="https://dawnqi12-cyber.github.io/tags/Graph/"/>
@@ -142,11 +142,11 @@
       <name>Dawnqi</name>
     </author>
     <category term="技术学习" scheme="https://dawnqi12-cyber.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
-    <category term="AI应用开发" scheme="https://dawnqi12-cyber.github.io/tags/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"/>
     <category term="Agent" scheme="https://dawnqi12-cyber.github.io/tags/Agent/"/>
-    <category term="Prompt" scheme="https://dawnqi12-cyber.github.io/tags/Prompt/"/>
+    <category term="AI应用开发" scheme="https://dawnqi12-cyber.github.io/tags/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"/>
     <category term="Skills" scheme="https://dawnqi12-cyber.github.io/tags/Skills/"/>
     <category term="MCP" scheme="https://dawnqi12-cyber.github.io/tags/MCP/"/>
+    <category term="Prompt" scheme="https://dawnqi12-cyber.github.io/tags/Prompt/"/>
     <id>https://dawnqi12-cyber.github.io/2026/07/07/Agent-Skills%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
     <link href="https://dawnqi12-cyber.github.io/2026/07/07/Agent-Skills%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <published>2026-07-07T14:10:00.000Z</published>
@@ -161,11 +161,11 @@
       <name>Dawnqi</name>
     </author>
     <category term="技术学习" scheme="https://dawnqi12-cyber.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
-    <category term="AI应用开发" scheme="https://dawnqi12-cyber.github.io/tags/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"/>
-    <category term="面试" scheme="https://dawnqi12-cyber.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    <category term="RAG" scheme="https://dawnqi12-cyber.github.io/tags/RAG/"/>
     <category term="Agent" scheme="https://dawnqi12-cyber.github.io/tags/Agent/"/>
     <category term="记忆系统" scheme="https://dawnqi12-cyber.github.io/tags/%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F/"/>
+    <category term="RAG" scheme="https://dawnqi12-cyber.github.io/tags/RAG/"/>
+    <category term="AI应用开发" scheme="https://dawnqi12-cyber.github.io/tags/AI%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"/>
+    <category term="面试" scheme="https://dawnqi12-cyber.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     <id>https://dawnqi12-cyber.github.io/2026/07/06/AI-Agent%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E7%AC%94%E8%AE%B0/</id>
     <link href="https://dawnqi12-cyber.github.io/2026/07/06/AI-Agent%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E7%AC%94%E8%AE%B0/"/>
     <published>2026-07-06T15:10:00.000Z</published>
@@ -198,9 +198,9 @@
       <name>Dawnqi</name>
     </author>
     <category term="技术学习" scheme="https://dawnqi12-cyber.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    <category term="Agent" scheme="https://dawnqi12-cyber.github.io/tags/Agent/"/>
     <category term="面试" scheme="https://dawnqi12-cyber.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     <category term="AI" scheme="https://dawnqi12-cyber.github.io/tags/AI/"/>
-    <category term="Agent" scheme="https://dawnqi12-cyber.github.io/tags/Agent/"/>
     <category term="期权策略" scheme="https://dawnqi12-cyber.github.io/tags/%E6%9C%9F%E6%9D%83%E7%AD%96%E7%95%A5/"/>
     <category term="量化研究" scheme="https://dawnqi12-cyber.github.io/tags/%E9%87%8F%E5%8C%96%E7%A0%94%E7%A9%B6/"/>
     <id>https://dawnqi12-cyber.github.io/2026/06/29/Option-Strategy-Research-Agent%E9%9D%A2%E8%AF%95%E5%A4%8D%E4%B9%A0%E7%AD%96%E7%95%A5/</id>
@@ -217,10 +217,10 @@
       <name>Dawnqi</name>
     </author>
     <category term="技术学习" scheme="https://dawnqi12-cyber.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
-    <category term="AI" scheme="https://dawnqi12-cyber.github.io/tags/AI/"/>
-    <category term="大模型" scheme="https://dawnqi12-cyber.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
-    <category term="RAG" scheme="https://dawnqi12-cyber.github.io/tags/RAG/"/>
     <category term="Agent" scheme="https://dawnqi12-cyber.github.io/tags/Agent/"/>
+    <category term="RAG" scheme="https://dawnqi12-cyber.github.io/tags/RAG/"/>
+    <category term="大模型" scheme="https://dawnqi12-cyber.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    <category term="AI" scheme="https://dawnqi12-cyber.github.io/tags/AI/"/>
     <category term="JavaGuide" scheme="https://dawnqi12-cyber.github.io/tags/JavaGuide/"/>
     <id>https://dawnqi12-cyber.github.io/2026/06/28/JavaGuide-AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</id>
     <link href="https://dawnqi12-cyber.github.io/2026/06/28/JavaGuide-AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/"/>
@@ -270,10 +270,10 @@
       <name>Dawnqi</name>
     </author>
     <category term="技术记录" scheme="https://dawnqi12-cyber.github.io/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"/>
-    <category term="python" scheme="https://dawnqi12-cyber.github.io/tags/python/"/>
     <category term="vscode" scheme="https://dawnqi12-cyber.github.io/tags/vscode/"/>
     <category term="codex" scheme="https://dawnqi12-cyber.github.io/tags/codex/"/>
     <category term="openai" scheme="https://dawnqi12-cyber.github.io/tags/openai/"/>
+    <category term="python" scheme="https://dawnqi12-cyber.github.io/tags/python/"/>
     <id>https://dawnqi12-cyber.github.io/2026/06/25/VS-Code%E4%B8%AD%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8Codex%E6%95%99%E7%A8%8B%E5%8F%8A%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
     <link href="https://dawnqi12-cyber.github.io/2026/06/25/VS-Code%E4%B8%AD%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8Codex%E6%95%99%E7%A8%8B%E5%8F%8A%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <published>2026-06-25T14:42:23.000Z</published>

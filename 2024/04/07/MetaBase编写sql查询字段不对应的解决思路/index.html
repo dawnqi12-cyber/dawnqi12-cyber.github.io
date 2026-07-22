@@ -1793,7 +1793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1784679007228),
+    lastupdate: new Date(1784679428736),
     sidebar: {
       for_page: ["blogger","category","tagcloud","qrcode","webinfo","lastupdate"],
       for_post: ["toc"],
@@ -2599,7 +2599,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <html><head></head><body><blockquote>
-<p>本文原发布于 CSDN：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Xi1yang/article/details/137463543">https://blog.csdn.net/Xi1yang/article/details/137463543</a></p>
+<p>本文原发布于 CSDN：<a href="https://blog.csdn.net/Xi1yang/article/details/137463543" target="_blank" rel="noopener">https://blog.csdn.net/Xi1yang/article/details/137463543</a></p>
 </blockquote>
 <p>这种直接写个 <code>case</code> 去替换名称即可。如下所示，传入的是 <code>TimeType_tran</code>，使用的是 <code>TimeType</code>，搜索的是中文，使用的是英文。</p>
 <figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span></span><br><span class="line">    <span class="keyword">when</span> {{TimeType_tran}} <span class="operator">=</span> <span class="string">'年'</span> <span class="keyword">then</span> <span class="string">'year'</span></span><br><span class="line">    <span class="keyword">when</span> {{TimeType_tran}} <span class="operator">=</span> <span class="string">'月'</span> <span class="keyword">then</span> <span class="string">'month'</span></span><br><span class="line">    <span class="keyword">when</span> {{TimeType_tran}} <span class="operator">=</span> <span class="string">'周'</span> <span class="keyword">then</span> <span class="string">'week'</span></span><br><span class="line">    <span class="keyword">when</span> {{TimeType_tran}} <span class="operator">=</span> <span class="string">'日'</span> <span class="keyword">then</span> <span class="string">'day'</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></tbody></table></figure>
