@@ -32,36 +32,6 @@
     <author>
       <name>Dawnqi</name>
     </author>
-    <category term="测试" scheme="https://dawnqi12-cyber.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    <category term="test" scheme="https://dawnqi12-cyber.github.io/tags/test/"/>
-    <id>https://dawnqi12-cyber.github.io/2026/07/22/2026-07-22-test1/</id>
-    <link href="https://dawnqi12-cyber.github.io/2026/07/22/2026-07-22-test1/"/>
-    <published>2026-07-21T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<html><head></head><body></body></html>]]>
-    </summary>
-    <title>test1</title>
-    <updated>2026-07-21T16:00:00.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Dawnqi</name>
-    </author>
-    <category term="测试" scheme="https://dawnqi12-cyber.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    <category term="test" scheme="https://dawnqi12-cyber.github.io/tags/test/"/>
-    <id>https://dawnqi12-cyber.github.io/2026/07/22/2026-07-22-test/</id>
-    <link href="https://dawnqi12-cyber.github.io/2026/07/22/2026-07-22-test/"/>
-    <published>2026-07-21T16:00:00.000Z</published>
-    <summary>
-      <![CDATA[<html><head></head><body></body></html>]]>
-    </summary>
-    <title>test</title>
-    <updated>2026-07-21T16:00:00.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Dawnqi</name>
-    </author>
     <category term="技术学习" scheme="https://dawnqi12-cyber.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     <category term="面试" scheme="https://dawnqi12-cyber.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     <category term="Agent" scheme="https://dawnqi12-cyber.github.io/tags/Agent/"/>
@@ -360,5 +330,37 @@
     </summary>
     <title>C++学习指南</title>
     <updated>2026-04-15T21:34:57.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Dawnqi</name>
+    </author>
+    <category term="日记" scheme="https://dawnqi12-cyber.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    <category term="随笔" scheme="https://dawnqi12-cyber.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="日记" scheme="https://dawnqi12-cyber.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    <id>https://dawnqi12-cyber.github.io/2025/10/11/2025-10-10/</id>
+    <link href="https://dawnqi12-cyber.github.io/2025/10/11/2025-10-10/"/>
+    <published>2025-10-10T16:16:00.000Z</published>
+    <summary>
+      <![CDATA[<html><head></head><body></body></html>]]>
+    </summary>
+    <title>Fri Oct 10 2025 08:00:00 GMT+0800 (中国标准时间)</title>
+    <updated>2025-10-10T16:16:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Dawnqi</name>
+    </author>
+    <category term="日记" scheme="https://dawnqi12-cyber.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    <category term="随笔" scheme="https://dawnqi12-cyber.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="日记" scheme="https://dawnqi12-cyber.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    <id>https://dawnqi12-cyber.github.io/2025/10/09/2025-10-09/</id>
+    <link href="https://dawnqi12-cyber.github.io/2025/10/09/2025-10-09/"/>
+    <published>2025-10-09T15:34:53.000Z</published>
+    <summary>
+      <![CDATA[<html><head></head><body></body></html>]]>
+    </summary>
+    <title>Thu Oct 09 2025 08:00:00 GMT+0800 (中国标准时间)</title>
+    <updated>2025-10-09T15:34:53.000Z</updated>
   </entry>
 </feed>
